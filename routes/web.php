@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('lisa', function () {
+    return view ('lisa');
+});
+
+Route::get('lisa', ['as' => 'lisa', 'uses' => 'lisaController@create']);
+
+Route::post('lisa', ['as' => '/lisa', 'uses' => 'lisaController@store']);
+
+
+
