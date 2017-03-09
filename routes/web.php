@@ -19,8 +19,11 @@ Route::get('lisa', function () {
     return view ('lisa');
 });
 
-Route::get('/lisa', ['as' => 'lisa', 'uses' => 'lisaController@create']);
+//Route::get('/lisa', ['as' => 'lisa', 'uses' => 'lisaController@create']);
 
-Route::post('/lisa', ['as' => '/lisatud', 'uses' => 'lisaController@store']);
+//Route::post('/lisa', ['as' => '/lisatud', 'uses' => 'lisaController@store']);
 
 Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'langController@changeLocale']);
+
+Route::get("lisa", "lisaController@index");
+Route::post("store", "lisaController@store");

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="/../LAFF/public/css/app.css" rel="stylesheet" type="text/css">
+    <link href="/../public/css/app.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <title><?php echo __('addAdmessages.pageTitle')?></title>
@@ -24,7 +24,7 @@
                 <h1><?php echo __('addAdmessages.addAd')?></h1>
             </div>
 
-            {!! Form::open(array('route' => '/lisatud', 'class' => 'form', 'files' => 'true')) !!}
+            {!! Form::open(array('action'=>'lisaController@store','class' => 'form', 'files' => 'true')) !!}
 
                 <div class="form-group">
                     {!! Form::label('teema', __('addAdmessages.adTopic')) !!}
@@ -38,7 +38,7 @@
 
                 <div class="form-group">
                     {!! Form::label('pilt', __('addAdmessages.adPic')) !!}
-                    {!! Form::file('kuulutusePilt', array('required', 'placeholder' => __('addAdmessages.adPicPH'))) !!}
+                    {!! Form::file('kuulutusePilt', array('placeholder' => __('addAdmessages.adPicPH'))) !!}
                 </div>
 
                 <div class="form-group">
