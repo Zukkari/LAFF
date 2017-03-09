@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Lost and Found Foundation',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'et',
+    'locales' => ['en' => 'English', 'et' => 'Eesti'],
 
     /*
     |--------------------------------------------------------------------------
@@ -91,6 +92,16 @@ return [
     */
 
     'fallback_locale' => 'en',
+
+    /**
+     * List of alternative languages (not including the one specified as 'locale')
+     */
+    'alt_langs' => array ('en', 'et'),
+
+    /**
+     *  Prefix of selected locale  - leave empty (set in runtime)
+     */
+    'locale_prefix' => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -180,6 +191,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         // ...
 
+        // Menu
+        Lavary\Menu\ServiceProvider::class,
 
     ],
 
@@ -231,6 +244,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Menu' => Lavary\Menu\Facade::class,
 
     ],
 

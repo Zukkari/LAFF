@@ -27,6 +27,11 @@ html, body {
     top: 18px;
 }
 
+.right {
+    position: absolute;
+    right: 10px;
+}
+
 .content {
     text-align: center;
 }

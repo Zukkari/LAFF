@@ -257,6 +257,13 @@ class ComposerStaticInit5b9440b7617bdcc32da5d0bf4cba6900
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
             ),
         ),
+        'L' => 
+        array (
+            'Lavary\\Menu\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/lavary/laravel-menu/src',
+            ),
+        ),
         'J' => 
         array (
             'JakubOnderka\\PhpConsoleHighlighter' => 
@@ -285,12 +292,15 @@ class ComposerStaticInit5b9440b7617bdcc32da5d0bf4cba6900
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\MainController' => __DIR__ . '/../..' . '/app/Http/Controllers/MainController.php',
+        'App\\Http\\Controllers\\langController' => __DIR__ . '/../..' . '/app/Http/Controllers/langController.php',
         'App\\Http\\Controllers\\lisaController' => __DIR__ . '/../..' . '/app/Http/Controllers/lisaController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Middleware\\appLang' => __DIR__ . '/../..' . '/app/Http/Middleware/appLang.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -1530,6 +1540,13 @@ class ComposerStaticInit5b9440b7617bdcc32da5d0bf4cba6900
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
         'Laravel\\Tinker\\TinkerServiceProvider' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerServiceProvider.php',
+        'Lavary\\Menu\\Builder' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Builder.php',
+        'Lavary\\Menu\\Collection' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Collection.php',
+        'Lavary\\Menu\\Facade' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Facade.php',
+        'Lavary\\Menu\\Item' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Item.php',
+        'Lavary\\Menu\\Link' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Link.php',
+        'Lavary\\Menu\\Menu' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/Menu.php',
+        'Lavary\\Menu\\ServiceProvider' => __DIR__ . '/..' . '/lavary/laravel-menu/src/Lavary/Menu/ServiceProvider.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',

@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="<?php echo e(config('app.locale')); ?>">
     <head>
         <meta charset="utf-8">
@@ -16,24 +18,22 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <div class="top-right links">
-                <a href=<?php echo e(url('/')); ?>>Home</a>
-                <a href="<?php echo e(url('/lisa')); ?>">Lisa kuulutus</a>
-            </div>
+                <div class="top-right links">
+                    <a href=<?php echo e(url('/')); ?>><?php echo __('homePageMessages.home')?></a>
+                    <a href="<?php echo e(url('/lisa')); ?>"><?php echo __('homePageMessages.addAd')?></a>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Lost & Found Foundation
+                    <div class="position-ref right">
+                        <?php $__currentLoopData = config('app.locales'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lang => $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <div class="links"><a href="<?php echo e(route('lang.switch', $lang)); ?>"><img src=<?php echo e(asset('/icons/'.$lang.'.png')); ?>> <?php echo e($language); ?></a></div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </div>
                 </div>
 
-                <div class="links">
-                    <a href="<?php echo e(url('hello')); ?>">This</a>
-                    <a href="https://laracasts.com">is</a>
-                    <a href="https://laravel-news.com">a</a>
-                    <a href="https://forge.laravel.com">beta</a>
-                    <a href="https://github.com/laravel/laravel">Test</a>
+                <div class="content">
+                    <div class="title m-b-md">
+                        Lost & Found Foundation
+                    </div>
                 </div>
-            </div>
         </div>
     </body>
 </html>

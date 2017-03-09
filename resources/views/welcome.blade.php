@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html lang="{{ config('app.locale') }}">
     <head>
         <meta charset="utf-8">
@@ -16,24 +18,22 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <div class="top-right links">
-                <a href={{url('/')}}>Home</a>
-                <a href="{{url('/lisa')}}">Lisa kuulutus</a>
-            </div>
+                <div class="top-right links">
+                    <a href={{url('/')}}><?php echo __('homePageMessages.home')?></a>
+                    <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Lost & Found Foundation
+                    <div class="position-ref right">
+                        @foreach (config('app.locales') as $lang => $language)
+                            <div class="links"><a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a></div>
+                        @endforeach
+                    </div>
                 </div>
 
-                <div class="links">
-                    <a href="{{url('hello')}}">This</a>
-                    <a href="https://laracasts.com">is</a>
-                    <a href="https://laravel-news.com">a</a>
-                    <a href="https://forge.laravel.com">beta</a>
-                    <a href="https://github.com/laravel/laravel">Test</a>
+                <div class="content">
+                    <div class="title m-b-md">
+                        Lost & Found Foundation
+                    </div>
                 </div>
-            </div>
         </div>
     </body>
 </html>

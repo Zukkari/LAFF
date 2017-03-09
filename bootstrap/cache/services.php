@@ -29,6 +29,7 @@
     25 => 'App\\Providers\\EventServiceProvider',
     26 => 'App\\Providers\\RouteServiceProvider',
     27 => 'Collective\\Html\\HtmlServiceProvider',
+    28 => 'Lavary\\Menu\\ServiceProvider',
   ),
   'eager' => 
   array (
@@ -143,6 +144,7 @@
     'form' => 'Collective\\Html\\HtmlServiceProvider',
     'Collective\\Html\\HtmlBuilder' => 'Collective\\Html\\HtmlServiceProvider',
     'Collective\\Html\\FormBuilder' => 'Collective\\Html\\HtmlServiceProvider',
+    'menu' => 'Lavary\\Menu\\ServiceProvider',
   ),
   'when' => 
   array (
@@ -186,6 +188,9 @@
     array (
     ),
     'Collective\\Html\\HtmlServiceProvider' => 
+    array (
+    ),
+    'Lavary\\Menu\\ServiceProvider' => 
     array (
     ),
   ),
