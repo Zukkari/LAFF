@@ -78,7 +78,7 @@ return [
     */
 
     'locale' => 'et',
-    'locales' => ['en' => 'English', 'et' => 'Eesti'],
+    'locales' => ['en' => 'English', 'et' => 'Eesti', 'rus' => 'Русский'],
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +96,7 @@ return [
     /**
      * List of alternative languages (not including the one specified as 'locale')
      */
-    'alt_langs' => array ('en', 'et'),
+    'alt_langs' => array ('en', 'et', 'rus'),
 
     /**
      *  Prefix of selected locale  - leave empty (set in runtime)

@@ -9029,3 +9029,1054 @@ Stack trace:
 #6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
 #7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
 #8 {main}  
+[2017-03-10 16:49:07] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:49:24] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:51:32] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:51:36] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:51:36] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:51:37] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:51:37] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:51:39] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:51:42] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:52:01] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:52:03] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:52:03] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:52:04] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:52:06] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:52:53] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:52:53] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:52:53] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:52:54] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:02] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:03] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:53:04] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:05] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:53:05] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:06] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:53:06] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:06] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:53:06] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:07] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:53:07] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:09] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:10] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:53:10] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:11] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:53:13] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:54:07] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:54:08] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:54:08] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:54:10] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:54:12] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 16:54:14] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 16:54:14] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:31:14] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:31:18] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:31:18] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:31:31] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:31:31] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:31:32] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:31:32] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:31:33] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:31:33] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:31:35] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:31:35] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:31:38] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:32:02] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:32:32] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:32:33] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:32:33] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:32:34] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:32:34] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:32:35] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:32:35] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:32:36] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:32:38] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:33:51] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:33:56] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:33:56] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:33:57] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:33:57] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:33:58] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:33:58] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:33:59] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:33:59] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:34:01] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:34:03] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:35:25] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{'' in /opt/lampp/htdocs/LAFF/storage/framework/views/a579c5313ed2fe9480c517d67a9b16689051135f.php:30
+Stack trace:
+#0 {main}  
+[2017-03-10 17:35:34] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Illuminate\Contracts\Session\Session::getLocale()' in /opt/lampp/htdocs/LAFF/storage/framework/views/a579c5313ed2fe9480c517d67a9b16689051135f.php:30
+Stack trace:
+#0 {main}  
+[2017-03-10 17:35:47] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:35:49] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:35:49] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:35:51] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:35:51] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:35:53] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:35:53] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:20] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:21] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:24] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:26] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:26] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:27] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:27] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:27] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:28] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:28] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:31] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:37:31] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-03-10 17:37:32] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:4:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:4:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\RedirectResponse))
+#8 {main}  
+[2017-03-10 17:37:32] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/storage/framework/sessions/pZBPNp0PtrNdbGeLKLN7gN6cB402Idt1YAM09Ae1): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', 2)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', 'a:3:{s:6:"_toke...', true)
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Store.php(129): Illuminate\Session\FileSessionHandler->write('pZBPNp0PtrNdbGe...', 'a:3:{s:6:"_toke...')
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(88): Illuminate\Session\Store->save()
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 /opt/lampp/htdocs/LAFF/public/index.php(60): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
