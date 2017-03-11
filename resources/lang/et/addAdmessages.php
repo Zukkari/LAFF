@@ -6,9 +6,11 @@ return [
     'addAd' => 'Lisa oma kuulutus',
     'adTopic' => 'Kuulutuse teema',
     'adTopicPH' => 'Sistesta oma kuulutse teema..',
-    'adText' => 'Kuulutuse text',
+    'adText' => 'Kuulutuse tekst',
     'adTextPH' => 'Sisesta siia oma kuulutuse tekst...',
     'adPic' => 'Lisa oma kuulutusele pilt',
     'adPicPH' => 'Vali oma kuulutuse jaoks pilt',
-    'adSubmit' => 'Lisa oma kuulutus!'
+    'adSubmit' => 'Lisa oma kuulutus!',
+    'adTagsPH' => 'Lisage tagid, eraldage nad komaga',
+    'adTags' => 'Tagid kuulutuse jaoks'
 ];

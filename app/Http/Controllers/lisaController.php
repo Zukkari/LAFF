@@ -26,10 +26,11 @@ class lisaController extends Controller
     {
         $teema=$req->input('teema');
         $tekst=$req->input('tekst');
+        $tagid=$req->input('tagid');
 
 
         //$data=array('firstName'=>$firstName, 'lastName'=>$lastName, 'mobile'=>$mobile);
-        DB::select('CALL lisa_postitus (?,?,?,?,?)',array("nonane", $teema, $tekst, "no link", "kaotatud"));
+        DB::select('CALL lisa_postitus (?,?,?,?,?)',array("nonane", $teema, $tekst, "no link", $tagid));
         /*
         DB::table('postitus')->insert(
             ['kasutaja' => "noname", 'pealkiri' => $teema, 'kirjeldus'=>$tekst, 'pildilink'=>"linki pole",

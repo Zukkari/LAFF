@@ -36,6 +36,11 @@
                 </div>
 
                 <div class="form-group">
+                    {!! Form::label('tagid' , __('addAdmessages.adTags')) !!}
+                    {!! Form::text('tagid', null, array('required', 'class' => 'form-control', 'placeholder' =>  __('addAdmessages.adTagsPH'))) !!}
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('pilt', __('addAdmessages.adPic')) !!}
                     {!! Form::file('kuulutusePilt') !!}
                 </div>

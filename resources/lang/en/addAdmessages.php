@@ -10,5 +10,7 @@ return [
     'adTextPH' => 'Add text for you ad here...',
     'adPic' => 'Add picture for your ad',
     'adPicPH' => 'Choose a picture for your ad..',
-    'adSubmit' => 'Submit your add!'
+    'adSubmit' => 'Submit your add!',
+    'adTagsPH' => 'Write down tags, separate them with comas',
+    'adTags' => 'Tags for ad'
 ];
