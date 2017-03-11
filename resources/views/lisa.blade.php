@@ -1,6 +1,6 @@
-<!DOCTYPE html PUBLIC>
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="{{ config('app.locale') }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('pilt', __('addAdmessages.adPic')) !!}
+                    {!! Form::label('kuulutusePilt', __('addAdmessages.adPic')) !!}
                     {!! Form::file('kuulutusePilt') !!}
                 </div>
 
