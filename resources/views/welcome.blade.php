@@ -22,11 +22,9 @@
                     <a href={{url('/')}}><?php echo __('homePageMessages.home')?></a>
                     <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
 
-                    <div class="position-ref right">
-                        @foreach (config('app.locales') as $lang => $language)
-                            <div class="links"><a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a></div>
-                        @endforeach
-                    </div>
+                    @foreach (config('app.locales') as $lang => $language)
+                        <div class="links"><a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a></div>
+                    @endforeach
                 </div>
 
                 <div class="content">
