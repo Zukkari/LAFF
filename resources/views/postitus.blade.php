@@ -6,36 +6,41 @@
   <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/../public/css/postitus.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 </script>
 </head>
 <body>
-<div class="top-right links">
-    <a href={{url('/')}}><?php echo __('homePageMessages.home')?></a>
-    <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
-    <a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a>
-
-    <div class="position-ref right">
-        @foreach (config('app.locales') as $lang => $language)
-            <div class="links"><a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a></div>
-        @endforeach
-    </div>
-</div>
 <div class="w3-container" style="margin-top: 50px">
-    <h1 class="col-sm-7"><a href="#">Lost &amp; Found Foundation</a></h1>
+    <div class="col-sm-7">
+        <div class="container">
+            <div class="row">
+                <button class="button button-primary" type="button"><a href={{url('/')}}><?php echo __('homePageMessages.home')?></a></button>
+                <button class="button button-neutral" type="button"><a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></button>
+                <button class="button button-neutral"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></button>
+            </div>
+        </div>
+    </div>
     <div class="col-sm-2">
-        <div class="input-group stylish-input-group">
-            <input class="form-control" placeholder="Search" type="text"> <span class="input-group-addon"><button type="submit"><span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span></button></span>
+        <div class="span6">
+            <form id="custom-search-form" class="form-search form-horizontal pull-right">
+                <div class="input-append span12">
+                    <input type="text" class="search-query" placeholder="Search">
+                    <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </form>
         </div>
     </div>
     <div class="col-sm-3">
         <div class="btn-group">
             <button class="btn btn-primary" type="button">Vali keel</button> <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span></button>
             <ul class="dropdown-menu" role="menu">
-                <li>Eesti keel</li>
-                <li>English</li>
+                <li>@foreach (config('app.locales') as $lang => $language)
+                        <a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a>
+                    @endforeach
+                </li>
             </ul>
         </div>
     </div>
