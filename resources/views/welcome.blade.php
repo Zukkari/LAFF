@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 
 
 <html lang="{{ config('app.locale') }}">
@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <link href="/../LAFF/public/css/default.css" rel="stylesheet" type="text/css">
+        <link href="/../public/css/default.css" rel="stylesheet" type="text/css">
 
     </head>
     <body>
@@ -21,10 +21,13 @@
                 <div class="top-right links">
                     <a href={{url('/')}}><?php echo __('homePageMessages.home')?></a>
                     <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
+                    <a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a>
 
-                    @foreach (config('app.locales') as $lang => $language)
-                        <div class="links"><a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a></div>
-                    @endforeach
+                    <div class="position-ref right">
+                        @foreach (config('app.locales') as $lang => $language)
+                            <div class="links"><a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a></div>
+                        @endforeach
+                    </div>
                 </div>
 
                 <div class="content">

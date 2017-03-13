@@ -19,6 +19,12 @@ Route::get('lisa', function () {
     return view ('lisa');
 });
 
+/*
+Route::get('postitus', function () {
+    return view ('postitus');
+});*/
+
+Route::get("postitus", "postitusController@index");
 //Route::get('/lisa', ['as' => 'lisa', 'uses' => 'lisaController@create']);
 
 //Route::post('/lisa', ['as' => '/lisatud', 'uses' => 'lisaController@store']);

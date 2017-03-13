@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC>
 
-<html xmlns="http://www.w3.org/1999/xhtml"  lang="{{ config('app.locale') }}">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,12 +36,12 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('tagid' , __('addAdmessages.adTags')) !!}
+                    {!! Form::label('tekst' , __('addAdmessages.adTags')) !!}
                     {!! Form::text('tagid', null, array('required', 'class' => 'form-control', 'placeholder' =>  __('addAdmessages.adTagsPH'))) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('kuulutusePilt', __('addAdmessages.adPic')) !!}
+                    {!! Form::label('pilt', __('addAdmessages.adPic')) !!}
                     {!! Form::file('kuulutusePilt') !!}
                 </div>
 

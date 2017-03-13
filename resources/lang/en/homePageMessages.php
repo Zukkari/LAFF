@@ -2,5 +2,6 @@
 
 return [
     'home' => 'Home',
-    'addAd' => 'Add ad'
+    'addAd' => 'Add ad',
+    'ads'=>'See ads'
 ];

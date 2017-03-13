@@ -2,5 +2,6 @@
 
 return [
     'home' => 'Avaleht',
-    'addAd' => 'Lisa kuulutus'
+    'addAd' => 'Lisa kuulutus',
+    'ads'=>'Vaata postitusi'
 ];

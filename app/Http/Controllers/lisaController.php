@@ -29,18 +29,9 @@ class lisaController extends Controller
         $tagid=$req->input('tagid');
 
 
-        //$data=array('firstName'=>$firstName, 'lastName'=>$lastName, 'mobile'=>$mobile);
-        DB::select('CALL lisa_postitus (?,?,?,?,?)',array("nonane", $teema, $tekst, "no link", $tagid));
-        /*
-        DB::table('postitus')->insert(
-            ['kasutaja' => "noname", 'pealkiri' => $teema, 'kirjeldus'=>$tekst, 'pildilink'=>"linki pole",
-                'peatag'=>'kaotatud']);
-        //return ("Its alive");
-        return view ('welcome');
-        */
-        /*
-        DB::table('test')->insert([
-            ['pealkiri' => 'taylor@example.com', 'sisu' => 'testime', 'link'=> 'testimiseks'],
-        ]);*/
+        //LARAVEL SULGEB KÕIK ÜHENDUSED ANDMEBAASIGA ISE!
+        DB::select('CALL lisa_postitus (?,?,?,?,?)',array("noname", $teema, $tekst, "no link", $tagid));
+        return view('welcome');
+
     }
 }
