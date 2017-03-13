@@ -24,13 +24,21 @@ class lisaController extends Controller
 
     public function store(Request $req)
     {
+        //LARAVEL SULGEB KÕIK ÜHENDUSED ANDMEBAASIGA ISE!
         $teema=$req->input('teema');
         $tekst=$req->input('tekst');
         $tagid=$req->input('tagid');
+        $pildilink=$req->input('pildilink');
+        if (empty($pildilink)){ //Kui pidlilinki pole lisatud, siis näitame pilti, et pilti pole :D
+            DB::select('CALL lisa_postitus (?,?,?,?,?)',array("noname", $teema, $tekst,"http://www.katiehalerealtor.com/elements/images/design/no_image_available.jpg", $tagid));
+        }
+        else {
+            DB::select('CALL lisa_postitus (?,?,?,?,?)',array("noname", $teema, $tekst,$pildilink, $tagid));
+        }
 
 
-        //LARAVEL SULGEB KÕIK ÜHENDUSED ANDMEBAASIGA ISE!
-        DB::select('CALL lisa_postitus (?,?,?,?,?)',array("noname", $teema, $tekst, "no link", $tagid));
+
+
         return view('welcome');
 
     }

@@ -9,7 +9,6 @@ class postitusController extends Controller
         $postitus =DB::select('CALL postitus()');
         $postitusi= DB::select('CALL postituste_arv()');
 
-
         return view("postitus", ['postitus'=>$postitus] ,[ 'postitusi'=>$postitusi]);
     }
 }
