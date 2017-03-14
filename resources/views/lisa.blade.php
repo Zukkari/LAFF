@@ -12,10 +12,17 @@
     <title><?php echo __('addAdmessages.pageTitle')?></title>
 </head>
 <body>
-    <div class="flex-center position-ref full-height">
-        <div class="top-right links">
-            <a href={{url('/')}}><?php echo __('addAdmessages.home')?></a>
+    <div class="col-sm-7">
+        <div class="container">
+            <div class="row">
+                <button class="button button-primary" type="button"><a href={{url('/')}}><?php echo __('homePageMessages.home')?></a></button>
+                <button class="button button-neutral" type="button"><a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></button>
+                <button class="button button-neutral"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></button>
+            </div>
         </div>
+    </div>
+    
+    <div class="flex-center position-ref full-height">
 
         <div class="content">
 
