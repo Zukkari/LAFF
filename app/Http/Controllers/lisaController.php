@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Validator;
@@ -18,7 +19,9 @@ class lisaController extends Controller
         //$users = DB::table('table')->get();
 
         //return view('user.index', ['users' => $users]);
-        return view ("lisa");
+        if (Auth::check()) {
+            return view("lisa");
+        } else return redirect('/');
     }
 
 

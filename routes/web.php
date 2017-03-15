@@ -11,12 +11,18 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('lisa', function () {
-    return view ('lisa');
+    if (Auth::check()) {
+        return view ('lisa');
+    } else {
+        return redirect('/');
+    }
 });
 
 
@@ -25,14 +31,16 @@ Route::get('postitus', function () {
     return view ('postitus');
 });*/
 
-Route::get("postitus", "postitusController@index");
+Route::get("postitus", 'postitusController@index');
+
 //Route::get('/lisa', ['as' => 'lisa', 'uses' => 'lisaController@create']);
 
 //Route::post('/lisa', ['as' => '/lisatud', 'uses' => 'lisaController@store']);
 
 Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'langController@changeLocale']);
 
-Route::get("lisa", "lisaController@index");
+Route::get("lisa", 'lisaController@index');
+
 Route::post("store", "lisaController@store");
 
 Route::get('auth.login', ['as' => 'auth.login']);
