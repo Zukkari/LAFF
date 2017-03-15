@@ -19,6 +19,7 @@ Route::get('lisa', function () {
     return view ('lisa');
 });
 
+
 /*
 Route::get('postitus', function () {
     return view ('postitus');
@@ -33,3 +34,9 @@ Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'langController@changeLo
 
 Route::get("lisa", "lisaController@index");
 Route::post("store", "lisaController@store");
+
+Route::get('auth.login', ['as' => 'auth.login']);
+
+Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
+
+Auth::routes();

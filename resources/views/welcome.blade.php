@@ -1,4 +1,4 @@
-<!DOCTYPE php>
+<!DOCTYPE html>
 
 
 <html lang="{{ config('app.locale') }}">
@@ -19,9 +19,15 @@
     <body>
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
-                    <a href={{url('/')}}><?php echo __('homePageMessages.home')?></a>
-                    <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
-                    <a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a>
+                        <a href={{url('/')}}><?php echo __('homePageMessages.home')?></a>
+
+                        @if (auth()->check())
+                            <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
+                            <a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a>
+                            <button><a href="{{route('logout')}}">Logout</a></button>
+                        @else
+                            <button><a href='{{ route('login') }}'>Log in</a></button>
+                        @endif
 
                     <div class="position-ref right">
                         @foreach (config('app.locales') as $lang => $language)

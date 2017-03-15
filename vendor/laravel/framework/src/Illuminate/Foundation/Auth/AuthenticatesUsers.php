@@ -4,6 +4,7 @@ namespace Illuminate\Foundation\Auth;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 trait AuthenticatesUsers
 {
@@ -112,7 +113,6 @@ trait AuthenticatesUsers
      */
     protected function authenticated(Request $request, $user)
     {
-        //
     }
 
     /**
@@ -141,7 +141,7 @@ trait AuthenticatesUsers
      */
     public function username()
     {
-        return 'email';
+        return 'kasutajanimi';
     }
 
     /**
@@ -158,7 +158,7 @@ trait AuthenticatesUsers
 
         $request->session()->regenerate();
 
-        return redirect('/');
+        return redirect()-back();
     }
 
     /**

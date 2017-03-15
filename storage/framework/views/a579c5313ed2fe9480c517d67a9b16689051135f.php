@@ -13,14 +13,21 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <link href="/../LAFF/public/css/default.css" rel="stylesheet" type="text/css">
+        <link href="/../public/css/default.css" rel="stylesheet" type="text/css">
 
     </head>
     <body>
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
-                    <a href=<?php echo e(url('/')); ?>><?php echo __('homePageMessages.home')?></a>
-                    <a href="<?php echo e(url('/lisa')); ?>"><?php echo __('homePageMessages.addAd')?></a>
+                        <a href=<?php echo e(url('/')); ?>><?php echo __('homePageMessages.home')?></a>
+
+                        <?php if(auth()->check()): ?>
+                            <a href="<?php echo e(url('/lisa')); ?>"><?php echo __('homePageMessages.addAd')?></a>
+                            <a href="<?php echo e(url('/postitus')); ?>"><?php echo __('homePageMessages.ads')?></a>
+                            <button><a href="<?php echo e(route('logout')); ?>">Logout</a></button>
+                        <?php else: ?>
+                            <button><a href='<?php echo e(route('login')); ?>'>Log in</a></button>
+                        <?php endif; ?>
 
                     <div class="position-ref right">
                         <?php $__currentLoopData = config('app.locales'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lang => $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
