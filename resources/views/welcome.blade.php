@@ -20,13 +20,14 @@
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
                         <a href={{url('/')}}><?php echo __('homePageMessages.home')?></a>
+                        <a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a>
 
                         @if (auth()->check())
                             <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
-                            <a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a>
-                            <button><a href="{{route('logout')}}">Logout</a></button>
+                            <a href="{{route('logout')}}"><?php echo __('auth.logout')?></a>
                         @else
-                            <button><a href='{{ route('login') }}'>Log in</a></button>
+                            <a href='{{ route('login') }}'><?php echo __('auth.login')?></a>
+                            <a href='{{route('register')}}'><?php echo __('auth.register')?></a>
                         @endif
 
                     <div class="position-ref right">
@@ -40,6 +41,11 @@
                     <div class="title m-b-md">
                         Lost & Found Foundation
                     </div>
+                    @if (auth()->check())
+                    <div class="title m-b-md">
+                        Welcome, <?php echo auth()->user()->kasutajanimi ?>
+                    </div>
+                    @endif
                 </div>
         </div>
     </body>

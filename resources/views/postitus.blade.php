@@ -6,7 +6,6 @@
   <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/../public/css/postitus.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
@@ -18,8 +17,15 @@
         <div class="container">
             <div class="row">
                 <button class="button button-primary" type="button"><a href={{url('/')}}><?php echo __('homePageMessages.home')?></a></button>
-                <button class="button button-neutral" type="button"><a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></button>
                 <button class="button button-neutral"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></button>
+
+                @if (auth()->check())
+                    <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
+                    <button class="button button-neutral"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></button>
+                @else
+                    <button class="button button-neutral"><a href='{{ route('login') }}'><?php echo __('auth.login')?></a></button>
+                    <button class="button button-neutral"><a href='{{route('register')}}'><?php echo __('auth.register')?></a></button>
+                @endif
             </div>
         </div>
     </div>

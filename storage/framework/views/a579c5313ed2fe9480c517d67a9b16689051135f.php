@@ -20,13 +20,14 @@
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
                         <a href=<?php echo e(url('/')); ?>><?php echo __('homePageMessages.home')?></a>
+                        <a href="<?php echo e(url('/postitus')); ?>"><?php echo __('homePageMessages.ads')?></a>
 
                         <?php if(auth()->check()): ?>
                             <a href="<?php echo e(url('/lisa')); ?>"><?php echo __('homePageMessages.addAd')?></a>
-                            <a href="<?php echo e(url('/postitus')); ?>"><?php echo __('homePageMessages.ads')?></a>
-                            <button><a href="<?php echo e(route('logout')); ?>">Logout</a></button>
+                            <a href="<?php echo e(route('logout')); ?>"><?php echo __('auth.logout')?></a>
                         <?php else: ?>
-                            <button><a href='<?php echo e(route('login')); ?>'>Log in</a></button>
+                            <a href='<?php echo e(route('login')); ?>'><?php echo __('auth.login')?></a>
+                            <a href='<?php echo e(route('register')); ?>'><?php echo __('auth.register')?></a>
                         <?php endif; ?>
 
                     <div class="position-ref right">
@@ -40,6 +41,11 @@
                     <div class="title m-b-md">
                         Lost & Found Foundation
                     </div>
+                    <?php if(auth()->check()): ?>
+                    <div class="title m-b-md">
+                        Welcome, <?php echo auth()->user()->kasutajanimi ?>
+                    </div>
+                    <?php endif; ?>
                 </div>
         </div>
     </body>
