@@ -189,10 +189,13 @@ return [
         App\Providers\RouteServiceProvider::class,
         // ...
         Collective\Html\HtmlServiceProvider::class,
+
         // ...
 
         // Menu
         Lavary\Menu\ServiceProvider::class,
+
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -245,6 +248,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Menu' => Lavary\Menu\Facade::class,
+        'Socialize' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

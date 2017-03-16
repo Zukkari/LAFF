@@ -14,6 +14,7 @@
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
+    Session::put('redirectTo', '/');
     return view('welcome');
 });
 
@@ -42,8 +43,6 @@ Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'langController@changeLo
 Route::get("lisa", 'lisaController@index');
 
 Route::post("store", "lisaController@store");
-
-Route::get('auth.login', ['as' => 'auth.login']);
 
 Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
 

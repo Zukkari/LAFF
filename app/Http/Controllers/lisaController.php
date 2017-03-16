@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Session;
 use Validator;
 use Redirect;
 use Illuminate\Support\Collection;
@@ -21,7 +22,10 @@ class lisaController extends Controller
         //return view('user.index', ['users' => $users]);
         if (Auth::check()) {
             return view("lisa");
-        } else return redirect('/');
+        } else {
+            Session::put('redirectTo', 'lisa');
+            return redirect('/login');
+        }
     }
 
 
@@ -69,6 +73,6 @@ class lisaController extends Controller
                 }
             }
         }
-        return view('welcome');
+        return redirect('lisa');
     }
 }
