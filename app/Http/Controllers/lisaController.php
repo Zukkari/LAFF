@@ -36,12 +36,12 @@ class lisaController extends Controller
         $teema=$req->input('teema');
         $tekst=$req->input('tekst');
         $tagid=$req->input('tagid');
-        $pildilink=$req->input('pildilink');
         $file = array('kuulutusePilt' => Input::file('kuulutusePilt'));
+        $kasutaja = auth()->user()->kasutajanimi;
 
-        $arv =count($file);
+
         if (empty($file['kuulutusePilt'])) {
-            DB::select('CALL lisa_postitus (?,?,?,?,?)',array("noname", $teema, $tekst,"http://www.katiehalerealtor.com/elements/images/design/no_image_available.jpg", $tagid));
+            DB::select('CALL lisa_postitus (?,?,?,?,?)',array($kasutaja, $teema, $tekst,"http://www.katiehalerealtor.com/elements/images/design/no_image_available.jpg", $tagid));
         }
         else {
             $rules = array('kuulutusePilt' => 'image',); //mimes:jpeg,bmp,png and for max size max:10000
@@ -58,7 +58,7 @@ class lisaController extends Controller
                     $fileName = rand(11111, 99999) . '.' . $extension; // renameing image
                     Input::file('kuulutusePilt')->move($destinationPath, $fileName); // uploading file to given path
                     $path='/../public/pictures';
-                    DB::select('CALL lisa_postitus (?,?,?,?,?)',array("noname", $teema, $tekst,$path."/".$fileName, $tagid));
+                    DB::select('CALL lisa_postitus (?,?,?,?,?)',array($kasutaja, $teema, $tekst,$path."/".$fileName, $tagid));
                     // sending back with message
                     //Session::flash('success', 'Upload successfully');
                     //return Redirect::to('lisa');
