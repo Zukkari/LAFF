@@ -21327,3 +21327,55 @@ Stack trace:
 #2 /opt/lampp/htdocs/LAFF/vendor/symfony/http-foundation/Response.php(418): Symfony\Component\HttpFoundation\Response->sendHeaders()
 #3 /opt/lampp/htdocs/LAFF/public/index.php(58): Symfony\Component\HttpFoundation\Response->send()
 #4 {main}  
+[2017-03-16 09:57:29] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/bootstrap/cache/services.php): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', '<?php return ar...', 0)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(188): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', '<?php return ar...')
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(164): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(543): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(208): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(160): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /opt/lampp/htdocs/LAFF/public/index.php(56): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2017-03-16 09:57:55] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/bootstrap/cache/services.php): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', '<?php return ar...', 0)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(188): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', '<?php return ar...')
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(164): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(543): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(208): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(160): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /opt/lampp/htdocs/LAFF/public/index.php(56): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2017-03-16 09:57:58] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/opt/lampp/htdocs/LAFF/bootstrap/cache/services.php): failed to open stream: Permission denied' in /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 111, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/opt/lampp/htdo...', '<?php return ar...', 0)
+#2 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(188): Illuminate\Filesystem\Filesystem->put('/opt/lampp/htdo...', '<?php return ar...')
+#3 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(164): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(543): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(208): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(160): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /opt/lampp/htdocs/LAFF/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /opt/lampp/htdocs/LAFF/public/index.php(56): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2017-03-16 12:43:20] local.ERROR: exception 'ErrorException' with message 'Header may not contain more than a single header, new line detected' in /opt/lampp/htdocs/LAFF/vendor/symfony/http-foundation/Response.php:380
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Header may not ...', '/opt/lampp/htdo...', 380, Array)
+#1 /opt/lampp/htdocs/LAFF/vendor/symfony/http-foundation/Response.php(380): header('Location: http:...', false, 302)
+#2 /opt/lampp/htdocs/LAFF/vendor/symfony/http-foundation/Response.php(418): Symfony\Component\HttpFoundation\Response->sendHeaders()
+#3 /opt/lampp/htdocs/LAFF/public/index.php(58): Symfony\Component\HttpFoundation\Response->send()
+#4 {main}  

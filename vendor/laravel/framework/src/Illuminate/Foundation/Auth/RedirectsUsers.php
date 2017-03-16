@@ -2,6 +2,8 @@
 
 namespace Illuminate\Foundation\Auth;
 
+use Illuminate\Contracts\Session\Session;
+
 trait RedirectsUsers
 {
     /**
@@ -11,10 +13,6 @@ trait RedirectsUsers
      */
     public function redirectPath()
     {
-        if (method_exists($this, 'redirectTo')) {
-            return $this->redirectTo();
-        }
-
-        return property_exists($this, 'redirectTo') ? redirect()->back(): '';
+        return session()->get('redirectTo');
     }
 }
