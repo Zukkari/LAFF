@@ -17,11 +17,12 @@
 
     </head>
     <body>
-
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
                         <a href=<?php echo e(url('/')); ?>><?php echo __('homePageMessages.home')?></a>
                         <a href="<?php echo e(url('/postitus')); ?>"><?php echo __('homePageMessages.ads')?></a>
+
+                        <?php echo e(Session::put('redirectTo', '/')); ?>
 
                         <?php if(auth()->check()): ?>
                             <a href="<?php echo e(url('/lisa')); ?>"><?php echo __('homePageMessages.addAd')?></a>

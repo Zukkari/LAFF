@@ -41,19 +41,4 @@ class LoginController extends Controller
         Auth::logout();
         return redirect()->back();
     }
-
-    public function redirectToProvider()
-    {
-        return Socialize::with('facebook')->redirect();
-    }
-
-
-    public function handleProviderCallback()
-    {
-        $user = Socialize::with('facebook')->user();
-        $username = DB::select('CALL getUsername(?)', $user->getEmail());
-        $password = DB::select('CALL getUserPassword(?)', $user->getEmail());
-
-        Auth::attempt(['username' => $username, 'password' => $password]);
-    }
 }

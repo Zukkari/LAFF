@@ -46,4 +46,11 @@ Route::post("store", "lisaController@store");
 
 Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
 
+/*
+ *  route redirect on selleks, et väljakutsuda facebooki autentimise teenust
+ *  route callback annab meile tagasi facebooki vastuse ja sellega saame sellega midagi teha
+ */
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');
+
 Auth::routes();

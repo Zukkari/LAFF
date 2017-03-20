@@ -53,6 +53,10 @@
                                     <?php echo __('auth.login')?>
                                 </button>
 
+                                <a class="btn btn-primary" href="redirect">
+                                    <?php echo 'Login with Facebook'?>
+                                </a>
+
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     <?php echo __('auth.forgot')?>
                                 </a>

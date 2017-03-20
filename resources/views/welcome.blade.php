@@ -17,12 +17,12 @@
 
     </head>
     <body>
-
         <div class="flex-center position-ref full-height">
                 <div class="top-right links">
                         <a href={{url('/')}}><?php echo __('homePageMessages.home')?></a>
                         <a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a>
 
+                        {{Session::put('redirectTo', '/')}}
                         @if (auth()->check())
                             <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
                             <a href="{{route('logout')}}"><?php echo __('auth.logout')?></a>

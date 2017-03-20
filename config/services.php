@@ -34,4 +34,14 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+
+    /*
+     * Facebooki autemiseks vajalikud app-i andmed
+     */
+
+    'facebook' => [
+        'client_id' => '225841561216632',
+        'client_secret' => 'a216632eeaf37a31c6051ea064fdbb7e',
+        'redirect' => 'http://localhost/LAFF/public/index.php/callback',
+    ]
 ];
