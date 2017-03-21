@@ -36,6 +36,12 @@ class SocialAuthController extends Controller
         return redirect('/postitus');
     }
 
+    /*
+     * Kui kasutaja on olemas, siis tagastame seda, kui ei ole siis loome uue
+     * Paneme talle random parooli ning kasutajanime, kuna facebook ei anna meil neid kaasa.
+     * Kui kasutaja tahab oma kasutajasse sisse logida parooliga, siis saab ta parooli kätte reset password abil.
+     */
+
     public function findOrCreateUser($facebookUser) {
         $authUser = User::where('email', $facebookUser->getEmail())->first();
 
