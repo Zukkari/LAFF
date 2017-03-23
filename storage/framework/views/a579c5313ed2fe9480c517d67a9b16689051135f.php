@@ -34,7 +34,7 @@
 
                     <div class="position-ref right">
                         <?php $__currentLoopData = config('app.locales'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lang => $language): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <div class="links"><a href="<?php echo e(route('lang.switch', $lang)); ?>"><img src=<?php echo e(asset('/icons/'.$lang.'.png')); ?>> <?php echo e($language); ?></a></div>
+                            <div class="links"><a href="<?php echo e(route('lang.switch', $lang)); ?>"><img src='<?php echo e(asset('/icons/'.$lang.'.png')); ?>' alt=<?php echo e($language); ?>> <?php echo e($language); ?></a></div>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
                 </div>
