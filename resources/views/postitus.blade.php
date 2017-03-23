@@ -24,13 +24,13 @@
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Lost & Found Foundation</a>
+            <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href={{url('/')}}><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
-                <li><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
-                <li><a href="#contact"><span class="glyphicon glyphicon-info-sign"></span> Meist</a></li>
+                <li><a href={{url('/')}}><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
+                <li class="active"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
+                <li><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 @if(auth()->check())
                     <a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
                     <li><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
@@ -39,11 +39,11 @@
                     <li><a href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
                 @endif
                 <li><form class="navbar-search navbar-form" method="get" action="">
-                        <input class="form-control" placeholder="Search" name="s" type="text">
+                        <input class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
                     </form>
                 </li>
                 <li class="menu-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vali keel <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('adPageMessages.lang') ?><b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>@foreach (config('app.locales') as $lang => $language)
                                 <a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a>

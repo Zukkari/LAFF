@@ -37,35 +37,30 @@ class lisaController extends Controller
     public function store(Request $req)
     {
         //LARAVEL SULGEB KÕIK ÜHENDUSED ANDMEBAASIGA ISE!
-        $teema=$req->input('teema');
+        $teema=$req->input('teema'); //võtame kasutaja sisendid andmebaasi sisestamiseks
         $tekst=$req->input('tekst');
         $tagid=$req->input('tagid');
-        $pildilink=$req->input('pildilink');
-        $file = array('kuulutusePilt' => Input::file('kuulutusePilt'));
+        $file = array('kuulutusePilt' => Input::file('kuulutusePilt')); //siit saame kasutaja sisestatud pildi
+        $kasutaja = auth()->user()->kasutajanimi; //siit saame autoritseeritud kasutaja nime
 
-        $arv =count($file);
-        if (empty($file['kuulutusePilt'])) {
-            DB::select('CALL lisa_postitus (?,?,?,?,?)',array("noname", $teema, $tekst,"http://www.katiehalerealtor.com/elements/images/design/no_image_available.jpg", $tagid));
+
+        if (empty($file['kuulutusePilt'])) { //kui kasutaja pilti ei lisa, paneme pildi asemele meie default pildi
+            DB::select('CALL lisa_postitus (?,?,?,?,?)',array($kasutaja, $teema, $tekst,"/../public/pictures/no_image_available.jpg", $tagid));
         }
-        else {
-            $rules = array('kuulutusePilt' => 'image',); //mimes:jpeg,bmp,png and for max size max:10000
-            // doing the validation, passing post data, rules and the messages
+        else { //siin toimub pildi töötlemine ja vastamine standartile
+            $rules = array('kuulutusePilt' => 'image',);
             $validator = Validator::make($file, $rules);
-            if ($validator->fails()) {
-                // send back to the page with the input data and errors
+            if ($validator->fails()) { //TODO kui mingi viga tekib, hetke redirectib lihtsalt tagasi, ei sisesta postitust, vaja errorit luua
                 return Redirect::to('lisa')->withInput()->withErrors($validator);
-            } else {
-                // checking file is valid.
+            } else { //kui validaatoril mingeid probleeme ei teki, suuname pildi andmebaasi, algusese salvestame selle serveris
                 if (Input::file('kuulutusePilt')->isValid()) {
-                    $destinationPath = '/webpages/lostafcsut/public_html/public/pictures'; // upload path
-                    $extension = Input::file('kuulutusePilt')->getClientOriginalExtension(); // getting image extension
-                    $fileName = rand(11111, 99999) . '.' . $extension; // renameing image
-                    Input::file('kuulutusePilt')->move($destinationPath, $fileName); // uploading file to given path
+                    $destinationPath = '/webpages/lostafcsut/public_html/public/pictures';
+                    $extension = Input::file('kuulutusePilt')->getClientOriginalExtension();
+                    $fileName = rand(11111, 99999) . '.' . $extension; // nime muutmine
+                    Input::file('kuulutusePilt')->move($destinationPath, $fileName); //kuhu pildi pannakse
                     $path='/../public/pictures';
-                    DB::select('CALL lisa_postitus (?,?,?,?,?)',array("noname", $teema, $tekst,$path."/".$fileName, $tagid));
-                    // sending back with message
-                    //Session::flash('success', 'Upload successfully');
-                    //return Redirect::to('lisa');
+                    DB::select('CALL lisa_postitus (?,?,?,?,?)',array($kasutaja, $teema, $tekst,$path."/".$fileName, $tagid));
+
                 } else {
                     // sending back with error message.
                     Session::flash('error', 'uploaded file is not valid');

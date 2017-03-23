@@ -3,5 +3,6 @@
 return [
     'home' => 'Home',
     'addAd' => 'Add ad',
-    'ads'=>'See ads'
+    'ads'=>'See ads',
+    'us'=>'About us'
 ];
