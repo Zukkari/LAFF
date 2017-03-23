@@ -12,9 +12,11 @@ class postitusController extends Controller
 
         Session::put('redirectTo', 'postitus');
 
-        $postitus = DB::select('CALL postitus()'); //annab meile postituse informatsiooni
-        $postitusi = DB::select('CALL postituste_arv()'); //mitu postitust on süsteemis
 
-        return view("postitus", ['postitus' => $postitus], ['postitusi' => $postitusi]);
+        $postitusi = DB::select('CALL postituste_arv()'); //mitu postitust on süsteemis
+        $postitus = DB::table('postitus_vaade')->paginate(5);
+
+
+        return view("postitus", ['postitusi' => $postitusi])->with('postitus', $postitus);
     }
 }
