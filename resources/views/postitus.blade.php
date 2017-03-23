@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{config('app.locale')}}">
 <head>
 
   <title>Lost &amp; Found Foundation</title>
@@ -38,7 +38,7 @@
                     <li><a href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
                     <li><a href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
                 @endif
-                <li><form class="navbar-search navbar-form" method="get" action="">
+                <li><form class="navbar-search navbar-form" method="get">
                         <input class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
                     </form>
                 </li>
@@ -46,7 +46,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('adPageMessages.lang') ?><b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>@foreach (config('app.locales') as $lang => $language)
-                                <a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a>
+                                <a href="{{ route('lang.switch', $lang) }}"><img src='{{asset('/icons/'.$lang.'.png')}}' alt="{{$language}}"> {{$language}}</a>
                             @endforeach
                         </li>
                     </ul>
@@ -83,7 +83,7 @@
                                 <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $postitus->kasutaja; echo ", " ; echo $postitus->date; echo ", "; echo $postitus->email ?></h5>
                                 <h5><span class="label label-danger"><?php echo $postitus->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
                                 <div>
-                                    <p style="float: left;"><img border="1px" height="236" src="<?php echo $postitus->pildilink ?>" width="200"></p>
+                                    <p><img src="<?php echo $postitus->pildilink ?>" alt="image"></p>
                                     <p><?php echo $postitus->kirjeldus ?></p>
                                 </div>
                             </div>
@@ -99,16 +99,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="./dist/js/bootstrap.min.js"></script>
-</body>
 <footer>
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
             <p class="navbar-text pull-left">© 2017 - Created by Stanislav Mõškovski, Mari-Liis Pihlapuu, Edgar Pašenkov
             </p>
         </div>
-
-
     </div>
 </footer>
+</body>
 </html>
 

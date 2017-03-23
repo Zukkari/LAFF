@@ -35,7 +35,7 @@
                     <li><a href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
                     <li><a href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
                 @endif
-                <li><form class="navbar-search navbar-form" method="get" action="">
+                <li><form class="navbar-search navbar-form" method="get">
                         <input class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
                     </form>
                 </li>
@@ -43,7 +43,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('adPageMessages.lang') ?><b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>@foreach (config('app.locales') as $lang => $language)
-                                <a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a>
+                                <a href="{{ route('lang.switch', $lang) }}"><img src='{{asset('/icons/'.$lang.'.png')}}' alt="{{$language}}"> {{$language}}</a>
                             @endforeach
                         </li>
                     </ul>
@@ -55,23 +55,23 @@
 
 
 
-<div class="container" align="center">
+<div class="container">
     <div class="jumbotron" style="background-color: white">
         <div class="container-fluid">
-                    <h2 style="color:black" align="center">Kes me oleme ja miks me seda teeme?</h2><br>
-                    <p style="color:black" align="center">Antud veebileht on loodud projekti tegemise raames Tartu Ülikooli informaatikateaduskonna aines "Veebirakenduste
+                    <h2 style="color:black" >Kes me oleme ja miks me seda teeme?</h2><br>
+                    <p style="color:black">Antud veebileht on loodud projekti tegemise raames Tartu Ülikooli informaatikateaduskonna aines "Veebirakenduste
                     loomine". Projekti raames õppime looma veebirakendusi kasutades erinevaid võtteid, lahendusi ja keeli. Antud veebileht valmis kasutades raamistiku
                     Laravel. Selliseid keeli nagu PHP, CSS, HTML, Javascript. Kujunduses aitas kaasa ka Bootstrap<br><br>
                     Me ise oleme kolm täitsa tavalist Tartu Ülikooli teise aasta tudengit, kelle põhiülesandeks on mitte ülikoolist välja kukkuda ja
                     lisaks veel kindlustada endale nuudliterohke tulevik!<br>
-                    <h2 style="color:black" align="center">Meie kontaktandmed</h2><br>
+                    <h2 style="color:black">Meie kontaktandmed</h2><br>
                     <p>Stanislav Mõškovski - <a href="mailto:stanislav.myshkovski@gmail.com" target="_top">saada kiri</a></p>
-                    <img src="/../public/pictures/meist/Stanislav.jpg" align="center" width="150" height="150" class="img-circle">
+                    <img src="/../public/pictures/meist/Stanislav.jpg" class="img-circle" alt="Stanislav">
                     <p>Mari-Liis Pihlapuu - <a href="mailto:mariliis.pihlapuu@gmail.com" target="_top">saada kiri</a></p>
-                    <img src="/../public/pictures/meist/Mari.png" align="center" width="150" height="150" class="img-circle">
+                    <img src="/../public/pictures/meist/Mari.png" alt="Mari-Liis" class="img-circle">
                     <p>Edgar Pašenkov (projektijuht) - <a href="mailto:edgarpasenkov@gmail.com" target="_top">saada kuri kiri</a></p>
-                    <img src="/../public/pictures/meist/edgar.png" align="center" width="150" height="150" class="img-circle">
-                    <h2 style="color:black" align="center">Kust meid leida saab?</h2><br>
+                    <img src="/../public/pictures/meist/edgar.png" alt="Edgar" class="img-circle">
+                    <h2 style="color:black">Kust meid leida saab?</h2><br>
                     <div id="map" style="width: 100%;height:400px;">
 
                         <script>
@@ -99,17 +99,16 @@
                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Tscsbc43oo3gHqtxPAVnQ04SQtiWF1Q&callback=asukoht" type="text/javascript"></script>
                     </div>
 
-                </div></div></div>
-
-</body>
+                </div>
+    </div>
+</div>
 <footer>
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">
             <p class="navbar-text pull-left">© 2017 - Created by Stanislav Mõškovski, Mari-Liis Pihlapuu, Edgar Pašenkov
             </p>
         </div>
-
-
     </div>
 </footer>
+</body>
 </html>
