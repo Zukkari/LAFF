@@ -33,7 +33,7 @@
 
                     <div class="position-ref right">
                         @foreach (config('app.locales') as $lang => $language)
-                            <div class="links"><a href="{{ route('lang.switch', $lang) }}"><img src={{asset('/icons/'.$lang.'.png')}}> {{$language}}</a></div>
+                            <div class="links"><a href="{{ route('lang.switch', $lang) }}"><img src='{{asset('/icons/'.$lang.'.png')}}' alt={{$language}}> {{$language}}</a></div>
                         @endforeach
                     </div>
                 </div>
