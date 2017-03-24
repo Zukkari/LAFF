@@ -77,25 +77,58 @@
                         </ul>
                         <?php foreach ($postitusi as $postitusi) {?>
                         <p><?php echo $postitusi->arv; echo __('adPageMessages.totalAds') ?></p><?php } ?>
-                        <?php
-                        foreach ($postitus as $postitus) {?>
-                        <div class="col-md-12 col-lg-12 container">
-                            <div class="row">
-                                <h2><?php echo $postitus->pealkiri ?></h2>
-                                <h5><span class="glyphicon glyphicon-time"></span>
-                                    <h5 title="<?php echo __('userHelp.userName')?>"><?php echo __('adPageMessages.user'); echo $postitus->kasutaja; ?></h5>
-                                    <h5 title="<?php echo __('userHelp.time')?>"><?php echo $postitus->date; ?></h5>
-                                    <h5 title="<?php echo __('userHelp.email')?>"><?php echo $postitus->email ?></h5>
-                                </h5>
-                                <h5 ><span class="label label-danger" title="<?php echo __('userHelp.tags')?>"><?php echo $postitus->peatag ?></span> <span title="<?php echo __('userHelp.status')?>" class="label label-primary">kaotatud</span></h5><br>
-                                <div>
-                                    <p><img src="<?php echo $postitus->pildilink ?>" alt="image"></p>
-                                    <p><?php echo $postitus->kirjeldus ?></p>
+                        <div class="posts endless-pagination" data-next-page="{{$postitus->nextPageUrl()}}">
+                            @foreach($postitus as $post)
+                                <div class="col-md-12 col-lg-12 container">
+                                    <div class="row">
+                                        <h2><?php echo $post->pealkiri ?></h2>
+                                        <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email ?></h5>
+                                        <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
+                                        <div>
+                                            <p><img src="<?php echo $post->pildilink ?>" alt="image"></p>
+                                            <p><?php echo $post->kirjeldus ?></p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
-                        <?php
-                        }?>
+
+
+                        <div class="loading" style="text-align: center">
+                            <img src="/../LAFF/public/pictures/waiting.gif" style="width:100px; height: 100px">
+                        </div>
+
+
+
+                        <script>
+                            /*See skript siin AJAXI abiga laeb postitusi juurde lehele, esialgu on lehel 3 postitust ja kui kasutaja scollib alla, tulevad
+                             uued postitused nähtavale. Osa, mis laetakse juurde asub view/ajaxStuff/ajax/index.blade.php's.
+                             */
+                            $('.loading').hide(); //eespool defineeritud loading gif, koguaeg me seda ei näita
+                            $(document).ready(function () {
+                                $(window).scroll(fetchPost);
+                                function fetchPost() { //fetchimine siin
+                                    var page=$('.endless-pagination').data('next-page');
+                                    if (page!==null) { //Kui meil veel midagi fetchida, juurde laadida, näitame laadimise ajal loading gifi ja laeme ajaxi abil juurde
+                                        $('.loading').show();
+                                        clearTimeout($.data(this,"scrollCheck"));
+                                        $.data(this, "scrollCheck", setTimeout(function () {
+                                            var scroll_position_for_post_load=$(window).height()+ $(window).scrollTop()+100;
+                                            if (scroll_position_for_post_load>=$(document).height()) {
+                                                $.get(page, function (data) {
+                                                    $('.posts').append(data.postitus);
+                                                    $('.endless-pagination').data('next-page', data.next_page);
+
+                                                });
+                                                $('.loading').hide(); //Kui info laetud kaotame loading gifi
+                                            }
+                                        },350))
+                                    } else { //Kui jõumae lõppu
+                                        $('.loading').hide();
+                                    }
+                                }
+                            })
+                        </script>
                     </div>
                 </div>
             </div>
