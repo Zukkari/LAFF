@@ -95,7 +95,7 @@
 
 
                         <div class="loading" style="text-align: center">
-                            <img src="/../LAFF/public/pictures/waiting.gif" style="width:100px; height: 100px">
+                            <img src="/../public/pictures/waiting.gif" style="width:100px; height: 100px">
                         </div>
 
 
