@@ -33,7 +33,7 @@
                     <li title="<?php echo __('userHelp.logout')?>"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
                 @else
                     <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
-                    <li><a title="<?php echo __('userHelp.register')?> "href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
+                    <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
                 @endif
                 <li><form class="navbar-search navbar-form" method="get">
                         <input title="<?php echo __('userHelp.search')?>" class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
