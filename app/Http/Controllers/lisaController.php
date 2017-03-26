@@ -46,12 +46,17 @@ class lisaController extends Controller
 
         if (empty($file['kuulutusePilt'])) { //kui kasutaja pilti ei lisa, paneme pildi asemele meie default pildi
             DB::select('CALL lisa_postitus (?,?,?,?,?)',array($kasutaja, $teema, $tekst,"/../public/pictures/no_image_available.jpg", $tagid));
+            Session::flash('msg', 'Success');
+            return redirect('lisa');
+
         }
         else { //siin toimub pildi töötlemine ja vastamine standartile
             $rules = array('kuulutusePilt' => 'image',);
             $validator = Validator::make($file, $rules);
             if ($validator->fails()) { //TODO kui mingi viga tekib, hetke redirectib lihtsalt tagasi, ei sisesta postitust, vaja errorit luua
-                return Redirect::to('lisa')->withInput()->withErrors($validator);
+                Session::flash('msg_error', 'Fail');
+                return redirect('lisa');
+
             } else { //kui validaatoril mingeid probleeme ei teki, suuname pildi andmebaasi, algusese salvestame selle serveris
                 if (Input::file('kuulutusePilt')->isValid()) {
                     $destinationPath = '/webpages/lostafcsut/public_html/public/pictures';
@@ -61,10 +66,13 @@ class lisaController extends Controller
                     $path='/../public/pictures';
                     DB::select('CALL lisa_postitus (?,?,?,?,?)',array($kasutaja, $teema, $tekst,$path."/".$fileName, $tagid));
 
+                    Session::flash('msg', 'Success');
+                    return redirect('lisa');
+
                 } else {
                     // sending back with error message.
-                    Session::flash('error', 'uploaded file is not valid');
-                    return Redirect::to('lisa');
+                    Session::flash('msg_error', 'Fail');
+                    return redirect('lisa');
                 }
             }
         }

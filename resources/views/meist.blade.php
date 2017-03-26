@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lost &amp; Found Foundation</title>
+    <title>Lostaf Us</title>
 
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -25,18 +25,18 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href={{url('/')}}><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
-                <li><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
-                <li class="active"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
+                <li title="<?php echo __('userHelp.home')?>"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
+                <li title="<?php echo __('userHelp.seeAds')?>" ><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
+                <li title="<?php echo __('userHelp.aboutUs')?>" class="active"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 @if(auth()->check())
-                    <li><a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
-                    <li><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
+                    <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
+                    <li title="<?php echo __('userHelp.logout')?>"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
                 @else
-                    <li><a href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
-                    <li><a href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
+                    <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
+                    <li><a title="<?php echo __('userHelp.register')?> "href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
                 @endif
                 <li><form class="navbar-search navbar-form" method="get">
-                        <input class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
+                        <input title="<?php echo __('userHelp.search')?>" class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
                     </form>
                 </li>
                 <li class="menu-item dropdown">
