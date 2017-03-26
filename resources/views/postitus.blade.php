@@ -2,7 +2,7 @@
 <html lang="{{config('app.locale')}}">
 <head>
 
-  <title>Lost &amp; Found Foundation</title>
+  <title>Lostaf Ads</title>
 
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">

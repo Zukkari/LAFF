@@ -12,15 +12,40 @@
     <title><?php echo __('addAdmessages.pageTitle')?></title>
 </head>
 <body>
-    <div class="col-sm-7">
-        <div class="container">
-            <div class="row">
-                <button class="button button-primary" type="button"><a href={{url('/')}}><?php echo __('homePageMessages.home')?></a></button>
-                <button class="button button-neutral" type="button"><a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></button>
-                <button class="button button-neutral"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></button>
-            </div>
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li title="<?php echo __('userHelp.home')?>"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
+                <li title="<?php echo __('userHelp.seeAds')?>" ><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
+                <li title="<?php echo __('userHelp.aboutUs')?>" ><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
+                @if(auth()->check())
+                    <a title="<?php echo __('userHelp.addAd')?>" class="active" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a>
+                    <li title="<?php echo __('userHelp.logout')?>"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
+                @else
+                    <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
+                    <li><a title="<?php echo __('userHelp.register')?> "href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
+                @endif
+                <li><form class="navbar-search navbar-form" method="get">
+                        <input title="<?php echo __('userHelp.search')?>" class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
+                    </form>
+                </li>
+                <li class="menu-item dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('adPageMessages.lang') ?><b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>@foreach (config('app.locales') as $lang => $language)
+                                <a href="{{ route('lang.switch', $lang) }}"><img src='{{asset('/icons/'.$lang.'.png')}}' alt="{{$language}}"> {{$language}}</a>
+                            @endforeach
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
+</div>
     
     <div class="flex-center position-ref full-height">
 
