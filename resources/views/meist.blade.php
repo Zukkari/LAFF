@@ -13,6 +13,7 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/../public/js/asukoht.js"></script>
 
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
@@ -84,29 +85,6 @@
 			
                 <h2 class="meistH">Kust meid leida saab?</h2><br>
                     <div id="map">
-
-                        <script>
-                            function asukoht() {
-                                var myLatLng = {lat: 58.378202, lng: 26.714864};
-
-                                var map = new google.maps.Map(document.getElementById('map'), {
-                                    zoom: 17,
-                                    center: myLatLng
-                                });
-
-                                var marker = new google.maps.Marker({
-                                    position: myLatLng,
-                                    animation: google.maps.Animation.BOUNCE,
-                                    map: map,
-                                    icon:{
-                                        url: "/../public/pictures/meist/marker.png",
-                                        scaledSize: new google.maps.Size(40, 45)
-                                    },
-                                    title: 'Siin me veedamegi enamuse enda ajast!'
-                                });
-                            }
-
-                        </script>
                         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Tscsbc43oo3gHqtxPAVnQ04SQtiWF1Q&callback=asukoht" type="text/javascript"></script>
                     </div>
 
