@@ -1,8 +1,8 @@
-html {
-font-family: Raleway;
+body {
+font-family: "Times New Roman";
 }
 
-img {
+.jumbotron .kuulutusePilt{
 max-height: 150px;
 max-width: 200px;
 float: left;
@@ -27,19 +27,12 @@ width: 450px;
 text-align: center;
 }
 
-.jumbotron .loojad img {
-float: left;
-height: 100px;
-width: 150px;
-}
-
 .jumbotron .location {
 color: black;
 margin-top: 150px;
 }
 
 #map{
-
 height:400px;
 width:100%;
 }
