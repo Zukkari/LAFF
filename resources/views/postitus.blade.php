@@ -82,7 +82,7 @@
                                 <div class="col-md-12 col-lg-12 container">
                                     <div class="row">
                                         <h2><?php echo $post->pealkiri ?></h2>
-                                        <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email ?></h5>
+                                        <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
                                         <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
                                         <div>
                                             <p><img src="<?php echo $post->pildilink ?>" alt="image"></p>
@@ -99,6 +99,13 @@
                         </div>
 
 
+                        <div id="connectionerror" class="alert alert-danger alert-dismissable">
+                            Internetiühendust pole
+                        </div>
+
+                        <div id="connectionestab" class="alert alert-success alert-dismissable">
+                            Internetiühendus taastatud!
+                        </div>
 
                         <script>
                             /*See skript siin AJAXI abiga laeb postitusi juurde lehele, esialgu on lehel 3 postitust ja kui kasutaja scollib alla, tulevad
@@ -108,26 +115,52 @@
                             $(document).ready(function () {
                                 $(window).scroll(fetchPost);
                                 function fetchPost() { //fetchimine siin
-                                    var page=$('.endless-pagination').data('next-page');
-                                    if (page!==null) { //Kui meil veel midagi fetchida, juurde laadida, näitame laadimise ajal loading gifi ja laeme ajaxi abil juurde
-                                        $('.loading').show();
-                                        clearTimeout($.data(this,"scrollCheck"));
-                                        $.data(this, "scrollCheck", setTimeout(function () {
-                                            var scroll_position_for_post_load=$(window).height()+ $(window).scrollTop()+100;
-                                            if (scroll_position_for_post_load>=$(document).height()) {
-                                                $.get(page, function (data) {
-                                                    $('.posts').append(data.postitus);
-                                                    $('.endless-pagination').data('next-page', data.next_page);
+                                    if (navigator.onLine) {
+                                        var page = $('.endless-pagination').data('next-page');
+                                        if (page !== null) { //Kui meil veel midagi fetchida, juurde laadida, näitame laadimise ajal loading gifi ja laeme ajaxi abil juurde
+                                            $('.loading').show();
+                                            clearTimeout($.data(this, "scrollCheck"));
+                                            $.data(this, "scrollCheck", setTimeout(function () {
+                                                var scroll_position_for_post_load = $(window).height() + $(window).scrollTop() + 100;
+                                                if (scroll_position_for_post_load >= $(document).height()) {
+                                                    $.get(page, function (data) {
+                                                        $('.posts').append(data.postitus);
+                                                        $('.endless-pagination').data('next-page', data.next_page);
 
-                                                });
-                                                $('.loading').hide(); //Kui info laetud kaotame loading gifi
-                                            }
-                                        },350))
-                                    } else { //Kui jõumae lõppu
-                                        $('.loading').hide();
+                                                    });
+                                                    $('.loading').hide(); //Kui info laetud kaotame loading gifi
+                                                }
+                                            }, 350))
+                                        } else { //Kui jõumae lõppu
+                                            $('.loading').hide();
+                                        }
                                     }
                                 }
                             })
+                        </script>
+
+                        <script type="text/javascript">
+                            document.getElementById('connectionerror').style.display = 'none';
+                            document.getElementById('connectionestab').style.display = 'none';
+                            window.setInterval(checkConnection, 5000);
+
+                            var last = false;
+                            function checkConnection() {
+                                var current = navigator.onLine;
+
+                                if (current) {
+                                    document.getElementById('connectionerror').style.display = 'none';
+                                    if (last) {
+                                        document.getElementById('connectionestab').style.display = 'block';
+                                        last = false;
+                                    } else {
+                                        document.getElementById('connectionestab').style.display = 'none';
+                                    }
+                                } else {
+                                    document.getElementById('connectionerror').style.display = 'block';
+                                    last = true;
+                                }
+                            }
                         </script>
                     </div>
                 </div>
