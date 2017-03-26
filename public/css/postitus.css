@@ -1,41 +1,60 @@
-.button {
-    background-color: transparent;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    padding: 10px 30px 8px;
-    font-size: 16px;
-    font-family: "proxima-nova", sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.2rem;
-    line-height: 1;
-    text-transform: uppercase;
-}
-.button:hover{
-    text-decoration: none;
-    cursor: pointer;
-    color: #000;
+html {
+font-family: Raleway;
 }
 
-.button-neutral{
-    color: #000;
-    border-color: #000;
-}
-.button-neutral:hover{
-    color: #fff;
-    background-color: #000;
+img {
+max-height: 150px;
+max-width: 200px;
+float: left;
+margin-right: 10px;
 }
 
-.button-primary{
-    color: #23849b;
-    border-color: #23849b;
+.jumbotron {
+background-color: white;
 }
-.button-primary:hover{
-    color: #fff;
-    background-color: #23849b;
+
+.jumbotron .postitusi {
+color: black;
 }
+
+.jumbotron .kirjeldus {
+float: right;
+word-wrap: break-all;
+width: 450px;
+}
+
+.jumbotron #loading {
+text-align: center;
+}
+
+.jumbotron .loojad img {
+float: left;
+height: 100px;
+width: 150px;
+}
+
+.jumbotron .location {
+color: black;
+margin-top: 150px;
+}
+
+#map{
+
+height:400px;
+width:100%;
+}
+
+#meistH {
+color: black;
+}
+
+.loadimg {
+width:100px;
+height:100px;
+}
+
+.img-circle {
+height: 100px;
+width: 100px;
+}
+

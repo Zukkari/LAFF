@@ -56,23 +56,34 @@
 
 
 <div class="container">
-    <div class="jumbotron" style="background-color: white">
+    <div class="jumbotron">
         <div class="container-fluid">
-                    <h2 style="color:black" >Kes me oleme ja miks me seda teeme?</h2><br>
-                    <p style="color:black">Antud veebileht on loodud projekti tegemise raames Tartu Ülikooli informaatikateaduskonna aines "Veebirakenduste
+                    <h2 class="meistH">Kes me oleme ja miks me seda teeme?</h2><br>
+                    <p class="meistH">Antud veebileht on loodud projekti tegemise raames Tartu Ülikooli informaatikateaduskonna aines "Veebirakenduste
                     loomine". Projekti raames õppime looma veebirakendusi kasutades erinevaid võtteid, lahendusi ja keeli. Antud veebileht valmis kasutades raamistiku
                     Laravel. Selliseid keeli nagu PHP, CSS, HTML, Javascript. Kujunduses aitas kaasa ka Bootstrap<br><br>
                     Me ise oleme kolm täitsa tavalist Tartu Ülikooli teise aasta tudengit, kelle põhiülesandeks on mitte ülikoolist välja kukkuda ja
                     lisaks veel kindlustada endale nuudliterohke tulevik!<br>
-                    <h2 style="color:black">Meie kontaktandmed</h2><br>
-                    <p>Stanislav Mõškovski - <a href="mailto:stanislav.myshkovski@gmail.com" target="_top">saada kiri</a></p>
-                    <img src="/../public/pictures/meist/Stanislav.jpg" class="img-circle" alt="Stanislav">
-                    <p>Mari-Liis Pihlapuu - <a href="mailto:mariliis.pihlapuu@gmail.com" target="_top">saada kiri</a></p>
-                    <img src="/../public/pictures/meist/Mari.png" alt="Mari-Liis" class="img-circle">
-                    <p>Edgar Pašenkov (projektijuht) - <a href="mailto:edgarpasenkov@gmail.com" target="_top">saada kuri kiri</a></p>
-                    <img src="/../public/pictures/meist/edgar.png" alt="Edgar" class="img-circle">
-                    <h2 style="color:black">Kust meid leida saab?</h2><br>
-                    <div id="map" style="width: 100%;height:400px;">
+
+                    <h2 class="meistH">Meie kontaktandmed</h2><br>
+			<table>
+			<tr>
+			<td><img src="/../public/pictures/meist/Stanislav.jpg" class="img-circle" alt="Stanislav"></td>
+			<td><p>Stanislav Mõškovski - <a href="mailto:stanislav.myshkovski@gmail.com" target="_top">saada kiri</a></p></td>
+			</tr>
+			<tr>
+			<td><img src="/../public/pictures/meist/Mari.png" alt="Mari-Liis" class="img-circle"></td>
+			<td><p>Mari-Liis Pihlapuu - <a href="mailto:mariliis.pihlapuu@gmail.com" target="_top">saada kiri</a></p></td>
+			</tr>
+			<tr>
+			<td><img src="/../public/pictures/meist/edgar.png" alt="Edgar" class="img-circle"></td>
+			<td><p>Edgar Pašenkov (projektijuht) - <a href="mailto:edgarpasenkov@gmail.com" target="_top">saada kuri kiri</a></p></td>
+			</tr>
+			</table>
+
+			
+                <h2 class="meistH">Kust meid leida saab?</h2><br>
+                    <div id="map">
 
                         <script>
                             function asukoht() {
