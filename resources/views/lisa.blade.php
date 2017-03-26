@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC>
-
+<html lang="{{config('app.locale')}}">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
@@ -11,6 +11,12 @@
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
 
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="/../public/css/postitus.css" rel="stylesheet" type="text/css">
@@ -29,7 +35,7 @@
                 <li title="<?php echo __('userHelp.seeAds')?>" ><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
                 <li title="<?php echo __('userHelp.aboutUs')?>" ><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 @if(auth()->check())
-                    <li><a title="<?php echo __('userHelp.addAd')?>" class="active" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
+                    <li title="<?php echo __('userHelp.addAd')?>" class="active"><a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
                     <li title="<?php echo __('userHelp.logout')?>"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
                 @else
                     <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
