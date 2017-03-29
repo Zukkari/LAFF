@@ -26,6 +26,10 @@ Route::get('lisa', function () {
     }
 });
 
+Route::get('/home', function () {
+    return view('welcome');
+});
+
 Route::get('/meist', function () {
     Session::put('redirectTo', '/meist');
     return view('meist');

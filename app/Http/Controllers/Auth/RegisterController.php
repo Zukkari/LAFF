@@ -20,6 +20,8 @@ class RegisterController extends Controller
     |
     */
 
+    protected $redirectTo = '/';
+
     use RegistersUsers;
 
     /**
