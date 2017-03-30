@@ -88,7 +88,7 @@
 
     <div class="form-group">
         {!! Form::label('teema', __('addAdmessages.adTopic')) !!}
-        {!! Form::text('teema', null, array('required', 'class' => 'form-control', 'placeholder' => __('addAdmessages.adTopicPH'))) !!}
+        {!! Form::text('teema', null, array('required', 'maxlength=50', 'class' => 'form-control', 'placeholder' => __('addAdmessages.adTopicPH'))) !!}
     </div>
 
     <div class="form-group">
@@ -98,7 +98,7 @@
 
     <div class="form-group">
         {!! Form::label('tekst' , __('addAdmessages.adTags')) !!}
-        {!! Form::text('tagid', null, array('required', 'class' => 'form-control', 'placeholder' =>  __('addAdmessages.adTagsPH'))) !!}
+        {!! Form::text('tagid', null, array('required', 'maxlength=50' ,'class' => 'form-control', 'placeholder' =>  __('addAdmessages.adTagsPH'))) !!}
     </div>
 
     <div class="form-group">

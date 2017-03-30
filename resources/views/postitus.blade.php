@@ -95,11 +95,9 @@
                             @endforeach
 			<hr>
                         </div>
-
-
-                        <div><span class="loading">
-                            <img class="loadimg" src="/../public/pictures/waiting.gif" alt="loadingGIF"/>
-                        </span></div>
+			<div class="loading">
+                            <img id="loadimg" src="/../public/pictures/waiting.gif" alt="loadingGIF"/>
+                        </div>
 
 
                         <div id="connectionerror" class="alert alert-danger alert-dismissable">
@@ -112,9 +110,9 @@
 
                         <script>
                             /*See skript siin AJAXI abiga laeb postitusi juurde lehele, esialgu on lehel 3 postitust ja kui kasutaja scollib alla, tulevad
-                             uued postitused n√§htavale. Osa, mis laetakse juurde asub view/ajaxStuff/ajax/index.blade.php's.
+                             uued postitused n‰htavale. Osa, mis laetakse juurde asub view/ajaxStuff/ajax/index.blade.php's.
                              */
-                            $('.loading').hide(); //eespool defineeritud loading gif, koguaeg me seda ei n√§ita
+                            $('.loading').hide(); //eespool defineeritud loading gif, koguaeg me seda ei n‰ita
                             $(document).ready(function () {
                                 $(window).scroll(fetchPost);
                             });
@@ -126,12 +124,16 @@
 			    var last = false;
                             window.setInterval(checkConnection, 5000);
                         </script>
-                    </div>
+
+
+                                            </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<br><br><br><br>
 <footer>
     <div class="navbar navbar-default navbar-fixed-bottom">
         <div class="container">

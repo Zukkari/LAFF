@@ -1,0 +1,14 @@
+[26-Mar-2017 20:11:49 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class App\Exceptions\Handler does not exist' in /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:681
+Stack trace:
+#0 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(681): ReflectionClass->__construct('App\\Exceptions\\...')
+#1 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(565): Illuminate\Container\Container->build('App\\Exceptions\\...')
+#2 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(702): Illuminate\Container\Container->make('App\\Exceptions\\...')
+#3 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(239): Illuminate\Foundation\Application->make('App\\Exceptions\\...', Array)
+#4 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(678): Illuminate\Container\Contai in /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 681
+[26-Mar-2017 20:11:50 UTC] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class App\Exceptions\Handler does not exist' in /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:681
+Stack trace:
+#0 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(681): ReflectionClass->__construct('App\\Exceptions\\...')
+#1 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(565): Illuminate\Container\Container->build('App\\Exceptions\\...')
+#2 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(702): Illuminate\Container\Container->make('App\\Exceptions\\...')
+#3 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(239): Illuminate\Foundation\Application->make('App\\Exceptions\\...', Array)
+#4 /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(678): Illuminate\Container\Contai in /webpages/lostafcsut/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 681

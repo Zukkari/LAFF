@@ -3,8 +3,8 @@ font-family: "Times New Roman";
 }
 
 .jumbotron .kuulutusePilt{
-max-height: 150px;
-max-width: 200px;
+height: 150px;
+width: 200px;
 float: left;
 margin-right: 10px;
 }
@@ -19,12 +19,13 @@ color: black;
 
 .jumbotron .kirjeldus {
 float: right;
-word-wrap: break-all;
 width: 450px;
 }
 
-.jumbotron #loading {
-text-align: center;
+.loading {
+    margin: auto;
+    width: 25%;
+    padding: 10px;
 }
 
 .jumbotron .location {
@@ -39,11 +40,6 @@ width:100%;
 
 #meistH {
 color: black;
-}
-
-.loadimg {
-width:100px;
-height:100px;
 }
 
 .img-circle {
