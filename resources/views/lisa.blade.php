@@ -23,19 +23,22 @@
 
     <title><?php echo __('addAdmessages.pageTitle')?></title>
 </head>
-<body>
+<body class="body-bottom">
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
-        </div>
-        <div class="collapse navbar-collapse">
+        <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
                 <li title="<?php echo __('userHelp.home')?>"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
                 <li title="<?php echo __('userHelp.seeAds')?>" ><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
-                <li title="<?php echo __('userHelp.aboutUs')?>" ><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
+                <li title="<?php echo __('userHelp.aboutUs')?>" class="active"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 @if(auth()->check())
-                    <li title="<?php echo __('userHelp.addAd')?>" class="active"><a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
+                    <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
                     <li title="<?php echo __('userHelp.logout')?>"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
                 @else
                     <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
@@ -54,11 +57,23 @@
                         </li>
                     </ul>
                 </li>
+                @if(auth()->check())
+                    <li class="menu-item dropdown">
+                        <a href="#" data-toggle="dropdown"><img src="http://www.nochoffen.de/static/img/avatar_placeholder.png" height="25px"></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
+                                <a href="{{url('/profiil')}}"><?php echo __('userHelp.profile')?></a>
+                                <a href="#"><?php echo __('userHelp.settings')?></a>
+                                <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>
 </div>
-
 
 <div class="flex-center position-ref full-height">
 
@@ -88,7 +103,7 @@
 
     <div class="form-group">
         {!! Form::label('teema', __('addAdmessages.adTopic')) !!}
-        {!! Form::text('teema', null, array('required', 'maxlength=50', 'class' => 'form-control', 'placeholder' => __('addAdmessages.adTopicPH'))) !!}
+        {!! Form::text('teema', null, array('required', 'maxlength=50','class' => 'form-control', 'placeholder' => __('addAdmessages.adTopicPH'))) !!}
     </div>
 
     <div class="form-group">
@@ -98,7 +113,7 @@
 
     <div class="form-group">
         {!! Form::label('tekst' , __('addAdmessages.adTags')) !!}
-        {!! Form::text('tagid', null, array('required', 'maxlength=50' ,'class' => 'form-control', 'placeholder' =>  __('addAdmessages.adTagsPH'))) !!}
+        {!! Form::text('tagid', null, array('required', 'maxlength=50', 'class' => 'form-control', 'placeholder' =>  __('addAdmessages.adTagsPH'))) !!}
     </div>
 
     <div class="form-group">

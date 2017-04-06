@@ -27,10 +27,13 @@
 <body class="body-bottom">
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
-        </div>
-        <div class="collapse navbar-collapse">
+        <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
                 <li title="<?php echo __('userHelp.home')?>"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
                 <li title="<?php echo __('userHelp.seeAds')?>" class="active"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
@@ -55,6 +58,19 @@
                         </li>
                     </ul>
                 </li>
+                @if(auth()->check())
+                    <li class="menu-item dropdown">
+                        <a href="#" data-toggle="dropdown"><img src="/../public/pictures/avatar_placeholder.png" height="25px"></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
+                                <a href="{{url('/profiil')}}"><?php echo __('userHelp.profile')?></a>
+                                <a href="#"><?php echo __('userHelp.settings')?></a>
+                                <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>
@@ -83,7 +99,7 @@
                             @foreach($postitus as $post)
                                 <div class="col-md-12 col-lg-12 container">
                                     <div class="row">
-                                        <h2><?php echo $post->pealkiri ?></h2>
+                                        <h2><?php echo $post->pealkiri ?></h2> <span class="vote"></span>
                                         <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
                                         <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
                                         <div>
@@ -110,9 +126,9 @@
 
                         <script>
                             /*See skript siin AJAXI abiga laeb postitusi juurde lehele, esialgu on lehel 3 postitust ja kui kasutaja scollib alla, tulevad
-                             uued postitused n�htavale. Osa, mis laetakse juurde asub view/ajaxStuff/ajax/index.blade.php's.
+                             uued postitused n�htavale. Osa, mis laetakse juurde asub view/ajaxStuff/ajax/index.blade.php's.
                              */
-                            $('.loading').hide(); //eespool defineeritud loading gif, koguaeg me seda ei n�ita
+                            $('.loading').hide(); //eespool defineeritud loading gif, koguaeg me seda ei n�ita
                             $(document).ready(function () {
                                 $(window).scroll(fetchPost);
                             });
@@ -135,12 +151,7 @@
 
 <br><br><br><br>
 <footer>
-    <div class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container">
-            <p class="navbar-text pull-left">© 2017 - Created by Stanislav Mõškovski, Mari-Liis Pihlapuu, Edgar Pašenkov
-            </p>
-        </div>
-    </div>
+<?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?>
 </footer>
 </body>
 </html>

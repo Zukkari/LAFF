@@ -20,10 +20,13 @@
 <body class="body-bottom">
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
-        </div>
-        <div class="collapse navbar-collapse">
+        <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+            <span class = "icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
                 <li title="<?php echo __('userHelp.home')?>"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
                 <li title="<?php echo __('userHelp.seeAds')?>" ><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
@@ -48,6 +51,19 @@
                         </li>
                     </ul>
                 </li>
+                @if(auth()->check())
+                    <li class="menu-item dropdown">
+                        <a href="#" data-toggle="dropdown"><img src="http://www.nochoffen.de/static/img/avatar_placeholder.png" height="25px"></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
+                                <a href="{{url('/profiil')}}"><?php echo __('userHelp.profile')?></a>
+                                <a href="#"><?php echo __('userHelp.settings')?></a>
+                                <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>
@@ -114,12 +130,6 @@
     </div>
 </div>
 <footer>
-    <div class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container">
-            <p class="navbar-text pull-left">© 2017 - Created by Stanislav Mõškovski, Mari-Liis Pihlapuu, Edgar Pašenkov
-            </p>
-        </div>
-    </div>
-</footer>
+    <?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?></footer>
 </body>
 </html>

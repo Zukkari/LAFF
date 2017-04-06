@@ -27,4 +27,7 @@ return [
     'search' => 'Search ads',
 
     'logout' => 'Log out of the current session',
+	
+	'profile' => 'Profile',
+	'settings' => 'Settings',
 ];

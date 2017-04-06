@@ -35,6 +35,11 @@ Route::get('/meist', function () {
     return view('meist');
 });
 
+Route::get('/profiil', function () {
+    Session::put('redirectTo', '/profiil');
+    return view('profile');
+});
+
 
 /*
 Route::get('postitus', function () {

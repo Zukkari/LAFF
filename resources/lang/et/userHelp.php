@@ -27,4 +27,7 @@ return [
     'search' => 'Otsi postitusi',
 
     'logout' => 'Logi praegusest sessioonist välja',
+	
+	'profile' => 'Profiil',
+	'settings' => 'Seaded',
 ];

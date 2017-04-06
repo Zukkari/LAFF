@@ -27,4 +27,7 @@ return [
     'search' => 'Искать объявления',
 
     'logout' => 'Закончить сессию и выйти',
+	
+	'profile' => 'Mari ei oska',
+	'settings' => 'Ne umeju',
 ];
