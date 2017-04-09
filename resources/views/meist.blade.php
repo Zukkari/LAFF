@@ -73,28 +73,28 @@
 <div class="container">
     <div class="jumbotron">
         <div class="container-fluid">
-                    <h2 class="meistH">Kes me oleme ja miks me seda teeme?</h2><br>
-                    <p class="meistH">Antud veebileht on loodud projekti tegemise raames Tartu Ülikooli informaatikateaduskonna aines "Veebirakenduste
-                    loomine". Projekti raames õppime looma veebirakendusi kasutades erinevaid võtteid, lahendusi ja keeli. Antud veebileht valmis kasutades raamistiku
-                    Laravel. Selliseid keeli nagu PHP, CSS, HTML, Javascript. Kujunduses aitas kaasa ka Bootstrap<br><br>
-                    Me ise oleme kolm täitsa tavalist Tartu Ülikooli teise aasta tudengit, kelle põhiülesandeks on mitte ülikoolist välja kukkuda ja
-                    lisaks veel kindlustada endale nuudliterohke tulevik!<br>
+            <h2 class="meistH">Kes me oleme ja miks me seda teeme?</h2><br>
+            <p class="meistH">Antud veebileht on loodud projekti tegemise raames Tartu Ülikooli informaatikateaduskonna aines "Veebirakenduste
+                loomine". Projekti raames õppime looma veebirakendusi kasutades erinevaid võtteid, lahendusi ja keeli. Antud veebileht valmis kasutades raamistiku
+                Laravel. Selliseid keeli nagu PHP, CSS, HTML, Javascript. Kujunduses aitas kaasa ka Bootstrap<br><br>
+                Me ise oleme kolm täitsa tavalist Tartu Ülikooli teise aasta tudengit, kelle põhiülesandeks on mitte ülikoolist välja kukkuda ja
+                lisaks veel kindlustada endale nuudliterohke tulevik!<br>
 
-                    <h2 class="meistH">Meie kontaktandmed</h2><br>
-			<table>
-			<tr>
-			<td><img src="/../public/pictures/meist/Stanislav.jpg" class="img-circle" alt="Stanislav"></td>
-			<td><p>Stanislav Mõškovski - <a href="mailto:stanislav.myshkovski@gmail.com" target="_top">saada kiri</a></p></td>
-			</tr>
-			<tr>
-			<td><img src="/../public/pictures/meist/Mari.png" alt="Mari-Liis" class="img-circle"></td>
-			<td><p>Mari-Liis Pihlapuu - <a href="mailto:mariliis.pihlapuu@gmail.com" target="_top">saada kiri</a></p></td>
-			</tr>
-			<tr>
-			<td><img src="/../public/pictures/meist/edgar.png" alt="Edgar" class="img-circle"></td>
-			<td><p>Edgar Pašenkov (projektijuht) - <a href="mailto:edgarpasenkov@gmail.com" target="_top">saada kuri kiri</a></p></td>
-			</tr>
-			</table>
+            <h2 class="meistH">Meie kontaktandmed</h2><br>
+            <table>
+                <tr>
+                    <td><img src="/../public/pictures/meist/Stanislav.jpg" class="img-circle" alt="Stanislav"></td>
+                    <td><p>Stanislav Mõškovski - <a href="mailto:stanislav.myshkovski@gmail.com" target="_top">saada kiri</a></p></td>
+                </tr>
+                <tr>
+                    <td><img src="/../public/pictures/meist/Mari.png" alt="Mari-Liis" class="img-circle"></td>
+                    <td><p>Mari-Liis Pihlapuu - <a href="mailto:mariliis.pihlapuu@gmail.com" target="_top">saada kiri</a></p></td>
+                </tr>
+                <tr>
+                    <td><img src="/../public/pictures/meist/edgar.png" alt="Edgar" class="img-circle"></td>
+                    <td><p>Edgar Pašenkov (projektijuht) - <a href="mailto:edgarpasenkov@gmail.com" target="_top">saada kuri kiri</a></p></td>
+                </tr>
+            </table>
             <div class="container-fluid"><div class="break"></div></div>
 
             <?php
@@ -126,9 +126,7 @@ aeFV0a07nwkUAAPYxACWhKBKEj+H9PRWOOff0LZ+IZhH4WsOWMdNmqGvN/o2WC8Z
 zcmMlFX5A0EthapSgZkQFYDEwSzwkeGgb8RrQLBfPJjaXZR68pDs3/MNq+pHY0xO
 cHmKJCxrpwBgBhb9SEbnMp43yfXArKaI4u4tAqqsCg+hB8vJIKis
 -----END RSA PRIVATE KEY-----");
-
-            $date = date('Y-m-d\TH:i:s\+0300');
-
+            $datetime = date('Y-m-d\TH:i:s\+0300');
             $fields = array(
                 "VK_SERVICE" => "1011",
                 "VK_VERSION" => "008",
@@ -143,10 +141,9 @@ cHmKJCxrpwBgBhb9SEbnMp43yfXArKaI4u4tAqqsCg+hB8vJIKis
                 "VK_MSG" => "Make Lost & Found Foundation great again!",
                 "VK_RETURN" => "http://lostaf.cs.ut.ee/meist",
                 "VK_CANCEL" => "http://lostaf.cs.ut.ee/meist", /* Võib midagi muud ka välja mõelda */
-                "VK_DATETIME" => "2017-04-06T22:05:55+0300",
+                "VK_DATETIME" => "2017-04-09T21:50:42+0300",
                 "VK_ENCODING" => "utf-8",
             );
-
             $data = str_pad(mb_strlen($fields["VK_SERVICE"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_SERVICE"] .    /* 1011 */
                 str_pad(mb_strlen($fields["VK_VERSION"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_VERSION"] .    /* 008 */
                 str_pad(mb_strlen($fields["VK_SND_ID"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_SND_ID"] .     /* uid100010 */
@@ -160,52 +157,47 @@ cHmKJCxrpwBgBhb9SEbnMp43yfXArKaI4u4tAqqsCg+hB8vJIKis
                 str_pad(mb_strlen($fields["VK_RETURN"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_RETURN"] .     /*  */
                 str_pad(mb_strlen($fields["VK_CANCEL"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_CANCEL"] .     /*  */
                 str_pad(mb_strlen($fields["VK_DATETIME"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_DATETIME"];    /* 2016-04-08T18:51:12+0300 */
-
             openssl_sign($data, $signature, $private_key, OPENSSL_ALGO_SHA1);
             $fields["VK_MAC"] = base64_encode($signature);
-
             ?>
 
             <div class="break"></div>
             <p>Make Lost & Found Foundation great again!</p>
 
-            <form method="post" action="https://localhost:8080/banklink/swedbank-common">
+            <form method="post" action="http://localhost:8080/banklink/swedbank-common">
 
                 <?php foreach($fields as $key => $val):?>
                 <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($val); ?>" />
                 <?php endforeach; ?>
                 <input type="submit" class="donate" value="Please take my money"/>
             </form>
-			
-                <h2 class="meistH">Kust meid leida saab?</h2><br>
-                    <div id="map">
 
-                        <script>
-                            function asukoht() {
-                                var myLatLng = {lat: 58.378202, lng: 26.714864};
+            <h2 class="meistH">Kust meid leida saab?</h2><br>
+            <div id="map">
 
-                                var map = new google.maps.Map(document.getElementById('map'), {
-                                    zoom: 17,
-                                    center: myLatLng
-                                });
+                <script>
+                    function asukoht() {
+                        var myLatLng = {lat: 58.378202, lng: 26.714864};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 17,
+                            center: myLatLng
+                        });
+                        var marker = new google.maps.Marker({
+                            position: myLatLng,
+                            animation: google.maps.Animation.BOUNCE,
+                            map: map,
+                            icon:{
+                                url: "/../public/pictures/meist/marker.png",
+                                scaledSize: new google.maps.Size(40, 45)
+                            },
+                            title: 'Siin me veedamegi enamuse enda ajast!'
+                        });
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Tscsbc43oo3gHqtxPAVnQ04SQtiWF1Q&callback=asukoht" type="text/javascript"></script>
+            </div>
 
-                                var marker = new google.maps.Marker({
-                                    position: myLatLng,
-                                    animation: google.maps.Animation.BOUNCE,
-                                    map: map,
-                                    icon:{
-                                        url: "/../public/pictures/meist/marker.png",
-                                        scaledSize: new google.maps.Size(40, 45)
-                                    },
-                                    title: 'Siin me veedamegi enamuse enda ajast!'
-                                });
-                            }
-
-                        </script>
-                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Tscsbc43oo3gHqtxPAVnQ04SQtiWF1Q&callback=asukoht" type="text/javascript"></script>
-                    </div>
-
-                </div>
+        </div>
     </div>
 </div>
 <footer>
