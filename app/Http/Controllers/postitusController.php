@@ -30,4 +30,47 @@ class postitusController extends Controller
 
         return view("postitus", ['postitusi' => $postitusi])->with('postitus', $postitus);
     }
+
+    public function best(\Illuminate\Http\Request $request) {
+        Session::put('redirectTo', 'postitus');
+
+
+        $postitusi = DB::select('CALL postituste_arv()'); //mitu postitust on süsteemis
+        $postitus = DB::table('postitus_vaade')->orderBy('reiting', 'desc')->paginate($this->leheküljel);
+
+        //See osa siin on vajalik lehekülje osade hilisema laadimise jaoks. Kui pöördutakse ajaxiga, siis laetakse veidikene teine leht
+        if ($request->ajax()) {
+            return ["postitus"=>view("ajaxStuff.ajax.index", ['postitusi'=>$postitusi])->with('postitus',$postitus)->render(),
+                'next_page' =>$postitus->nextPageUrl()
+            ];
+        }
+        return view("postitus", ['postitusi' => $postitusi])->with('postitus', $postitus);
+
+    }
+
+
+    public function recent(\Illuminate\Http\Request $request)
+    {
+
+        Session::put('redirectTo', 'postitus');
+
+
+        $postitusi = DB::select('CALL postituste_arv()'); //mitu postitust on süsteemis
+        $postitus = DB::table('postitus_vaade')->paginate($this->leheküljel);
+
+        //See osa siin on vajalik lehekülje osade hilisema laadimise jaoks. Kui pöördutakse ajaxiga, siis laetakse veidikene teine leht
+        if ($request->ajax()) {
+            return ["postitus"=>view("ajaxStuff.ajax.index", ['postitusi'=>$postitusi])->with('postitus',$postitus)->render(),
+                'next_page' =>$postitus->nextPageUrl()
+            ];
+        }
+
+
+        return view("postitus", ['postitusi' => $postitusi])->with('postitus', $postitus);
+    }
+
+
+
+
+
 }

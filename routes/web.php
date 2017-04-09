@@ -26,31 +26,34 @@ Route::get('lisa', function () {
     }
 });
 
-Route::get('/home', function () {
-    return view('welcome');
-});
-
 Route::get('/meist', function () {
     Session::put('redirectTo', '/meist');
-    return view('meist');
+    return view('meist' ,['ns'=>'Niisama']);
 });
 
-Route::get('/profiil', function () {
-    Session::put('redirectTo', '/profiil');
-    return view('profile');
-});
 
 
 /*
-Route::get('postitus', function () {
-    return view ('postitus');
+Route::get('profile', function () {
+    if (Auth::check()) {
+        return redirect()->action('lisaController@wtf');
+    } else {
+        Session::put('redirectTo', 'profile');
+        return redirect('/login');
+    }
 });*/
+
+Route::get('/profile', 'profileController@index');
+Route::get('/getmsg', 'AjaxController@index');
+
+Route::post('/getmsg','postitusController@test');
 
 Route::get("postitus", 'postitusController@index');
 
-//Route::get('/lisa', ['as' => 'lisa', 'uses' => 'lisaController@create']);
+Route::get("best", 'postitusController@best');
 
-//Route::post('/lisa', ['as' => '/lisatud', 'uses' => 'lisaController@store']);
+Route::get("recent", 'postitusController@index');
+
 
 Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'langController@changeLocale']);
 

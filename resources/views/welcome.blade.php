@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lostaf Main</title>
+    <title><?php echo __('titles.titleHome')?></title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -21,7 +21,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./dist/js/bootstrap.min.js"></script>
 
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
@@ -38,12 +37,11 @@
         </button>
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav">
-                <li title="<?php echo __('userHelp.home')?>"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
+                <li title="<?php echo __('userHelp.home')?>" class="active"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
                 <li title="<?php echo __('userHelp.seeAds')?>" ><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
-                <li title="<?php echo __('userHelp.aboutUs')?>" class="active"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
+                <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 @if(auth()->check())
                     <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
-                    <li title="<?php echo __('userHelp.logout')?>"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
                 @else
                     <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
                     <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
@@ -63,11 +61,11 @@
                 </li>
                 @if(auth()->check())
                     <li class="menu-item dropdown">
-                        <a href="#" data-toggle="dropdown"><img src="http://www.nochoffen.de/static/img/avatar_placeholder.png" height="25px"></a>
+                        <a href="#" data-toggle="dropdown"><img src="/../public/pictures/meist/avatar_placeholder.png" height="25px"></a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
-                                <a href="{{url('/profiil')}}"><?php echo __('userHelp.profile')?></a>
+                                <a href="{{url('/profile')}}"><?php echo __('userHelp.profile')?></a>
                                 <a href="#"><?php echo __('userHelp.settings')?></a>
                                 <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
                             </li>
@@ -96,5 +94,10 @@
         @endif
     </div>
 </div>
+
+<footer>
+    <?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?>
+</footer>
+
 </body>
 </html>

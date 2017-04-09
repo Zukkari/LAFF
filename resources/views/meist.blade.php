@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lostaf Us</title>
+    <title><?php echo __('titles.titleUs')?></title>
 
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -33,7 +33,6 @@
                 <li title="<?php echo __('userHelp.aboutUs')?>" class="active"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 @if(auth()->check())
                     <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
-                    <li title="<?php echo __('userHelp.logout')?>"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
                 @else
                     <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
                     <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
@@ -53,11 +52,11 @@
                 </li>
                 @if(auth()->check())
                     <li class="menu-item dropdown">
-                        <a href="#" data-toggle="dropdown"><img src="http://www.nochoffen.de/static/img/avatar_placeholder.png" height="25px"></a>
+                        <a href="#" data-toggle="dropdown"><img src="/../public/pictures/meist/avatar_placeholder.png" height="25px"></a>
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
-                                <a href="{{url('/profiil')}}"><?php echo __('userHelp.profile')?></a>
+                                <a href="{{url('/profile')}}"><?php echo __('userHelp.profile')?></a>
                                 <a href="#"><?php echo __('userHelp.settings')?></a>
                                 <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
                             </li>
@@ -170,7 +169,7 @@ cHmKJCxrpwBgBhb9SEbnMp43yfXArKaI4u4tAqqsCg+hB8vJIKis
             <div class="break"></div>
             <p>Make Lost & Found Foundation great again!</p>
 
-            <form method="post" action="http://localhost:8080/banklink/swedbank-common">
+            <form method="post" action="https://localhost:8080/banklink/swedbank-common">
 
                 <?php foreach($fields as $key => $val):?>
                 <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($val); ?>" />
@@ -210,6 +209,8 @@ cHmKJCxrpwBgBhb9SEbnMp43yfXArKaI4u4tAqqsCg+hB8vJIKis
     </div>
 </div>
 <footer>
-    <?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?></footer>
+    <?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?>
+</footer>
+
 </body>
 </html>

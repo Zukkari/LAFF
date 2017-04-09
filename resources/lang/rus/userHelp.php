@@ -28,6 +28,6 @@ return [
 
     'logout' => 'Закончить сессию и выйти',
 	
-	'profile' => 'Mari ei oska',
-	'settings' => 'Ne umeju',
+	'profile' => 'Профиль',
+	'settings' => 'Настройки',
 ];

@@ -14,7 +14,10 @@ return [
     'remember' => 'Remember me',
     'log_in' => 'Log in',
     'fbgmail' => 'Log in with Gmail or Facebook',
-    'search' => 'Search'
+    'search' => 'Search',
+    'newData'=> 'There are new ads in database, to see all, please, refresh page',
+    'last'=> 'Last added ad',
+
 
 
     ];

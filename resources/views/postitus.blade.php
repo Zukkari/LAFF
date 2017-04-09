@@ -2,7 +2,7 @@
 <html lang="{{config('app.locale')}}">
 <head>
 
-  <title>Lostaf Ads</title>
+  <title><?php echo __('titles.titleAds')?></title>
 
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -15,9 +15,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="./dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/../public/js/checkConnection.js"></script>
     <script src="/../public/js/fetchPost.js"></script>
+    <script src="/../public/js/polling.js"></script>
+    <script src="/../public/js/nupuAbiline.js"></script>
 
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
@@ -40,7 +41,6 @@
                 <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 @if(auth()->check())
                     <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
-                    <li title="<?php echo __('userHelp.logout')?>"><a href="{{route('logout')}}"><?php echo __('auth.logout')?></a></li>
                 @else
                     <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
                     <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
@@ -64,7 +64,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
-                                <a href="{{url('/profiil')}}"><?php echo __('userHelp.profile')?></a>
+                                <a href="{{url('/profile')}}"><?php echo __('userHelp.profile')?></a>
                                 <a href="#"><?php echo __('userHelp.settings')?></a>
                                 <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
                             </li>
@@ -72,6 +72,10 @@
                     </li>
                 @endif
             </ul>
+
+
+
+
         </div>
     </div>
 </div>
@@ -84,17 +88,40 @@
                     <div class="col-sm-10">
                         <ul class="nav nav-pills">
                             <li class="active">
-                                <a href="#" title="<?php echo __('userHelp.newAds')?>"><?php echo __('adPageMessages.new') ?></a>
+                                <a href="{{url('postitus')}}" title="<?php echo __('userHelp.newAds')?>"><?php echo __('adPageMessages.new') ?></a>
                             </li>
                             <li>
-                                <a href="#" title="<?php echo __('userHelp.topAds')?>"><?php echo __('adPageMessages.top') ?></a>
+                                <a id="bestNupp" href="{{url('best')}}" title="<?php echo __('userHelp.topAds')?>"><?php echo __('adPageMessages.top') ?></a>
                             </li>
                             <li>
-                                <a href="#" title="<?php echo __('userHelp.recentlyAds')?>"><?php echo __('adPageMessages.found') ?></a>
+                                <a href="{{url('recent')}}" title="<?php echo __('userHelp.recentlyAds')?>"><?php echo __('adPageMessages.found') ?></a>
                             </li>
                         </ul>
-                        <?php foreach ($postitusi as $postitusi) {?>
-                        <p class="postitusi"><?php echo $postitusi->arv; echo __('adPageMessages.totalAds') ?></p><?php } ?>
+
+
+
+                        <div class="col-md-12 col-lg-12 container" id="uus" style="display: none">
+                            <div class="row">
+                                <h2 class="uued"><?php echo __('adPageMessages.newData')?></h2>
+                                <h2><?php echo __('adPageMessages.last')?></h2>
+                                <h2 id="pealkiri"></h2>
+                                <h5 style="display:inline"><?php echo __('adPageMessages.user')?></h5><h5 style="display:inline"  id="kasutaja"></h5>
+                                <h5 ><span class="glyphicon glyphicon-time" id="aeg"></span></h5>
+                                <h5 ><span class="label label-danger" id="peatag"></span> <span class="label label-primary">kaotatud</span></h5><br>
+                                <div>
+                                    <p><img class="kuulutusePilt" id="pildilink" src="" alt="image"></p>
+                                    <p class="kirjeldus" id="text"></p>
+                                </div>
+                            </div>
+                            <hr>
+                            <br><br><br><br><br>
+
+                        </div>
+
+
+
+
+                        <p class="postitusi" id="arv" style="display:inline"></p><p class="postitusi" style="display:inline"><?php echo __('adPageMessages.totalAds') ?></p>
                         <div class="posts endless-pagination" data-next-page="{{$postitus->nextPageUrl()}}">
                             @foreach($postitus as $post)
                                 <div class="col-md-12 col-lg-12 container">
@@ -107,7 +134,10 @@
                                             <p class="kirjeldus"><?php echo $post->kirjeldus ?></p>
                                         </div>
                                     </div>
+                                    <br><br>
+                                    <hr>
                                 </div>
+
                             @endforeach
 			<hr>
                         </div>
@@ -151,8 +181,9 @@
 
 <br><br><br><br>
 <footer>
-<?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?>
+    <?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?>
 </footer>
+
 </body>
 </html>
 

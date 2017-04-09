@@ -13,13 +13,9 @@ margin-right: 10px;
 background-color: white;
 }
 
-.jumbotron .postitusi {
-color: black;
-}
-
 .jumbotron .kirjeldus {
-float: right;
 width: 450px;
+float: inherit;
 }
 
 .loading {
@@ -31,6 +27,11 @@ width: 450px;
 .jumbotron .location {
 color: black;
 margin-top: 150px;
+}
+
+.jumbotron .uued {
+    background-color: #2ca02c;
+    text-align: center;
 }
 
 #map{
@@ -47,3 +48,16 @@ height: 100px;
 width: 100px;
 }
 
+.vote {
+  display: inline-block;
+  overflow: hidden;
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+  background: url('/../public/icons/vote.png');
+  background-position: 0 -25px;
+} 
+
+.vote.on {
+  background-position: 0 2px;
+}

@@ -14,5 +14,8 @@ return [
     'remember' => 'Jäta mind meelde',
     'log_in' => 'Sisene',
     'fbgmail' => 'Sisene Gmaili või Facebooki kaudu',
-    'search' => 'Otsing'
+    'search' => 'Otsing',
+    'newData'=> 'Andmebaasi on lisandunud uued postitused! Kõikide nägemiseks uuendage lehte!',
+    'last'=> 'Viimati lisatud postitus',
+
 ];
