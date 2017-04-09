@@ -34,6 +34,10 @@ margin-top: 150px;
     text-align: center;
 }
 
+.jumbotron .info {
+    display: inline;
+}
+
 #map{
 height:400px;
 width:100%;

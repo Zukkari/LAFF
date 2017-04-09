@@ -104,12 +104,12 @@
                             <div class="row">
                                 <h2 class="uued"><?php echo __('adPageMessages.newData')?></h2>
                                 <h2><?php echo __('adPageMessages.last')?></h2>
-                                <h2 id="pealkiri"></h2>
-                                <h5 style="display:inline"><?php echo __('adPageMessages.user')?></h5><h5 style="display:inline"  id="kasutaja"></h5>
-                                <h5 ><span class="glyphicon glyphicon-time" id="aeg"></span></h5>
-                                <h5 ><span class="label label-danger" id="peatag"></span> <span class="label label-primary">kaotatud</span></h5><br>
+                                <h2 id="pealkiri">x</h2>
+                                <h5 class="info"><?php echo __('adPageMessages.user')?></h5><h5 class="info"  id="kasutaja">x</h5><br>
+                                <span class="glyphicon glyphicon-time"></span><h5 class="info" id="aeg">x</h5>
+                                <h5><span class="label label-danger" id="peatag">x</span> <span class="label label-primary">kaotatud</span></h5><br>
                                 <div>
-                                    <p><img class="kuulutusePilt" id="pildilink" src="" alt="image"></p>
+                                    <p><img class="kuulutusePilt" id="pildilink" src="x" alt="image"></p>
                                     <p class="kirjeldus" id="text"></p>
                                 </div>
                             </div>
