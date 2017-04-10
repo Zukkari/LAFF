@@ -102,8 +102,14 @@
 
                         <div class="col-md-12 col-lg-12 container" id="uus" style="display: none">
                             <div class="row">
-                                <h2 class="uued"><?php echo __('adPageMessages.newData')?></h2>
-                                <h2><?php echo __('adPageMessages.last')?></h2>
+                                <div class="row">
+                                    <div class="uued">
+                                        <div class="alert alert-success alert-dismissable">
+                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                            <h3><strong><?php echo __('adPageMessages.newData')?></strong></h3>
+                                        </div>
+                                    </div>
+                                    <h3><?php echo __('adPageMessages.last')?></h3>
                                 <h2 id="pealkiri">x</h2>
                                 <h5 class="info"><?php echo __('adPageMessages.user')?></h5><h5 class="info"  id="kasutaja">x</h5><br>
                                 <span class="glyphicon glyphicon-time"></span><h5 class="info" id="aeg">x</h5>
