@@ -123,10 +123,21 @@
                             <br><br><br><br><br>
 
                         </div>
+                        @if (auth()->check())
+                            <script type="text/javascript">
+                                var upvoted = [];
+                                var downvoted = [];
+                                getUpvoted({{auth()->user()->id}});
+                                getDownvoted({{auth()->user()->id}});
 
-
-
-
+                                window.setTimeout(initButtons, 2000);
+                            </script>
+                        @else
+                            <script type="text/javascript">
+                                var upvoted = [];
+                                var downvoted = [];
+                            </script>
+                        @endif
                         <p class="postitusi" id="arv" style="display:inline"></p><p class="postitusi" style="display:inline"><?php echo __('adPageMessages.totalAds') ?></p>
                         <div class="posts endless-pagination" data-next-page="{{$postitus->nextPageUrl()}}">
                             @foreach($postitus as $post)
@@ -134,26 +145,15 @@
                                     <div class="row">
                                         <h2><?php echo $post->pealkiri ?></h2>
                                         <div>
-                                            @if (auth()->check())
-                                                <script type="text/javascript">
-                                                    var upvoted = [];
-                                                    var downvoted = [];
-                                                    getUpvoted({{auth()->user()->id}});
-                                                    getDownvoted({{auth()->user()->id}});
-
-                                                    $(document).ready(getRating({{$post->id}}));
-                                                </script>
-                                            @else
-                                                <script type="text/javascript">
-                                                    var upvoted = [];
-                                                    var downvoted = [];
-                                                    $(document).ready(getRating({{$post->id}}));
-                                                </script>
-                                            @endif
+                                            <script type="text/javascript">
+                                                $(document).ready(function() {
+                                                    getRating({{$post->id}});
+                                                });
+                                            </script>
                                             <label id={{$post->id}}>0</label>
                                             @if (auth()->check())
-                                            <button id="upvote" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
-                                            <button id="downvote" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
+                                            <button id="<?php echo $post->id ?>" class="upvoteBtn" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
+                                            <button id="<?php echo $post->id ?>" class="downvoteBtn" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
                                             @endif
                                         </div>
                                         <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
@@ -166,7 +166,6 @@
                                     <br><br>
                                     <hr>
                                 </div>
-
                             @endforeach
 			<hr>
                         </div>
