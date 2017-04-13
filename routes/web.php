@@ -31,17 +31,8 @@ Route::get('/meist', function () {
     return view('meist' ,['ns'=>'Niisama']);
 });
 
-
-
-/*
-Route::get('profile', function () {
-    if (Auth::check()) {
-        return redirect()->action('lisaController@wtf');
-    } else {
-        Session::put('redirectTo', 'profile');
-        return redirect('/login');
-    }
-});*/
+Route::post('/postitus', 'VotingController@vote');
+Route::get('/getVotes', 'VotingController@getRating');
 
 Route::get('/profile', 'profileController@index');
 Route::get('/getmsg', 'AjaxController@index');

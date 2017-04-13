@@ -1,7 +1,15 @@
 @foreach($postitus as $post)
     <div class="col-md-12 col-lg-12 container">
         <div class="row">
-            <h2><?php echo $post->pealkiri ?></h2> <span class="vote"></span>
+            <h2><?php echo $post->pealkiri ?></h2>
+            <div>
+                <script type="text/javascript">
+                    $(document).ready(getRating({{$post->id}}));
+                </script>
+                <label id={{$post->id}}>0</label>
+                <button id="upvote" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
+                <button id="downvote" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
+            </div>
             <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
             <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
             <div>

@@ -6,6 +6,7 @@
 
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +19,7 @@
     <script type="text/javascript" src="/../public/js/checkConnection.js"></script>
     <script src="/../public/js/fetchPost.js"></script>
     <script src="/../public/js/polling.js"></script>
-    <script src="/../public/js/nupuAbiline.js"></script>
+    <script type="text/javascript" src="/../public/js/voting.js"></script>
 
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
@@ -102,20 +103,19 @@
 
                         <div class="col-md-12 col-lg-12 container" id="uus" style="display: none">
                             <div class="row">
-                                <div class="row">
-                                    <div class="uued">
+                                 <div class="uued">
                                         <div class="alert alert-success alert-dismissable">
                                             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                                             <h3><strong><?php echo __('adPageMessages.newData')?></strong></h3>
                                         </div>
                                     </div>
-                                    <h3><?php echo __('adPageMessages.last')?></h3>
+                                <h3><?php echo __('adPageMessages.last')?></h3>
                                 <h2 id="pealkiri">x</h2>
                                 <h5 class="info"><?php echo __('adPageMessages.user')?></h5><h5 class="info"  id="kasutaja">x</h5><br>
                                 <span class="glyphicon glyphicon-time"></span><h5 class="info" id="aeg">x</h5>
                                 <h5><span class="label label-danger" id="peatag">x</span> <span class="label label-primary">kaotatud</span></h5><br>
                                 <div>
-                                    <p><img class="kuulutusePilt" id="pildilink" src="x" alt="image"></p>
+                                    <p><img class="kuulutusePilt" id="pildilink" src="" alt="image"></p>
                                     <p class="kirjeldus" id="text"></p>
                                 </div>
                             </div>
@@ -132,7 +132,15 @@
                             @foreach($postitus as $post)
                                 <div class="col-md-12 col-lg-12 container">
                                     <div class="row">
-                                        <h2><?php echo $post->pealkiri ?></h2> <span class="vote"></span>
+                                        <h2><?php echo $post->pealkiri ?></h2>
+                                        <div>
+                                            <script type="text/javascript">
+                                                $(document).ready(getRating({{$post->id}}));
+                                            </script>
+                                            <label id={{$post->id}}>0</label>
+                                            <button id="upvote" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
+                                            <button id="downvote" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
+                                        </div>
                                         <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
                                         <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
                                         <div>
@@ -173,12 +181,12 @@
                         <script type="text/javascript">
                             document.getElementById('connectionerror').style.display = 'none';
                             document.getElementById('connectionestab').style.display = 'none';
-			    var last = false;
+			                var last = false;
                             window.setInterval(checkConnection, 5000);
                         </script>
 
 
-                                            </div>
+                    </div>
                 </div>
             </div>
         </div>
