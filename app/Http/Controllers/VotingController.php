@@ -62,4 +62,24 @@ class VotingController extends Controller
             return 'Not AJAX request';
         }
     }
+
+    public function getUpvoted(Request $request) {
+        if ($request->ajax()){
+            $userid = $request->input('userid');
+
+            $response = Vote::where('kasutajaID', $userid)->where('status', 1)->get()->pluck('postitusID')->toArray();
+
+            return $response;
+        }
+    }
+
+    public function getDownvoted(Request $request) {
+        if ($request->ajax()) {
+            $userid = $request->input('userid');
+
+            $response = Vote::where('kasutajaID', $userid)->where('status', -1)->get()->pluck('postitusID')->toArray();
+
+            return $response;
+        }
+    }
 }

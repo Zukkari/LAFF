@@ -31,8 +31,14 @@ Route::get('/meist', function () {
     return view('meist' ,['ns'=>'Niisama']);
 });
 
+Route::get('/voting', function () {
+    return view('voting');
+});
+
 Route::post('/postitus', 'VotingController@vote');
 Route::get('/getVotes', 'VotingController@getRating');
+Route::get('/getUpvoted', 'VotingController@getUpvoted');
+Route::get('/getDownvoted', 'VotingController@getDownvoted');
 
 Route::get('/profile', 'profileController@index');
 Route::get('/getmsg', 'AjaxController@index');

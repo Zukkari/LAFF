@@ -134,12 +134,27 @@
                                     <div class="row">
                                         <h2><?php echo $post->pealkiri ?></h2>
                                         <div>
-                                            <script type="text/javascript">
-                                                $(document).ready(getRating({{$post->id}}));
-                                            </script>
+                                            @if (auth()->check())
+                                                <script type="text/javascript">
+                                                    var upvoted = [];
+                                                    var downvoted = [];
+                                                    getUpvoted({{auth()->user()->id}});
+                                                    getDownvoted({{auth()->user()->id}});
+
+                                                    $(document).ready(getRating({{$post->id}}));
+                                                </script>
+                                            @else
+                                                <script type="text/javascript">
+                                                    var upvoted = [];
+                                                    var downvoted = [];
+                                                    $(document).ready(getRating({{$post->id}}));
+                                                </script>
+                                            @endif
                                             <label id={{$post->id}}>0</label>
+                                            @if (auth()->check())
                                             <button id="upvote" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
                                             <button id="downvote" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
+                                            @endif
                                         </div>
                                         <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
                                         <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
