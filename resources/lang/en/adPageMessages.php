@@ -17,7 +17,10 @@ return [
     'search' => 'Search',
     'newData'=> 'There are new ads in database, to see all, please, refresh page',
     'last'=> 'Last added ad',
-
-
-
+    'urcomments'=> 'Add your comment',
+    'submit'=> 'Submit your comment',
+    'comments' => 'Check out others comments',
+    'posted' => 'Posted by ',
+    'topic' => 'Insert your comments here',
+    'nocomments' => 'Seems that there are no comments, but you can be first!'
     ];

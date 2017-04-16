@@ -13,14 +13,14 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="/../public/css/default.css" rel="stylesheet" type="text/css">
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="/../public/css/postitus.css" rel="stylesheet" type="text/css">
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 
 
     <!-- Head icon -->
@@ -28,72 +28,81 @@
 
 </head>
 <body class="body-bottom">
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-            <span class = "icon-bar"></span>
-            <span class = "icon-bar"></span>
-            <span class = "icon-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse navHeaderCollapse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li title="<?php echo __('userHelp.home')?>"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
-                <li title="<?php echo __('userHelp.seeAds')?>" ><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
-                <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
+                <li title="<?php echo __('userHelp.home')?>"><a href="{{url('/')}}"><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
+                <li title="<?php echo __('userHelp.seeAds')?>"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
                 @if(auth()->check())
                     <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
-                @else
-                    <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
-                    <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
                 @endif
-                <li><form class="navbar-search navbar-form" method="get">
-                        <input title="<?php echo __('userHelp.search')?>" class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
-                    </form>
-                </li>
-                <li class="menu-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('adPageMessages.lang') ?><b class="caret"></b></a>
-                    <ul class="dropdown-menu" role="menu">
+                <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
+                <li><form class="navbar-form navbar-left">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo __('adPageMessages.lang') ?> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
                         <li>@foreach (config('app.locales') as $lang => $language)
                                 <a href="{{ route('lang.switch', $lang) }}"><img src='{{asset('/icons/'.$lang.'.png')}}' alt="{{$language}}"> {{$language}}</a>
                             @endforeach
                         </li>
                     </ul>
                 </li>
-                @if(auth()->check())
-                    <li class="menu-item dropdown">
-                        <a href="#" data-toggle="dropdown"><img src="/../public/pictures/meist/avatar_placeholder.png" height="25px"></a>
-                        <ul class="dropdown-menu" role="menu">
+                @if (auth()->guest())
+                    <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
+                    <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
+                @endif
+
+                @if (auth()->check())
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/../public/pictures/avatar_placeholder.png" height="25px"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
-                                <a href="{{url('/profile')}}"><?php echo __('userHelp.profile')?></a>
+                                <a href="{{url('/profile/'.auth()->user()->kasutajanimi)}}"><?php echo __('userHelp.profile')?></a>
                                 <a href="#"><?php echo __('userHelp.settings')?></a>
                                 <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
                             </li>
                         </ul>
                     </li>
                 @endif
+
             </ul>
         </div>
     </div>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="content">
+</nav>
+<br><br><br><br>
+
+<div class="content" align="center">
         <div class="profile">
-            <h1><?php echo auth()->user()->kasutajanimi ?></h1>
+            <h1><?php echo $name->kasutajanimi; ?></h1>
             <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png">
         </div>
-	<p> <i class="glyphicon glyphicon-envelope"></i><?php echo auth()->user()->email ?></p>
+	<p> <i class="glyphicon glyphicon-envelope"></i><?php echo $name->email; ?></p>
         <br>
         <div class="ads">
             <h2><?php echo __('profile.myads')?></h2>
 		<div class="container">
-    <div class="row col-md-6 col-md-offset-3 custyle">
+
     <table class="table table-striped custab">
     <thead>
         <tr>
@@ -101,31 +110,39 @@
             <th><?php echo __('profile.title')?></th>
             <th><?php echo __('profile.date')?></th>
             <th><?php echo __('profile.tags')?></th>
+            @if(auth()->check())
+                @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
+                    <th><?php echo __('profile.interaction')?></th>
+                @endif
+            @endif
+
         </tr>
     </thead>
         @foreach($postitusKasutaja as $kasutajaPost)
         <tr>
             <td><?php echo $kasutajaPost->id ?></td>
-            <td><?php echo $kasutajaPost->pealkiri ?></td>
+            <td><a href="{{ url('postitus/'.$kasutajaPost->id) }}"><?php echo $kasutajaPost->pealkiri ?></a></td>
             <td><?php echo $kasutajaPost->date ?></td>
             <td><?php echo $kasutajaPost->peatag ?></td>
+            @if(auth()->check())
+                @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
+                    <td> <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
+                        <a href="{{ route('ad.delete', ['ad_id' => $kasutajaPost->id]) }}"><?php echo __('profile.delete')?></a></td>
+                @endif
+            @endif
         </tr>
         @endforeach
 
 
 
     </table>
-    </div>
+
 
 
 </div>
         </div>
     </div>
 </div>
-
-<footer>
-    <?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?>
-</footer>
 
 </body>
 </html>

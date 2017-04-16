@@ -2,6 +2,12 @@
     <div class="col-md-12 col-lg-12 container">
         <div class="row">
             <h2><?php echo $post->pealkiri ?></h2>
+            @if(auth()->check())
+                @if(auth()->user()->kasutajanimi == $post->kasutaja)
+                    <a href="#" class="edit">Edit</a> |
+                    <a href="{{ route('ad.delete', ['ad_id' => $post->id]) }}">Delete</a>
+                @endif
+            @endif
             <div>
                 <script type="text/javascript">
                     $(document).ready(getRating({{$post->id}}));

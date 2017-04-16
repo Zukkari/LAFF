@@ -69,6 +69,15 @@ class postitusController extends Controller
         return view("postitus", ['postitusi' => $postitusi])->with('postitus', $postitus);
     }
 
+    public function deleteAd($ad_id) {
+        $postitus = DB::table('postitus_vaade')->get()->where('id', $ad_id)->first();
+        if (auth()->user()->kasutajanimi != $postitus->kasutaja) {
+            return redirect()->back();
+        }
+        DB::select('CALL kustuta_postitus(?)', array($postitus->id));
+        return redirect()->back();
+    }
+
 
 
 

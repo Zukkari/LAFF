@@ -27,59 +27,68 @@
 
 </head>
 <body class="body-bottom">
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-            <span class = "icon-bar"></span>
-            <span class = "icon-bar"></span>
-            <span class = "icon-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse navHeaderCollapse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href={{url('/')}}>Lost & Found Foundation</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li title="<?php echo __('userHelp.home')?>"><a href='{{url('/')}}'><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
+                <li title="<?php echo __('userHelp.home')?>"><a href="{{url('/')}}"><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
                 <li title="<?php echo __('userHelp.seeAds')?>" class="active"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
-                <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 @if(auth()->check())
                     <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
-                @else
-                    <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
-                    <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
                 @endif
-                <li><form class="navbar-search navbar-form" method="get">
-                        <input title="<?php echo __('userHelp.search')?>" class="form-control" placeholder="<?php echo __('adPageMessages.search') ?>" name="s" type="text">
-                    </form>
-                </li>
-                <li class="menu-item dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('adPageMessages.lang') ?><b class="caret"></b></a>
-                    <ul class="dropdown-menu" role="menu">
+                <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
+                <li><form class="navbar-form navbar-left">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo __('adPageMessages.lang') ?> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
                         <li>@foreach (config('app.locales') as $lang => $language)
                                 <a href="{{ route('lang.switch', $lang) }}"><img src='{{asset('/icons/'.$lang.'.png')}}' alt="{{$language}}"> {{$language}}</a>
                             @endforeach
                         </li>
                     </ul>
                 </li>
-                @if(auth()->check())
-                    <li class="menu-item dropdown">
-                        <a href="#" data-toggle="dropdown"><img src="/../public/pictures/avatar_placeholder.png" height="25px"></a>
-                        <ul class="dropdown-menu" role="menu">
+                @if (auth()->guest())
+                    <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
+                    <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
+                @endif
+
+                @if (auth()->check())
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/../public/pictures/avatar_placeholder.png" height="25px"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
-                                <a href="{{url('/profile')}}"><?php echo __('userHelp.profile')?></a>
+                                <a href="{{url('/profile/'.auth()->user()->kasutajanimi)}}"><?php echo __('userHelp.profile')?></a>
                                 <a href="#"><?php echo __('userHelp.settings')?></a>
                                 <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
                             </li>
                         </ul>
                     </li>
                 @endif
+
             </ul>
-
-
-
-
         </div>
     </div>
-</div>
+</nav>
 <br/>
 <div class="container">
     <div class="jumbotron">
@@ -123,6 +132,8 @@
                             <br><br><br><br><br>
 
                         </div>
+
+
                         @if (auth()->check())
                             <script type="text/javascript">
                                 var upvoted = [];
@@ -138,12 +149,23 @@
                                 var downvoted = [];
                             </script>
                         @endif
+
+
                         <p class="postitusi" id="arv" style="display:inline"></p><p class="postitusi" style="display:inline"><?php echo __('adPageMessages.totalAds') ?></p>
                         <div class="posts endless-pagination" data-next-page="{{$postitus->nextPageUrl()}}">
                             @foreach($postitus as $post)
                                 <div class="col-md-12 col-lg-12 container">
                                     <div class="row">
-                                        <h2><?php echo $post->pealkiri ?></h2>
+                                        <a href={{'postitus/'.$post->id}}><h2><?php echo $post->pealkiri ?> </h2></a>
+
+                                        @if(auth()->check())
+                                            @if(auth()->user()->kasutajanimi == $post->kasutaja)
+                                                <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
+                                                <a href="{{ route('ad.delete', ['ad_id' => $post->id]) }}"><?php echo __('profile.delete')?></a>
+                                            @endif
+                                        @endif
+
+
                                         <div>
                                             <script type="text/javascript">
                                                 $(document).ready(function() {

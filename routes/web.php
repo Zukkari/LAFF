@@ -31,10 +31,52 @@ Route::get('/meist', function () {
     return view('meist' ,['ns'=>'Niisama']);
 });
 
+//Postituste eemaldamine
+Route::get('delete/{ad_id}', [
+    'uses' => 'postitusController@deleteAd',
+    'as' => 'ad.delete',
+]);
+
+//Antud route avab meile postituse id järgi
+Route::get('/postitus/{id}', [
+    'uses' =>'commentsController@index']);
+
+//Kommentaaride lisamine postitusele
+Route::post('/createpost/{id}', [
+    'uses' => 'commentsController@postCreatePost',
+    //'as' => 'post.create/{id}',
+
+]);
+
+//Kommentaaride eemaldamine postitusest
+Route::get('/delete-post/{post_id}', [
+    'uses' => 'commentsController@getDeletePost',
+    'as' => 'post.delete',
+    'middleware' => 'auth'
+]);
+
+//Peaks kommentaaride muutmine olema, aga pole realiseeritud veel!
+Route::post('/edit', [
+    'uses' => 'commentsController@postEditPost',
+    'as' => 'edit'
+]);
+
+
+//PROFIILIBLOKK
+
+//Kasutaja profiili avamine
+Route::get('/profile/{id}', [
+        'uses' => 'profileController@index']
+);
+
+
+
+//TODO KELLE OMA SEE ON JA MIS VIEW??
 Route::get('/voting', function () {
     return view('voting');
 });
 
+//VOTING SYSTEM
 Route::post('/postitus', 'VotingController@vote');
 Route::get('/getVotes', 'VotingController@getRating');
 Route::get('/getUpvoted', 'VotingController@getUpvoted');
