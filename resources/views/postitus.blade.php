@@ -141,7 +141,7 @@
                                 getUpvoted({{auth()->user()->id}});
                                 getDownvoted({{auth()->user()->id}});
 
-                                window.setTimeout(initButtons, 2000);
+                                window.setTimeout(initButtons, 750);
                             </script>
                         @else
                             <script type="text/javascript">

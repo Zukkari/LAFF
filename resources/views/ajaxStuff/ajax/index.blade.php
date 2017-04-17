@@ -11,7 +11,7 @@
             <div>
                 <script type="text/javascript">
                     $(document).ready(getRating({{$post->id}}));
-                    window.setTimeout(initButtons, 2000);
+                    window.setTimeout(initButtons, 750);
                 </script>
                 <label id={{$post->id}}>0</label>
                 @if (auth()->check())
