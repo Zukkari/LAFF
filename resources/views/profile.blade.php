@@ -74,7 +74,7 @@
 
                 @if (auth()->check())
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/../public/pictures/avatar_placeholder.png" height="25px"><span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/../public/pictures/avatar_placeholder.png"  height="25px" alt="image"><span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
@@ -92,10 +92,10 @@
 </nav>
 <br><br><br><br>
 
-<div class="content" align="center">
+<div class="tekst">
         <div class="profile">
             <h1><?php echo $name->kasutajanimi; ?></h1>
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png" alt="image">
         </div>
 	<p> <i class="glyphicon glyphicon-envelope"></i><?php echo $name->email; ?></p>
         <br>
@@ -142,7 +142,7 @@
 </div>
         </div>
     </div>
-</div>
+
 
 </body>
 </html>

@@ -52,6 +52,10 @@ height: 100px;
 width: 100px;
 }
 
+.tekst {
+    text-align: center;
+}
+
 .vote {
   display: inline-block;
   overflow: hidden;

@@ -97,7 +97,7 @@
 
 
 
-<div class="content" align="center">
+<div class="tekst">
 
     <h1>Lost & Found Foundation <br>
         <?php echo __('homePageMessages.slogan')?></h1>

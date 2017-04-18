@@ -97,7 +97,7 @@
                             @foreach($data as $post)
                             <div class="col-md-12 col-lg-12 container">
                                 <div class="row">
-                                    <h2><?php echo $post->pealkiri ?> </h2> <span class="vote"></span>
+                                    <h2><?php echo $post->pealkiri ?> </h2>
                                     <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
                                     <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
                                     <div>
@@ -138,7 +138,7 @@
                                         <h4><?php echo __('adPageMessages.nocomments')?></h4>
                                     @endif
                                     @foreach($kommentaarid as $kommentaar)
-                                        <article class="post" data-postid="{{ $kommentaar->id }}">
+                                        <div class="post" data-postid="{{ $kommentaar->id }}">
                                             <p>{{ $kommentaar->body }}</p>
                                             <div class="info">
                                                 <?php echo __('adPageMessages.posted')?><a href="{{url('/profile/'.$kommentaar->kasutaja_nimi)}}">{{ $kommentaar->kasutaja_nimi }}</a> {{ $kommentaar->date }}
@@ -152,7 +152,7 @@
                                             @endif
                                             </div>
 
-                                        </article>
+                                        </div>
                                         @endforeach
                                 </div>
                     </div>
@@ -163,8 +163,6 @@
             </div>
         </div>
     </div>
-</div>
-</div>
 
 
 <div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
