@@ -17,32 +17,33 @@ class VotingController extends Controller
                 $vote = $request->input('vote');
                 $user = Auth::user()->id;
 
-                $entry = Vote::where('kasutajaID', $user) -> where('postitusID', $post)->first();
+                $entry = Vote::where('kasutajaID', $user)->where('postitusID', $post)->first();
 
-                if ($entry != null)
-                {
+                if ($entry != null) {
                     if ($entry->status == $vote) {
                         $entry->status = 0;
                         $entry->timestamps = false;
                         $entry->save();
+                        DB::select('CALL uuenda_reiting (?)', array($post));
                     } else {
                         $entry->status = $vote;
                         $entry->timestamps = false;
                         $entry->save();
+                        DB::select('CALL uuenda_reiting (?)', array($post));
                     }
-                }
-                else
-                {
+                } else {
                     $entry = new Vote;
                     $entry->kasutajaID = $user;
                     $entry->postitusID = $post;
                     $entry->timestamps = false;
                     $entry->save();
+                    DB::select('CALL uuenda_reiting (?)', array($post));
                 }
             } else {
                 return "Not AJAX request";
             }
-        } else {
+        }
+         else {
             return "User not signed in";
         }
     }
