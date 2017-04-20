@@ -1,7 +1,7 @@
 @foreach($postitus as $post)
     <div class="col-md-12 col-lg-12 container">
         <div class="row">
-            <h2><?php echo $post->pealkiri ?></h2>
+            <a href={{'postitus/'.$post->id}}><h2><?php echo $post->pealkiri ?> </h2></a>
             @if(auth()->check())
                 @if(auth()->user()->kasutajanimi == $post->kasutaja)
                     <a href="#" class="edit">Edit</a> |
@@ -13,10 +13,10 @@
                     $(document).ready(getRating({{$post->id}}));
                     window.setTimeout(initButtons, 750);
                 </script>
-                <label id={{$post->id}}>0</label>
+                <?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
                 @if (auth()->check())
-                <button id="<?php echo $post->id ?>" class="upvoteBtn" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
-                <button id="<?php echo $post->id ?>" class="downvoteBtn" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
+                    <button id="<?php echo $post->id ?>" class="upvoteBtn" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
+                    <button id="<?php echo $post->id ?>" class="downvoteBtn" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
                 @endif
             </div>
             <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
