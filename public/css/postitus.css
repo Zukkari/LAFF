@@ -117,3 +117,31 @@ width: 100px;
         display:block !important;
     }
 }
+
+.btn-primary {
+    background-color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #4c4c4c;
+}
+
+.btn-primary:active {
+    background-color: darkgrey !important;
+}
+
+.btn-primary:focus {
+    background-color: darkgrey !important;
+}
+
+.btn-primary:target {
+    background-color: darkgrey !important;
+}
+
+.btn-primary:after {
+    background-color: darkgrey !important;
+}
+
+.btn-primary:after:focus {
+    background-color: darkgrey !important;
+}
