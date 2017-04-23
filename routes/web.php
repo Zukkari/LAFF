@@ -62,8 +62,7 @@ Route::get('/delete-post/{post_id}', [
 
 //Peaks kommentaaride muutmine olema, aga pole realiseeritud veel!
 Route::post('/edit', [
-    'uses' => 'commentsController@postEditPost',
-    'as' => 'edit'
+    'uses' => 'commentsController@updateComment',
 ]);
 
 
@@ -74,11 +73,13 @@ Route::get('/profile/{id}', [
         'uses' => 'profileController@index']
 );
 
-
-
 //TODO KELLE OMA SEE ON JA MIS VIEW??
 Route::get('/voting', function () {
     return view('voting');
+});
+
+Route::get('/error', function () {
+    return view('error');
 });
 
 //VOTING SYSTEM
@@ -106,6 +107,7 @@ Route::get("lisa", 'lisaController@index');
 Route::post("store", "lisaController@store");
 
 Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
+
 
 /*
  *  route redirect on selleks, et väljakutsuda facebooki autentimise teenust

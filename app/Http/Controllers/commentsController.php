@@ -49,18 +49,18 @@ class commentsController extends Controller
     }
 
 
-    //TODO Kommentaaride muutmine, pole realiseeritud. midagi on katki
-    public function postEditPost(Request $request)
-    {
-        $this->validate($request, [
-            'body' => 'required'
-        ]);
-        $post = Post::find($request['postId']);
-        if (Auth::user() != $post->user) {
-            return redirect()->back();
+    public function updateComment(Request $request) {
+        if ($request->ajax()) {
+            if ($request->input('type') == 'updateComment') {
+                $id = $request->input('commentId');
+                $text = $request->input('commentText');
+
+                DB::select('CALL uuenda_Kommentaar(?,?)', array($id, $text));
+
+                return redirect()->back();
+            }
+        } else {
+            return 'Not AJAX request';
         }
-        $post->body = $request['body'];
-        $post->update();
-        return response()->json(['new_body' => $post->body], 200);
     }
 }

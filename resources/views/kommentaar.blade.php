@@ -6,6 +6,7 @@
 
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +72,7 @@
 
                 @if (auth()->check())
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/../public/pictures/avatar_placeholder.png" height="25px"><span class="caret"></span></a>
+                       <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{auth()->user()->avatar}}" height="25px"> {{ auth()->user()->kasutajanimi }}<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
@@ -131,22 +132,24 @@
                                 @endif
                         </div>
 
-
+                                <script>
+                                    var editing = [];
+                                </script>
                                 <div class="kommentaarid">
                                     <h2><?php echo __('adPageMessages.comments')?></h2>
                                     @if (count($kommentaarid)<1)
                                         <h4><?php echo __('adPageMessages.nocomments')?></h4>
                                     @endif
                                     @foreach($kommentaarid as $kommentaar)
-                                        <div class="post" data-postid="{{ $kommentaar->id }}">
-                                            <p>{{ $kommentaar->body }}</p>
+                                        <div class="post" data-postid="{{ $kommentaar->id }}" id="{{$kommentaar->id}}">
+                                            <p class="commentText" id="{{$kommentaar->id}}">{{ $kommentaar->body }}</p>
                                             <div class="info">
                                                 <?php echo __('adPageMessages.posted')?><a href="{{url('/profile/'.$kommentaar->kasutaja_nimi)}}">{{ $kommentaar->kasutaja_nimi }}</a> {{ $kommentaar->date }}
                                             </div>
                                             <div class="interaction">
                                             @if(auth()->check())
                                                 @if(auth()->user()->kasutajanimi == $kommentaar->kasutaja_nimi)
-                                                        <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
+                                                        <a onclick="editComment({{$kommentaar->id}})" class="edit"><?php echo __('profile.edit')?></a> |
                                                         <a href="{{ route('post.delete', ['post_id' => $kommentaar->id]) }}"><?php echo __('profile.delete')?></a>
                                                 @endif
                                             @endif
@@ -187,6 +190,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
 
 
 
