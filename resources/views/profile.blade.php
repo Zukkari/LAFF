@@ -20,7 +20,7 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 
     <!-- Head icon -->
@@ -74,7 +74,7 @@
 
                 @if (auth()->check())
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/../public/pictures/avatar_placeholder.png"  height="25px" alt="image"><span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{auth()->user()->avatar}}" height="25px"> {{ auth()->user()->kasutajanimi }}<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
@@ -91,18 +91,69 @@
     </div>
 </nav>
 <br><br><br><br>
+<script>
+    $(function(){
+        var navMain = $(".navbar-collapse"); // avoid dependency on #id
+// "a:not([data-toggle])" - to avoid issues caused
+// when you have dropdown inside navbar
+        navMain.on("click", "a:not([data-toggle])", null, function () {
+            navMain.collapse('hide');
+        });
+    });
+
+</script>
+
+
+@if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 <div class="tekst">
-        <div class="profile">
-            <h1><?php echo $name->kasutajanimi; ?></h1>
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png" alt="image">
-        </div>
-	<p> <i class="glyphicon glyphicon-envelope"></i><?php echo $name->email; ?></p>
-        <br>
-        <div class="ads">
-            <h2><?php echo __('profile.myads')?></h2>
-		<div class="container">
+    <h2><?php echo $name->kasutajanimi?></h2>
+    <img src=" <?php echo $name->avatar?>" alt="image" class="avatar">
+    <p><i class="glyphicon glyphicon-envelope"></i><a href="mailto:<?php echo $name->email?>" target="_top"><?php echo $name->email; ?></a></p>
+    <p><?php echo __('profile.registration')?><?php echo $name->created_at?> </p>
+<br>
+    @if(auth()->check())
+        @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
+            <form action="{{ url('storeImg') }}" enctype="multipart/form-data" method="POST">
+                {{ csrf_field() }}
+                <h2><?php echo __('profile.change')?></h2>
+                <label>Avatar</label>
+                <input id="inp" type="file" name="avatar"/><br>
+                <label><?php echo __('profile.name')?></label><br>
+                <input type="text" name="name" value="<?php echo $name->kasutajanimi?>"><br><br>
+                <label><?php echo __('profile.email')?></label><br>
+                <input type="text" name="email" value="<?php echo $name->email?>"><br>
 
+
+                <br>
+                <input id="inp" type="submit" value="<?php echo __('profile.submit')?>" class="btn btn-sm btn-primary">
+            </form>
+        @endif
+    @endif
+
+</div>
+
+
+
+
+
+
+
+        <div class="tekst">
+            <h2><?php echo __('profile.myads')?></h2>
+
+
+
+            <div class="container">
+    <div class="row col-md-6 col-md-offset-3 custyle">
     <table class="table table-striped custab">
     <thead>
         <tr>
@@ -136,16 +187,12 @@
 
 
     </table>
-
+    </div>
 
 
 </div>
         </div>
-    </div>
 
-<br><br><br><br>
-<footer class="row">
-    @include('footer')
-</footer>
+
 </body>
 </html>

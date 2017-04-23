@@ -72,6 +72,8 @@ Route::post('/edit', [
 Route::get('/profile/{id}', [
         'uses' => 'profileController@index']
 );
+Route::post("storeImg", "profileController@storeImg");
+
 
 //TODO KELLE OMA SEE ON JA MIS VIEW??
 Route::get('/voting', function () {

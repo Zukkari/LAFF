@@ -12,7 +12,7 @@ class commentsController extends Controller
     //Loeb sisse kommentaarid, mis seotud antud id'ga postitusega ja tagastab vaate selle postitusega
     public function index($id) {
         $postitus = DB::table('postitus_vaade')->get()->where('id',$id);
-        $posts=DB::table('kommentaar')->get()->where('postitus_id',$id);
+        $posts=DB::table('kommentaarview')->get()->where('postitus_id',$id);
         return view('kommentaar',['kommentaarid' => $posts])->with('data',$postitus );
         //return $id;
     }
@@ -28,7 +28,7 @@ class commentsController extends Controller
         //$post = new Post();*/
 
         $teema=$request->input('body');
-        $kasutaja = auth()->user()->kasutajanimi;
+        $kasutaja = auth()->user()->id;
 
         //$name = $request->imelik;
         DB::select('CALL lisa_kommentaar (?,?,?)',array($teema, $kasutaja, $id));
@@ -40,7 +40,7 @@ class commentsController extends Controller
     public function getDeletePost($post_id)
     {
         $post = DB::table('kommentaar')->get()->where('id', $post_id)->first();
-        if (auth()->user()->kasutajanimi != $post->kasutaja_nimi) {
+        if (auth()->user()->id != $post->kasutaja_id) {
             return redirect()->back();
         }
         DB::select('CALL kustuta_kommentaar(?)', array($post->id));

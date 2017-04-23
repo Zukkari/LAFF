@@ -10,6 +10,7 @@ use Validator;
 use Redirect;
 use Illuminate\Support\Collection;
 
+
 class ProfileController extends Controller
 {
 
@@ -21,6 +22,29 @@ class ProfileController extends Controller
         return view('profile',['name' => $user])->with('postitusKasutaja',$postitusKasutaja );
 
 
+
+    }
+
+    public function storeImg(Request $request) {
+
+        //Laravel validator, best thing since sliced bread, kurb, et alles praegu avastasin
+        $this->validate($request, [
+            'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'name' => 'required',
+            'email' => 'unique:users|email|required',
+        ]);
+
+
+        if (empty($request->avatar)) {
+            DB::select('CALL changeProfile (?,?,?,?)',array(auth()->user()->avatar,auth()->user()->id,$request->name, $request->email));
+        }
+        else {
+            $imageName = time().'.'.$request->avatar->getClientOriginalExtension();
+            $request->avatar->move(public_path('pictures/profilePics'), $imageName);
+            DB::select('CALL changeProfile (?,?,?,?)',array('/../LAFF/public/pictures/profilePics/'.$imageName, auth()->user()->id,$request->name, $request->email));}
+
+       //suunamine edasi proofilile
+        return redirect('/profile/'.$request->name);
 
     }
 }

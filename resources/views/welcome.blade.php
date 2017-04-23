@@ -11,11 +11,11 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href="/../LAFF/public/css/postitus.css" rel="stylesheet">
+    <link href="/../public/css/postitus.css" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="/../LAFF/public/css/postitus.css" rel="stylesheet">
+    <link href="/../public/css/postitus.css" rel="stylesheet">
 
 
     <!-- Scripts -->
@@ -73,7 +73,7 @@
 
                 @if (auth()->check())
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/../public/pictures/avatar_placeholder.png" height="25px"><span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{auth()->user()->avatar}}" height="25px"> {{ auth()->user()->kasutajanimi }}<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
