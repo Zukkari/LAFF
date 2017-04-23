@@ -124,7 +124,7 @@
                                 <span class="glyphicon glyphicon-time"></span><h5 class="info" id="aeg">x</h5>
                                 <h5><span class="label label-danger" id="peatag">x</span> <span class="label label-primary">kaotatud</span></h5><br>
                                 <div>
-                                    <p><img class="kuulutusePilt" id="pildilink" src="" alt="image"></p>
+                                    <p><img class="kuulutusePilt" id="pildilink" src="x" alt="image"></p>
                                     <p class="kirjeldus" id="text"></p>
                                 </div>
                             </div>
