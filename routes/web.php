@@ -26,6 +26,11 @@ Route::get('lisa', function () {
     }
 });
 
+//Sitemap route
+Route::get('sitemap', function (){
+    return view('sitemap');
+});
+
 Route::get('/meist', function () {
     Session::put('redirectTo', '/meist');
     return view('meist' ,['ns'=>'Niisama']);

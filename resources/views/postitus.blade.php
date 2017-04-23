@@ -230,8 +230,8 @@
 </div>
 
 <br><br><br><br>
-<footer>
-    <?php include('/webpages/lostafcsut/public_html/resources/views/footer.blade.php'); ?>
+<footer class="row">
+    @include('includes.footer')
 </footer>
 
 </body>

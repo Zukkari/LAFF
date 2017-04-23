@@ -3,5 +3,6 @@ return [
     'titleAds'=>'Lostaf Kuulutused',
     'titleHome'=>'Lostaf Pealeht',
     'titleAdd'=>'Lostaf Uus Kuulutus',
-    'titleUs'=>'Lostaf Meist'
+    'titleUs'=>'Lostaf Meist',
+    'titleSitemap' =>'Veebilehe kaart'
 ];
