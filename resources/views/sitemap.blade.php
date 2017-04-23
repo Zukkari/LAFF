@@ -1,13 +1,10 @@
-<!DOCTYPE html PUBLIC>
-<html lang="{{config('app.locale')}}">
-
+<!DOCTYPE html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf_token" content="{{ csrf_token() }}" />
 
-    <title><?php echo __('addAdmessages.pageTitle')?></title>
+    <title><?php echo __('titles.titleSitemap')?></title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -26,6 +23,8 @@
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
 
 </head>
+
+
 <body class="body-bottom">
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
@@ -42,8 +41,7 @@
                 <li title="<?php echo __('userHelp.home')?>" ><a href="{{url('/')}}"><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
                 <li title="<?php echo __('userHelp.seeAds')?>"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
                 @if(auth()->check())
-                    <li title="<?php echo __('userHelp.addAd')?>" class="active"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.addAd')?></a></li>
-
+                    <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
                 @endif
                 <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
                 <li><form class="navbar-form navbar-left">
@@ -90,69 +88,24 @@
         </div>
     </div>
 </nav>
-
-
-<br><br><br>
-    <div class="flex-center position-ref full-height">
-
-
-            <div class="title m-b-md">
-                <h1><?php echo __('addAdmessages.addAd')?></h1>
-            </div>
-
-
-        @if(Session::has('msg'))
-            <div class="alert alert-success alert-dismissable">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong><?php echo __('warnings.success')?></strong><br><?php echo __('warnings.success_msg')?>
-
-            </div>
-        @elseif (Session::has('msg_error'))
-            <div class="alert alert-warning alert-dismissable">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong><?php echo __('warnings.fail')?></strong><br><?php echo __('warnings.fail_msg')?>
-            </div>
-
-
-        @endif
-
-            {!! Form::open(array('action'=>'lisaController@store','class' => 'form', 'files' => 'true')) !!}
-
-                <div class="form-group">
-                    {!! Form::label('teema', __('addAdmessages.adTopic')) !!}
-                    {!! Form::text('teema', null, array('required','maxlength=50', 'class' => 'form-control', 'placeholder' => __('addAdmessages.adTopicPH'))) !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('tekst' , __('addAdmessages.adText')) !!}
-                    {!! Form::textarea('tekst', null, array('required', 'class' => 'form-control', 'placeholder' =>  __('addAdmessages.adTextPH'))) !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('tekst' , __('addAdmessages.adTags')) !!}
-                    {!! Form::text('tagid', null, array('required', 'maxlength=50', 'class' => 'form-control', 'placeholder' =>  __('addAdmessages.adTagsPH'))) !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('pilt', __('addAdmessages.adPic')) !!}
-                    {!! Form::file('kuulutusePilt') !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::submit(__('addAdmessages.adSubmit', ['onClick'=>'getMessage()'])) !!}
-                </div>
-
-
-            {!! Form::close() !!}
-    </div>
-
-
-
-
 <br><br><br><br>
-<footer class="row">
-    @include('footer')
-</footer>
-</body>
-</html>
 
+<div class="tekst">
+    <h1><?php echo __('titles.titleSitemap')?></h1>
+
+
+    <h2><a href="{{url('/')}}"><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></h2>
+    <h2><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></h2>
+    @if(auth()->check())
+    <h2><a href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></h2>
+    @endif
+    <h2><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></h2>
+    @if (auth()->guest())
+    <h2><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></h2>
+    <h2><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></h2>
+    @endif
+    @if (auth()->check())
+    <h2> <a href="{{url('/profile/'.auth()->user()->kasutajanimi)}}"><?php echo __('userHelp.profile')?></a></h2>
+    @endif
+</div>
+</body>

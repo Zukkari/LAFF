@@ -8,3 +8,12 @@ Homestead.json
 Homestead.yaml
 .env
 /config/services.php
+/storage/*
+artisan
+composer.json
+composer.lock
+Prototüüp.zip
+/tests/*
+vendor/*
+tests/*
+storage/*

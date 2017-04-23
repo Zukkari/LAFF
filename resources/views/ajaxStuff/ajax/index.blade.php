@@ -15,8 +15,8 @@
                 </script>
                 <?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
                 @if (auth()->check())
-                    <button id="<?php echo $post->id ?>" class="upvoteBtn" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
-                    <button id="<?php echo $post->id ?>" class="downvoteBtn" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
+                    <button id="<?php echo $post->id ?>" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
+                    <button id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
                 @endif
             </div>
             <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>

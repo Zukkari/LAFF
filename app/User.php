@@ -2,12 +2,13 @@
 
 namespace App;
 
+use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, CanResetPassword;
 
     protected $table = 'kasutajad';
 

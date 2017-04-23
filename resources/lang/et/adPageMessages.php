@@ -22,6 +22,7 @@ return [
     'comments' => 'Vaata teiste jäetud kommentaare',
     'posted' => 'Postitas ',
     'topic' => 'Sisestage enda kommentaar siia',
-    'nocomments'=> 'Tundub, et keegi pole veel kommenteerinud, aga Teie võite olla esimene!'
+    'nocomments'=> 'Tundub, et keegi pole veel kommenteerinud, aga Teie võite olla esimene!',
+    'rating' => 'Postituse reiting: '
 
 ];

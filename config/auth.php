@@ -15,7 +15,7 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'kasutajad',
+        'passwords' => 'users',
     ],
 
     /*
@@ -67,8 +67,9 @@ return [
     'providers' => [
 
          'users' => [
-             'driver' => 'database',
+             'driver' => 'eloquent',
              'table' => 'kasutajad',
+             'model' => App\User::class,
          ],
     ],
 
@@ -89,7 +90,7 @@ return [
 
     'passwords' => [
         'users' => [
-            'provider' => 'kasutajad',
+            'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
         ],

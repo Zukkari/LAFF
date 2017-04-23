@@ -11,11 +11,11 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href="/../public/css/postitus.css" rel="stylesheet">
+    <link href="/../LAFF/public/css/postitus.css" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="/../public/css/postitus.css" rel="stylesheet">
+    <link href="/../LAFF/public/css/postitus.css" rel="stylesheet">
 
 
     <!-- Scripts -->
@@ -108,5 +108,10 @@
             </div>
         @endif
         </div>
+
+<br><br><br><br>
+<footer class="row">
+    @include('footer')
+</footer>
 </body>
 </html>

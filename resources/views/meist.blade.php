@@ -221,6 +221,9 @@ cHmKJCxrpwBgBhb9SEbnMp43yfXArKaI4u4tAqqsCg+hB8vJIKis
                 </div>
     </div>
 </div>
-
+<br><br><br><br>
+<footer class="row">
+    @include('footer')
+</footer>
 </body>
 </html>

@@ -19,7 +19,7 @@ function upvote(id) {
             if (upvoteButtons[i].id == id) {
                 var button = upvoteButtons[i];
 
-                button.style.backgroundColor = 'grey';
+                button.style.backgroundColor = '';
             }
         }
 
@@ -48,7 +48,7 @@ function upvote(id) {
                 if (dvButtons[i].id == id) {
                     var button = dvButtons[i];
 
-                    button.style.backgroundColor = 'grey';
+                    button.style.backgroundColor = '';
                 }
             }
         } else {
@@ -90,7 +90,7 @@ function downvote(id) {
             if (dvButtons[i].id == id) {
                 var button = dvButtons[i];
 
-                button.style.backgroundColor = 'grey';
+                button.style.backgroundColor = '';
             }
         }
 
@@ -117,7 +117,7 @@ function downvote(id) {
                 if (upvoteButtons[i].id == id) {
                     var button = upvoteButtons[i];
 
-                    button.style.backgroundColor = 'grey';
+                    button.style.backgroundColor = '';
                 }
             }
 
@@ -172,9 +172,7 @@ function initButtons() {
     var upvoteButtons = document.getElementsByClassName('upvoteBtn');
     var dvButtons = document.getElementsByClassName('downvoteBtn');
 
-    console.log(upvoted);
     for (i = 0; i < upvoteButtons.length; i++) {
-        console.log(upvoteButtons[i].id);
         if (upvoted.includes(parseInt(upvoteButtons[i].id))) {
             upvoteButtons[i].style.backgroundColor = '#4CAF50'
         }
@@ -182,7 +180,6 @@ function initButtons() {
 
     for (i = 0; i < dvButtons.length; i++) {
         if (downvoted.includes(parseInt(dvButtons[i].id))) {
-            console.log('here');
             dvButtons[i].style.backgroundColor = '#f44336';
         }
     }
