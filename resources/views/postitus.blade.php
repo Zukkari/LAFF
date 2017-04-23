@@ -73,7 +73,7 @@
 
                 @if (auth()->check())
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{auth()->user()->avatar}}" height="25px"> {{ auth()->user()->kasutajanimi }}<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="/../LAFF/public/pictures/avatar_placeholder.png" height="25px"><span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
@@ -124,7 +124,7 @@
                                 <span class="glyphicon glyphicon-time"></span><h5 class="info" id="aeg">x</h5>
                                 <h5><span class="label label-danger" id="peatag">x</span> <span class="label label-primary">kaotatud</span></h5><br>
                                 <div>
-                                    <p><img class="kuulutusePilt" id="pildilink" src="x" alt="image"></p>
+                                    <p><img class="kuulutusePilt" id="pildilink" src="" alt="image"></p>
                                     <p class="kirjeldus" id="text"></p>
                                 </div>
                             </div>
