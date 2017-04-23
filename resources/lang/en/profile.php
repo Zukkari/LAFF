@@ -6,5 +6,12 @@ return [
     'tags'=>'Tags',
     'interaction'=> 'Interaction',
     'delete'=>'Delete',
-    'edit'=>'Edit'
+    'edit'=>'Edit',
+    'name' => 'Name: ',
+    'avatar' => 'Avatar: ',
+    'email' => 'E-mail: ',
+    'change'=> 'Change your profile',
+    'submit'=> 'Save changes',
+    'registration'=> 'Registration date: '
+
 ];

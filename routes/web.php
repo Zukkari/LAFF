@@ -73,6 +73,8 @@ Route::post('/edit', [
 Route::get('/profile/{id}', [
         'uses' => 'profileController@index']
 );
+Route::post("storeImg", "profileController@storeImg");
+
 
 
 

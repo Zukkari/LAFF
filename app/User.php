@@ -2,13 +2,12 @@
 
 namespace App;
 
-use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable, CanResetPassword;
+    use Notifiable;
 
     protected $table = 'kasutajad';
 
@@ -18,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'kasutajanimi', 'email', 'password',
+        'id','kasutajanimi', 'email', 'password', 'created_at', 'avatar'
     ];
 
     /**
@@ -29,4 +28,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
 }

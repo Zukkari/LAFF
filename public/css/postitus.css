@@ -43,6 +43,11 @@ height:400px;
 width:100%;
 }
 
+#inp {
+    text-align: center;
+    margin: auto;
+}
+
 #meistH {
 color: black;
 }

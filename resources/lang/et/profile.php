@@ -6,5 +6,13 @@ return [
     'tags'=>'Tagid',
     'interaction'=> 'Võimalikud tegevused',
     'delete'=>'Kustuta',
-    'edit'=>'Muuda'
+    'edit'=>'Muuda',
+    'name' => 'Nimi: ',
+    'avatar' => 'Avatar: ',
+    'email' => 'E-mail: ',
+    'change'=> 'Muuda enda profiili',
+    'submit'=> 'Salvesta muudatused',
+    'registration'=> 'Registreerimiskuupäev: '
+
+
 ];
