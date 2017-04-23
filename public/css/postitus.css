@@ -48,6 +48,12 @@ width:100%;
     margin: auto;
 }
 
+.avatar {
+    width: 250px;
+    height: 300px;
+
+}
+
 #meistH {
 color: black;
 }

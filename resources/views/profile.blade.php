@@ -116,7 +116,7 @@
 
 <div class="tekst">
     <h2><?php echo $name->kasutajanimi?></h2>
-<img src=" <?php echo $name->avatar?>">
+    <img src=" <?php echo $name->avatar?>" alt="image" class="avatar">
     <p><i class="glyphicon glyphicon-envelope"></i><a href="mailto:<?php echo $name->email?>" target="_top"><?php echo $name->email; ?></a></p>
     <p><?php echo __('profile.registration')?><?php echo $name->created_at?> </p>
 <br>
