@@ -231,7 +231,7 @@
 
 <br><br><br><br>
 <footer class="row">
-    @include('includes.footer')
+    @include('footer')
 </footer>
 
 </body>

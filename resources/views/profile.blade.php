@@ -143,6 +143,9 @@
         </div>
     </div>
 
-
+<br><br><br><br>
+<footer class="row">
+    @include('footer')
+</footer>
 </body>
 </html>
