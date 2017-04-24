@@ -25,7 +25,7 @@ class commentsController extends Controller
         $this->validate($request, [
             'body' => 'required|max:1000'
         ]);
-        
+
 
         $teema=$request->input('body');
         $kasutaja = auth()->user()->id;
