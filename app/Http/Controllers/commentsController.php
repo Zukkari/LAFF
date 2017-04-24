@@ -25,12 +25,12 @@ class commentsController extends Controller
         $this->validate($request, [
             'body' => 'required|max:1000'
         ]);
-        //$post = new Post();*/
+        
 
         $teema=$request->input('body');
         $kasutaja = auth()->user()->id;
 
-        //$name = $request->imelik;
+
         DB::select('CALL lisa_kommentaar (?,?,?)',array($teema, $kasutaja, $id));
         return redirect()->back();
 
