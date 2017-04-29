@@ -99,12 +99,12 @@
                             @foreach($data as $post)
                             <div class="col-md-12 col-lg-12 container">
                                 <div class="row">
-                                    <h2><?php echo $post->pealkiri ?> </h2>
-                                    <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
-                                    <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
+                                    <h2>{{$post->pealkiri}}</h2>
+                                    <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user')?> {{$post->kasutaja}} <?php echo ", " ?> {{$post->date}} <?php echo ", "?> {{$post->email}}</h5>
+                                    <h5><span class="label label-danger">{{$post->peatag}}</span> <span class="label label-primary">kaotatud</span></h5><br>
                                     <div>
                                         <img class="kuulutusePilt" src="<?php echo $post->pildilink ?>" alt="image">
-                                        <p class="kirjeldus"><?php echo $post->kirjeldus ?></p>
+                                        <p class="kirjeldus">{{$post->kirjeldus}}</p>
                                     </div>
                                 </div>
                                 <br><br>
