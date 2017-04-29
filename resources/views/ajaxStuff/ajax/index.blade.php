@@ -19,11 +19,11 @@
                     <button id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
                 @endif
             </div>
-            <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", "; echo $post->email?></h5>
-            <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
+            <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user');?> {{$post->kasutaja}}<?php echo ", " ?>; {{$post->date }} <?php echo ", "?> {{$post->email}}</h5>
+            <h5><span class="label label-danger">{{$post->peatag}}</span> <span class="label label-primary">kaotatud</span></h5><br>
             <div>
-                <img class="kuulutusePilt" src="<?php echo $post->pildilink ?>" alt="image">
-                <p class="kirjeldus"><?php echo $post->kirjeldus ?></p>
+                <img class="kuulutusePilt" src="{{$post->pildilink}}" alt="image">
+                <p class="kirjeldus">{{$post->kirjeldus}}</p>
             </div>
         </div>
         <hr>

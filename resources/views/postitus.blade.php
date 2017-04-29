@@ -10,16 +10,16 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/../LAFF/public/css/postitus.css" rel="stylesheet">
+    <link href="/../public/css/postitus.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/../LAFF/public/js/checkConnection.js"></script>
-    <script src="/../LAFF/public/js/fetchPost.js"></script>
-    <script src="/../LAFF/public/js/polling.js"></script>
-    <script type="text/javascript" src="/../LAFF/public/js/voting.js"></script>
+    <script type="text/javascript" src="/../public/js/checkConnection.js"></script>
+    <script src="/../public/js/fetchPost.js"></script>
+    <script src="/../public/js/polling.js"></script>
+    <script type="text/javascript" src="/../public/js/voting.js"></script>
 
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
@@ -179,11 +179,11 @@
                                                 <span id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)"></span>
                                             @endif
                                         </div>
-                                        <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user'); echo $post->kasutaja; echo ", " ; echo $post->date; echo ", ";?></h5>
-                                        <h5><span class="label label-danger"><?php echo $post->peatag ?></span> <span class="label label-primary">kaotatud</span></h5><br>
+                                        <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user')?> {{$post->kasutaja}}<?php echo ", " ?> {{$post->date}} <?php echo ", "?>{{$post->email}}</h5>
+                                        <h5><span class="label label-danger">{{$post->peatag}}</span> <span class="label label-primary">kaotatud</span></h5><br>
                                         <div>
-                                            <img class="kuulutusePilt" src="<?php echo $post->pildilink ?>" alt="image">
-                                            <p class="kirjeldus"><?php echo $post->kirjeldus ?></p>
+                                            <img class="kuulutusePilt" src="{{$post->pildilink}}" alt="image">
+                                            <p class="kirjeldus">{{$post->kirjeldus}}</p>
                                         </div>
                                     </div>
                                     <br><br>
@@ -193,7 +193,7 @@
 			<hr>
                         </div>
 			<div class="loading">
-                            <img id="loadimg" src="/../LAFF/public/pictures/waiting.gif" alt="loadingGIF"/>
+                            <img id="loadimg" src="/../public/pictures/waiting.gif" alt="loadingGIF"/>
                         </div>
 
 
