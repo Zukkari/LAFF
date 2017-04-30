@@ -36,16 +36,18 @@
                     <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
                 @endif
                 <li title="<?php echo __('userHelp.aboutUs')?>" class="active"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
-                <li><form class="navbar-form navbar-left">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit">
-                                    <i class="glyphicon glyphicon-search"></i>
-                                </button>
-                            </div>
+                <li>
+                    {!! Form::open(['method'=>'GET','url'=>'search','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
+                    <div class="input-group">
+                        {!! Form::text('search', null, array('class' => 'form-control', 'placeholder' =>  __('titles.titleSearch'))) !!}
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
                         </div>
-                    </form></li>
+                    </div>
+                    {!! Form::close() !!}
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -85,6 +87,16 @@
 <div class="container">
     <div class="jumbotron">
         <div class="container-fluid">
+
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
                     <h2 class="meistH">Kes me oleme ja miks me seda teeme?</h2><br>
                     <p class="meistH">Antud veebileht on loodud projekti tegemise raames Tartu Ülikooli informaatikateaduskonna aines "Veebirakenduste
                     loomine". Projekti raames õppime looma veebirakendusi kasutades erinevaid võtteid, lahendusi ja keeli. Antud veebileht valmis kasutades raamistiku

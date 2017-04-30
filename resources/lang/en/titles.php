@@ -4,5 +4,6 @@ return [
     'titleHome'=>'Lostaf Home',
     'titleAdd'=>'Lostaf New Add',
     'titleUs'=>'Lostaf About Us',
-    'titleSitemap' =>'Sitemap'
+    'titleSitemap' =>'Sitemap',
+    'titleSearch'=>'Search'
 ];

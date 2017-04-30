@@ -70,6 +70,9 @@ Route::post('/edit', [
 ]);
 
 
+Route::get("/search", 'postitusController@search');
+
+
 //PROFIILIBLOKK
 
 //Kasutaja profiili avamine
@@ -105,6 +108,8 @@ Route::get("best", 'postitusController@best');
 
 Route::get("recent", 'postitusController@index');
 
+//Otsing
+Route::get("search", 'postitusController@search');
 
 Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'langController@changeLocale']);
 

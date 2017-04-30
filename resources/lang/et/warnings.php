@@ -9,5 +9,7 @@ return [
 
     'noconnection' => 'Interneti ühendus katkes',
     'connection' => 'Interneti ühendus on taastatud',
-    'adDeleted'=>'Postitus oli edukalt kustutatud'
+    'adDeleted'=>'Postitus oli edukalt kustutatud',
+    'foundAds'=>'Leitud postitusi: ',
+    'noAds' => 'Kahjuks postitusi ei leitud!'
 ];

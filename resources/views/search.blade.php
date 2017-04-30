@@ -2,7 +2,7 @@
 <html lang="{{config('app.locale')}}">
 <head>
 
-  <title><?php echo __('titles.titleAds')?></title>
+    <title><?php echo __('titles.titleSearch')?></title>
 
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li title="<?php echo __('userHelp.home')?>"><a href="{{url('/')}}"><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
-                <li title="<?php echo __('userHelp.seeAds')?>" class="active"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
+                <li title="<?php echo __('userHelp.seeAds')?>"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
                 @if(auth()->check())
                     <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
                 @endif
@@ -97,17 +97,8 @@
             <div class="row content">
                 <div class="col-sm col-md-offset-2">
                     <div class="col-sm-10">
-                        <ul class="nav nav-pills">
-                            <li class="active">
-                                <a href="{{url('postitus')}}" title="<?php echo __('userHelp.newAds')?>"><?php echo __('adPageMessages.new') ?></a>
-                            </li>
-                            <li>
-                                <a id="bestNupp" href="{{url('best')}}" title="<?php echo __('userHelp.topAds')?>"><?php echo __('adPageMessages.top') ?></a>
-                            </li>
-                            <li>
-                                <a href="{{url('recent')}}" title="<?php echo __('userHelp.recentlyAds')?>"><?php echo __('adPageMessages.found') ?></a>
-                            </li>
-                        </ul>
+
+
 
 
                         @if (count($errors) > 0)
@@ -120,41 +111,9 @@
                             </div>
                         @endif
 
-                        @if(Session::has('message'))
-                            <div class="alert alert-success alert-dismissable">
-                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                <strong><?php echo __('warnings.adDeleted')?></strong>
-
-                            </div>
-                        @endif
 
 
-
-                        <div class="col-md-12 col-lg-12 container" id="uus" style="display: none">
-                            <div class="row">
-                                 <div class="uued">
-                                        <div class="alert alert-success alert-dismissable">
-                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                            <h3><strong><?php echo __('adPageMessages.newData')?></strong></h3>
-                                        </div>
-                                    </div>
-                                <h3><?php echo __('adPageMessages.last')?></h3>
-                                <h2 id="pealkiri">x</h2>
-                                <h5 class="info"><?php echo __('adPageMessages.user')?></h5><h5 class="info"  id="kasutaja">x</h5><br>
-                                <span class="glyphicon glyphicon-time"></span><h5 class="info" id="aeg">x</h5>
-                                <h5><span class="label label-danger" id="peatag">x</span> <span class="label label-primary">kaotatud</span></h5><br>
-                                <div>
-                                    <p><img class="kuulutusePilt" id="pildilink" src="/../resources/pictures/no_image_available.jpg" alt="image"></p>
-                                    <p class="kirjeldus" id="text"></p>
-                                </div>
-
-                            </div>
-                            <hr>
-                            <br><br><br><br><br>
-
-                        </div>
-
-
+                        @if (count($postitus)>0)
                         @if (auth()->check())
                             <script type="text/javascript">
                                 var upvoted = [];
@@ -171,9 +130,14 @@
                             </script>
                         @endif
 
+                            <div class="alert alert-success alert-dismissable">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong><?php echo __('warnings.foundAds')?>{{count($postitus)}}</strong>
 
-                        <p class="postitusi" id="arv" style="display:inline"></p><p class="postitusi" style="display:inline"><?php echo __('adPageMessages.totalAds') ?></p>
-                        <div class="posts endless-pagination" data-next-page="{{$postitus->nextPageUrl()}}">
+                            </div>
+
+
+                        <div class="posts endless-pagination">
                             @foreach($postitus as $post)
                                 <div class="col-md-12 col-lg-12 container">
                                     <div class="row">
@@ -214,14 +178,20 @@
                                     <hr>
                                 </div>
                             @endforeach
-			<hr>
+                            <hr>
                         </div>
-			<div class="loading">
-                            <img id="loadimg" src="/../public/pictures/waiting.gif" alt="loadingGIF"/>
-                        </div>
+                        @else
+                            <div class="alert alert-danger alert-dismissable">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong><?php echo __('warnings.noAds')?></strong>
+
+                            </div>
+                        @endif
 
 
-                        <div id="connectionerror" class="alert alert-danger alert-dismissable">
+
+
+                            <div id="connectionerror" class="alert alert-danger alert-dismissable">
                             <?php echo __('warnings.noconnection') ?>
                         </div>
 
@@ -229,20 +199,12 @@
                             <?php echo __('warnings.connection') ?>
                         </div>
 
-                        <script>
-                            /*See skript siin AJAXI abiga laeb postitusi juurde lehele, esialgu on lehel 3 postitust ja kui kasutaja scollib alla, tulevad
-                             uued postitused n�htavale. Osa, mis laetakse juurde asub view/ajaxStuff/ajax/index.blade.php's.
-                             */
-                            $('.loading').hide(); //eespool defineeritud loading gif, koguaeg me seda ei n�ita
-                            $(document).ready(function () {
-                                $(window).scroll(fetchPost);
-                            });
-                        </script>
+
 
                         <script type="text/javascript">
                             document.getElementById('connectionerror').style.display = 'none';
                             document.getElementById('connectionestab').style.display = 'none';
-			                var last = false;
+                            var last = false;
                             window.setInterval(checkConnection, 5000);
                         </script>
 

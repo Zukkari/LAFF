@@ -9,5 +9,7 @@ return [
 
     'noconnection' => 'Internet connection was lost',
     'connection' => 'Internet connection was established!',
-    'adDeleted'=> 'Ad was successfully deleted'
+    'adDeleted'=> 'Ad was successfully deleted',
+    'foundAds'=>'Found ads: ',
+    'noAds' => 'Sorry, but no ads found!'
 ];

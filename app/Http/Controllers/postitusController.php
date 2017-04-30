@@ -95,6 +95,20 @@ class postitusController extends Controller
         return redirect()->back();
     }
 
+    public function search(\Illuminate\Http\Request $request) {
+        $this->validate($request, [
+            'search' => 'max:100|min:1'
+        ]);
+        //$post = new Post();*/
+
+        $otsitav=$request->input('search');
+
+
+        $filtreeritud=DB::select('Call search(?)',array($otsitav));
+        return view('search')->with('postitus',$filtreeritud);
+    }
+
+
 
 
 

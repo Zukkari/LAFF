@@ -4,5 +4,6 @@ return [
     'titleHome'=>'Lostaf Главная Страница',
     'titleAdd'=>'Lostaf Новое объявление',
     'titleUs'=>'Lostaf О Нас',
-    'titleSitemap' =>'Карта сайта'
+    'titleSitemap' =>'Карта сайта',
+    'titleSearch'=>'Поиск'
 ];
