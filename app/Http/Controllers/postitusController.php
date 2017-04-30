@@ -74,7 +74,24 @@ class postitusController extends Controller
         if (auth()->user()->kasutajanimi != $postitus->kasutaja) {
             return redirect()->back();
         }
+
+
         DB::select('CALL kustuta_postitus(?)', array($postitus->id));
+
+        Session::put('redirectTo', 'postitus');
+
+        Session::flash('message', 'Ad');
+
+        return redirect(url('postitus'));
+    }
+
+    public function deleteAdProfile($ad_id) {
+        $postitus = DB::table('postitus_vaade')->get()->where('id', $ad_id)->first();
+        if (auth()->user()->kasutajanimi != $postitus->kasutaja) {
+                return redirect()->back();
+        }
+        DB::select('CALL kustuta_postitus(?)', array($postitus->id));
+        Session::flash('message', 'Ad');
         return redirect()->back();
     }
 

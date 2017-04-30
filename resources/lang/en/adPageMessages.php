@@ -23,5 +23,7 @@ return [
     'posted' => 'Posted by ',
     'topic' => 'Insert your comments here',
     'nocomments' => 'Seems that there are no comments, but you can be first!',
-    'rating' => 'Post rating: '
+    'rating' => 'Post rating: ',
+    'mailto' => 'Send email to user (for example if you have information)',
+    'tags'=> 'Tags: '
     ];

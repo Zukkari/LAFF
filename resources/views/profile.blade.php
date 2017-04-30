@@ -79,7 +79,6 @@
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
                                 <a href="{{url('/profile/'.auth()->user()->kasutajanimi)}}"><?php echo __('userHelp.profile')?></a>
-                                <a href="#"><?php echo __('userHelp.settings')?></a>
                                 <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
                             </li>
                         </ul>
@@ -104,6 +103,13 @@
 </script>
 
 
+@if(Session::has('message'))
+    <div class="alert alert-success alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong><?php echo __('warnings.adDeleted')?></strong>
+
+    </div>
+@endif
 @if (count($errors) > 0)
     <div class="alert alert-danger">
         <ul>
@@ -178,7 +184,7 @@
             @if(auth()->check())
                 @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
                     <td> <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
-                        <a href="{{ route('ad.delete', ['ad_id' => $kasutajaPost->id]) }}"><?php echo __('profile.delete')?></a></td>
+                        <a href="{{ route('ad.deleteAd', ['ad_id' => $kasutajaPost->id]) }}"><?php echo __('profile.delete')?></a></td>
                 @endif
             @endif
         </tr>

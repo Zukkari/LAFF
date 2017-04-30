@@ -41,7 +41,11 @@ Route::get('delete/{ad_id}', [
     'uses' => 'postitusController@deleteAd',
     'as' => 'ad.delete',
 ]);
-
+//Profiilis eemaldamine, peab redirectime profiili!
+Route::get('deleteAd/{ad_id}', [
+    'uses' => 'postitusController@deleteAdProfile',
+    'as' => 'ad.deleteAd',
+]);
 //Antud route avab meile postituse id järgi
 Route::get('/postitus/{id}', [
     'uses' =>'commentsController@index']);

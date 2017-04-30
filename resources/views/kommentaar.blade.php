@@ -20,6 +20,7 @@
 
 
 
+
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
 
@@ -78,7 +79,6 @@
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
                                 <a href="{{url('/profile/'.auth()->user()->kasutajanimi)}}"><?php echo __('userHelp.profile')?></a>
-                                <a href="#"><?php echo __('userHelp.settings')?></a>
                                 <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
                             </li>
                         </ul>
@@ -89,19 +89,33 @@
         </div>
     </div>
 </nav>
-<br/>
+<br>
 <div class="container">
     <div class="jumbotron">
         <div class="container-fluid">
             <div class="row content">
+
+
                 <div class="col-sm col-md-offset-2">
+
+
+
                         <div class="posts endless-pagination">
-                            @foreach($data as $post)
+                            @foreach($postitus as $post)
                             <div class="col-md-12 col-lg-12 container">
                                 <div class="row">
                                     <h2>{{$post->pealkiri}}</h2>
-                                    <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user')?> {{$post->kasutaja}} <?php echo ", " ?> {{$post->date}} <?php echo ", "?> {{$post->email}}</h5>
-                                    <h5><span class="label label-danger">{{$post->peatag}}</span> <span class="label label-primary">kaotatud</span></h5><br>
+                                    @if(auth()->check())
+                                        @if(auth()->user()->kasutajanimi == $post->kasutaja)
+                                            <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
+                                            <a href="{{ route('ad.delete', ['ad_id' => $post->id]) }}"><?php echo __('profile.delete')?></a>
+                                        @endif
+                                    @endif
+
+
+                                    <a href="{{url('/profile/'.$post->kasutaja)}}"><h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user')?> {{$post->kasutaja}} <?php echo ", " ?> {{$post->date}} <?php echo ", "?> {{$post->email}}</h5></a>
+                                    <h5><i class="glyphicon glyphicon-envelope"></i><a href="mailto:{{$post->email}}" target="_top"><?php echo __('adPageMessages.mailto')?></a></h5>
+                                    <h5><?php echo __('adPageMessages.tags')?><span class="label label-danger">{{$post->peatag}}</span></h5><br>
                                     <div>
                                         <img class="kuulutusePilt" src="<?php echo $post->pildilink ?>" alt="image">
                                         <p class="kirjeldus">{{$post->kirjeldus}}</p>
@@ -119,7 +133,7 @@
                         <div class="kommentaarsisend">
                                 @if(auth()->check())
                                         <header><h3><?php echo __('adPageMessages.urcomments')?></h3></header>
-                                        {!! Form::open(array('url'=>'/createpost/'.$data->first()->id ,'class' => 'form', 'files' => 'true')) !!}
+                                        {!! Form::open(array('url'=>'/createpost/'.$postitus->first()->id ,'class' => 'form', 'files' => 'true')) !!}
                                         <div class="form-group">
                                             {!! Form::textarea('body', null, array('required','maxlength=100', 'rows=5', 'class' => 'form-control', 'placeholder' => __('adPageMessages.topic'))) !!}
                                         </div>
@@ -169,28 +183,7 @@
     </div>
 
 
-<div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Edit Post</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="post-body">Edit the Post</label>
-                        <textarea class="form-control" name="post-body" id="post-body" rows="5"></textarea>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+
 
 
 

@@ -78,7 +78,6 @@
                             <li>
                                 <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
                                 <a href="{{url('/profile/'.auth()->user()->kasutajanimi)}}"><?php echo __('userHelp.profile')?></a>
-                                <a href="#"><?php echo __('userHelp.settings')?></a>
                                 <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
                             </li>
                         </ul>
@@ -108,6 +107,14 @@
                             </li>
                         </ul>
 
+                        @if(Session::has('message'))
+                            <div class="alert alert-success alert-dismissable">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                <strong><?php echo __('warnings.adDeleted')?></strong>
+
+                            </div>
+                        @endif
+
 
 
                         <div class="col-md-12 col-lg-12 container" id="uus" style="display: none">
@@ -127,6 +134,7 @@
                                     <p><img class="kuulutusePilt" id="pildilink" src="/../resources/pictures/no_image_available.jpg" alt="image"></p>
                                     <p class="kirjeldus" id="text"></p>
                                 </div>
+
                             </div>
                             <hr>
                             <br><br><br><br><br>
@@ -172,19 +180,22 @@
                                                     getRating({{$post->id}});
                                                 });
                                             </script>
-                                            <?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
-                                            @if (auth()->check())
+                                            <h3 style="display: inline"><?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
+                                                @if (auth()->check())
 
-                                                <span id="<?php echo $post->id ?>" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote(<?php echo $post->id ?>)"></span>
-                                                <span id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)"></span>
-                                            @endif
+                                                    <span id="<?php echo $post->id ?>" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote(<?php echo $post->id ?>)"></span>
+                                                    <span id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)"></span>
+                                                @endif
+                                            </h3>
                                         </div>
-                                        <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user')?> {{$post->kasutaja}}<?php echo ", " ?> {{$post->date}} <?php echo ", "?>{{$post->email}}</h5>
-                                        <h5><span class="label label-danger">{{$post->peatag}}</span> <span class="label label-primary">kaotatud</span></h5><br>
+                                        <a href="{{url('/profile/'.$post->kasutaja)}}"><h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user')?> {{$post->kasutaja}}<?php echo ", " ?> {{$post->date}} <?php echo ", "?>{{$post->email}}</h5></a>
+                                        <h5><i class="glyphicon glyphicon-envelope"></i><a href="mailto:{{$post->email}}" target="_top"><?php echo __('adPageMessages.mailto')?></a></h5>
+                                        <h5><?php echo __('adPageMessages.tags')?><span class="label label-danger">{{$post->peatag}}</span></h5><br>
                                         <div>
                                             <img class="kuulutusePilt" src="{{$post->pildilink}}" alt="image">
                                             <p class="kirjeldus">{{$post->kirjeldus}}</p>
                                         </div>
+                                        <br><br>
                                     </div>
                                     <br><br>
                                     <hr>

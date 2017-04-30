@@ -13,14 +13,17 @@
                     $(document).ready(getRating({{$post->id}}));
                     window.setTimeout(initButtons, 750);
                 </script>
-                <?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
-                @if (auth()->check())
-                    <button id="<?php echo $post->id ?>" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote(<?php echo $post->id ?>)">Upvote</button>
-                    <button id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)">Downvote</button>
-                @endif
+                <h3 style="display: inline"><?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
+                    @if (auth()->check())
+
+                        <span id="<?php echo $post->id ?>" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote(<?php echo $post->id ?>)"></span>
+                        <span id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)"></span>
+                    @endif
+                </h3>
             </div>
-            <h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user');?> {{$post->kasutaja}}<?php echo ", " ?>; {{$post->date }} <?php echo ", "?> {{$post->email}}</h5>
-            <h5><span class="label label-danger">{{$post->peatag}}</span> <span class="label label-primary">kaotatud</span></h5><br>
+            <a href="{{url('/profile/'.$post->kasutaja)}}"><h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user');?> {{$post->kasutaja}}<?php echo ", " ?>; {{$post->date }} <?php echo ", "?> {{$post->email}}</h5></a>
+            <h5><i class="glyphicon glyphicon-envelope"></i><a href="mailto:{{$post->email}}" target="_top"><?php echo __('adPageMessages.mailto')?></a></h5>
+            <h5><?php echo __('adPageMessages.tags')?><span class="label label-danger">{{$post->peatag}}</span> <span class="label label-primary">kaotatud</span></h5><br>
             <div>
                 <img class="kuulutusePilt" src="{{$post->pildilink}}" alt="image">
                 <p class="kirjeldus">{{$post->kirjeldus}}</p>

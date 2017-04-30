@@ -8,5 +8,6 @@ return [
     'success_msg' => 'Advertisement successfully added!',
 
     'noconnection' => 'Internet connection was lost',
-    'connection' => 'Internet connection was established!'
+    'connection' => 'Internet connection was established!',
+    'adDeleted'=> 'Ad was successfully deleted'
 ];

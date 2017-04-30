@@ -23,6 +23,8 @@ return [
     'posted' => 'Postitas ',
     'topic' => 'Sisestage enda kommentaar siia',
     'nocomments'=> 'Tundub, et keegi pole veel kommenteerinud, aga Teie võite olla esimene!',
-    'rating' => 'Postituse reiting: '
+    'rating' => 'Postituse reiting: ',
+    'mailto' => 'Saada kasutajale email (näiteks, kui omate informatsiooni)',
+    'tags'=> 'Tagid: '
 
 ];

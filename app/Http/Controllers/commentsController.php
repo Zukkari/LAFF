@@ -13,7 +13,7 @@ class commentsController extends Controller
     public function index($id) {
         $postitus = DB::table('postitus_vaade')->get()->where('id',$id);
         $posts=DB::table('kommentaarview')->get()->where('postitus_id',$id);
-        return view('kommentaar',['kommentaarid' => $posts])->with('data',$postitus );
+        return view('kommentaar',['kommentaarid' => $posts])->with('postitus',$postitus );
         //return $id;
     }
 
