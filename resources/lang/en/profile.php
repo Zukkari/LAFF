@@ -12,6 +12,8 @@ return [
     'email' => 'E-mail: ',
     'change'=> 'Change your profile',
     'submit'=> 'Save changes',
-    'registration'=> 'Registration date: '
+    'registration'=> 'Registration date: ',
+    'reitingUser' => 'Users rating: ',
+    'reiting' => 'Rating of ad'
 
 ];

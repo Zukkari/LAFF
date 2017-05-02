@@ -12,7 +12,9 @@ return [
     'email' => 'E-mail: ',
     'change'=> 'Muuda enda profiili',
     'submit'=> 'Salvesta muudatused',
-    'registration'=> 'Registreerimiskuupäev: '
+    'registration'=> 'Registreerimiskuupäev: ',
+    'reitingUser' => 'Kasutaja reiting: ',
+    'reiting' => 'Postituse reiting'
 
 
 ];
