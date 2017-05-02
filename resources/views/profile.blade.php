@@ -128,14 +128,14 @@
     <p><?php echo __('profile.registration')?>{{$name->created_at}}</p>
 <br>
     @if(auth()->check())
-        @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
+        @if (auth()->user()->id == $name->id)
             <form action="{{ url('storeImg') }}" enctype="multipart/form-data" method="POST">
                 {{ csrf_field() }}
                 <h2><?php echo __('profile.change')?></h2>
                 <label>Avatar</label>
                 <input id="inp" type="file" name="avatar"/><br>
                 <label><?php echo __('profile.name')?></label><br>
-                <input type="text" name="name" value={{$name->kasutajanimi}}><br>
+                <input type="text" name="kasutajanimi" value={{$name->kasutajanimi}}><br>
                 <label><?php echo __('profile.email')?></label><br>
                 <input type="text" name="email" value={{$name->email}}><br>
 

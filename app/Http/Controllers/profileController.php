@@ -14,10 +14,10 @@ use Illuminate\Support\Collection;
 class ProfileController extends Controller
 {
 
-    public function index($id)
+    public function index($kasutaja)
     {
 
-        $user = User::where('kasutajanimi',$id) -> first();
+        $user = User::where('kasutajanimi',$kasutaja)->first();
         $postitusKasutaja = DB::table('postitus_vaade')->get()->where('kasutaja',$user->kasutajanimi);
         $reiting = DB::table('postitus_vaade')->where('kasutaja', $user->kasutajanimi)->sum('reiting');
 
@@ -30,24 +30,51 @@ class ProfileController extends Controller
 
     public function storeImg(Request $request) {
 
-        //Laravel validator, best thing since sliced bread, kurb, et alles praegu avastasin
+        //Kui kasutaja ei muuda enda emaili ja nime!
+        if($request->email==auth()->user()->email && $request->kasutajanimi==auth()->user()->kasutajanimi) {
+            $this->validate($request, [
+                'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'kasutajanimi' => 'required',
+                'email' => 'required',
+            ]);
+
+        }
+        //Kui kasutaja ei muuda enda nime
+        else if ($request->kasutajanimi==auth()->user()->kasutajanimi)  {
+            $this->validate($request, [
+                'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'kasutajanimi' => 'required',
+                'email' => 'unique:kasutajad|email|required',
+            ]);
+        }
+        //kasutaja ei muuda enda meili
+        else if ($request->email==auth()->user()->email) {
+            $this->validate($request, [
+                'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'kasutajanimi' => 'required|unique:kasutajad',
+                'email' => 'required',
+            ]);
+        }
+
+        //kasutaja muudab mõlemat
+        else {
         $this->validate($request, [
             'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'name' => 'required',
-            'email' => 'unique:users|email|required',
-        ]);
+            'kasutajanimi' => 'required|unique:kasutajad',
+            'email' => 'unique:kasutajad|email|required',
+        ]);}
 
 
         if (empty($request->avatar)) {
-            DB::select('CALL changeProfile (?,?,?,?)',array(auth()->user()->avatar,auth()->user()->id,$request->name, $request->email));
+            DB::select('CALL changeProfile (?,?,?,?)',array(auth()->user()->avatar,auth()->user()->id,$request->kasutajanimi, $request->email));
         }
         else {
             $imageName = time().'.'.$request->avatar->getClientOriginalExtension();
             $request->avatar->move(public_path('pictures/profilePics'), $imageName);
-            DB::select('CALL changeProfile (?,?,?,?)',array('/../LAFF/public/pictures/profilePics/'.$imageName, auth()->user()->id,$request->name, $request->email));}
+            DB::select('CALL changeProfile (?,?,?,?)',array('/../public/pictures/profilePics/'.$imageName, auth()->user()->id,$request->kasutajanimi, $request->email));}
 
        //suunamine edasi proofilile
-        return redirect('/profile/'.$request->name);
+        return redirect('/profile/'.$request->kasutajanimi);
 
     }
 }
