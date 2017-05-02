@@ -123,8 +123,9 @@
 <div class="tekst">
     <h2><?php echo $name->kasutajanimi?></h2>
     <img src=" <?php echo $name->avatar?>" alt="image" class="avatar">
-    <p><i class="glyphicon glyphicon-envelope"></i><a href="mailto:<?php echo $name->email?>" target="_top"><?php echo $name->email; ?></a></p>
-    <p><?php echo __('profile.registration')?><?php echo $name->created_at?> </p>
+    <p><i class="glyphicon glyphicon-envelope"></i><a href="mailto:{{$name->email}}" target="_top">{{$name->email}}</a></p>
+    <p><?php echo __('profile.reitingUser')?>{{$reiting}}</p>
+    <p><?php echo __('profile.registration')?>{{$name->created_at}}</p>
 <br>
     @if(auth()->check())
         @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
@@ -134,9 +135,9 @@
                 <label>Avatar</label>
                 <input id="inp" type="file" name="avatar"/><br>
                 <label><?php echo __('profile.name')?></label><br>
-                <input type="text" name="name" value="<?php echo $name->kasutajanimi?>"><br><br>
+                <input type="text" name="name" value={{$name->kasutajanimi}}><br>
                 <label><?php echo __('profile.email')?></label><br>
-                <input type="text" name="email" value="<?php echo $name->email?>"><br>
+                <input type="text" name="email" value={{$name->email}}><br>
 
 
                 <br>
@@ -167,6 +168,7 @@
             <th><?php echo __('profile.title')?></th>
             <th><?php echo __('profile.date')?></th>
             <th><?php echo __('profile.tags')?></th>
+            <th><?php echo __('profile.reiting')?></th>
             @if(auth()->check())
                 @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
                     <th><?php echo __('profile.interaction')?></th>
@@ -177,10 +179,11 @@
     </thead>
         @foreach($postitusKasutaja as $kasutajaPost)
         <tr>
-            <td><?php echo $kasutajaPost->id ?></td>
-            <td><a href="{{ url('postitus/'.$kasutajaPost->id) }}"><?php echo $kasutajaPost->pealkiri ?></a></td>
-            <td><?php echo $kasutajaPost->date ?></td>
-            <td><?php echo $kasutajaPost->peatag ?></td>
+            <td>{{$kasutajaPost->id}}</td>
+            <td><a href="{{ url('postitus/'.$kasutajaPost->id) }}">{{$kasutajaPost->pealkiri}} </a></td>
+            <td>{{$kasutajaPost->date}}</td>
+            <td>{{$kasutajaPost->peatag}}</td>
+            <td>{{$kasutajaPost->reiting}}</td>
             @if(auth()->check())
                 @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
                     <td> <a href="#" class="edit"><?php echo __('profile.edit')?></a> |

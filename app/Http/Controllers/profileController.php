@@ -19,7 +19,10 @@ class ProfileController extends Controller
 
         $user = User::where('kasutajanimi',$id) -> first();
         $postitusKasutaja = DB::table('postitus_vaade')->get()->where('kasutaja',$user->kasutajanimi);
-        return view('profile',['name' => $user])->with('postitusKasutaja',$postitusKasutaja );
+        $reiting = DB::table('postitus_vaade')->where('kasutaja', $user->kasutajanimi)->sum('reiting');
+
+
+        return view('profile',['name' => $user], ['reiting' => $reiting])->with('postitusKasutaja',$postitusKasutaja );
 
 
 
