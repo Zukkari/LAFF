@@ -138,15 +138,21 @@
                             <div class="col-md-12 col-lg-12 container">
                                 <div class="row">
                                     <h2>{{$post->pealkiri}}</h2>
-                                    <?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
                                     @if(auth()->check())
                                         @if(auth()->user()->kasutajanimi == $post->kasutaja)
                                             <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
                                             <a href="{{ route('ad.delete', ['ad_id' => $post->id]) }}"><?php echo __('profile.delete')?></a>
                                         @endif
+                                    @endif
+                                    <div>
+                                        <h3><?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
+                                        @if (auth()->check())
                                             <span id="{{$post->id}}" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote({{$post->id}})"></span>
                                             <span id="{{$post->id}}" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote({{$post->id}})"></span>
-                                    @endif
+                                        @endif
+                                        </h3>
+                                    </div>
+
 
 
                                     <a href="{{url('/profile/'.$post->kasutaja)}}"><h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user')?> {{$post->kasutaja}} <?php echo ", " ?> {{$post->date}} <?php echo ", "?> {{$post->email}}</h5></a>
