@@ -20,6 +20,7 @@
     <script src="/../public/js/fetchPost.js"></script>
     <script src="/../public/js/polling.js"></script>
     <script type="text/javascript" src="/../public/js/voting.js"></script>
+    <script type="text/javascript" src="/../public/js/postEdit.js"></script>
 
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
@@ -177,11 +178,11 @@
                             @foreach($postitus as $post)
                                 <div class="col-md-12 col-lg-12 container">
                                     <div class="row">
-                                        <a href={{'postitus/'.$post->id}}><h2><?php echo $post->pealkiri ?> </h2></a>
+                                        <a href={{'postitus/'.$post->id}}><h2 class="postPealkiri" id="{{$post->id}}"><?php echo $post->pealkiri ?> </h2></a>
 
                                         @if(auth()->check())
                                             @if(auth()->user()->kasutajanimi == $post->kasutaja)
-                                                <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
+                                                <a id="{{$post->id}}" class="edit" onclick="editPost('{{$post->id}}','{{$post->pealkiri}}','{{$post->kirjeldus}}')"><?php echo __('profile.edit')?></a> |
                                                 <a href="{{ route('ad.delete', ['ad_id' => $post->id]) }}"><?php echo __('profile.delete')?></a>
                                             @endif
                                         @endif
@@ -192,10 +193,10 @@
                                                 $(document).ready(function() {
                                                     getRating({{$post->id}});
                                                 });
+                                                var editing = [];
                                             </script>
-                                            <h3 style="display: inline"><?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
+                                            <h3 style="display: inline"><?php echo __('adPageMessages.rating')?><label class="postRating" id={{$post->id}}>0</label>
                                                 @if (auth()->check())
-
                                                     <span id="<?php echo $post->id ?>" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote(<?php echo $post->id ?>)"></span>
                                                     <span id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)"></span>
                                                 @endif
@@ -206,7 +207,7 @@
                                         <h5><?php echo __('adPageMessages.tags')?><span class="label label-danger">{{$post->peatag}}</span></h5><br>
                                         <div>
                                             <img class="kuulutusePilt" src="{{$post->pildilink}}" alt="image">
-                                            <p class="kirjeldus">{{$post->kirjeldus}}</p>
+                                            <p class="kirjeldus" id="{{$post->id}}">{{$post->kirjeldus}}</p>
                                         </div>
                                         <br><br>
                                     </div>

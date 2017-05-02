@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
@@ -108,9 +108,17 @@ class postitusController extends Controller
         return view('search')->with('postitus',$filtreeritud);
     }
 
+    public function update(Request $request) {
+        if ($request->ajax()) {
+            if (auth()->check()) {
+                $id = $request->input('id');
+                $title = $request->input('title');
+                $payload = $request->input('payload');
 
-
-
-
-
+                DB::select('CALL uuenda_postitus(?,?,?)', array($id,$title,$payload));
+            }
+        } else {
+            return 'Not ajax request';
+        }
+    }
 }

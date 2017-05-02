@@ -91,6 +91,8 @@ Route::get('/error', function () {
     return view('error');
 });
 
+Route::post('/updatePost', 'postitusController@update');
+
 //VOTING SYSTEM
 Route::get('/getVotes', 'VotingController@getRating');
 Route::get('/getUpvoted', 'VotingController@getUpvoted');

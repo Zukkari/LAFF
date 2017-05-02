@@ -8,7 +8,16 @@
  */
 
 function upvote(id) {
-    var element = document.getElementById(id);
+    var element;
+
+    var elems = document.getElementsByClassName("postRating");
+
+    for (i = 0; i < elems.length; i++) {
+        if (elems[i].id == id) {
+            element =  elems[i];
+        }
+    }
+
     if (upvoted.includes(id)) {
         var index = upvoted.indexOf(id);
         upvoted.splice(index, 1);
@@ -80,7 +89,15 @@ function upvote(id) {
 }
 
 function downvote(id) {
-    var element = document.getElementById(id);
+    var element;
+
+    var elems = document.getElementsByClassName("postRating");
+
+    for (i = 0; i < elems.length; i++) {
+        if (elems[i].id == id) {
+            element =  elems[i];
+        }
+    }
     if (downvoted.includes(id)) {
         var index = upvoted.indexOf(id);
         downvoted.splice(index, 1);
@@ -163,7 +180,13 @@ function getRating(id) {
         url: '/getVotes',
         data: {postitusID: id},
         success: function (data) {
-            document.getElementById(id).textContent = data;
+            var elems = document.getElementsByClassName("postRating");
+
+            for (i = 0; i < elems.length; i++) {
+                if (elems[i].id == id) {
+                    elems[i].textContent = data;
+                }
+            }
         }
     });
 }
