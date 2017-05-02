@@ -70,6 +70,7 @@ function upvote(id) {
 
     $.ajax({
         type: 'POST',
+        url: '/vote',
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         data: {
             id:id,
@@ -141,6 +142,7 @@ function downvote(id) {
 
     $.ajax({
         type: 'POST',
+        url: '/vote',
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
         data: {
             id: id,
@@ -151,21 +153,50 @@ function downvote(id) {
 }
 
 function getRating(id) {
+    /*
     $.get('getVotes', {postitusID: id},function (data) {
         document.getElementById(id).textContent = data;
+    }); */
+
+    $.ajax({
+        type: 'GET',
+        url: '/getVotes',
+        data: {postitusID: id},
+        success: function (data) {
+            document.getElementById(id).textContent = data;
+        }
     });
 }
 
 function getUpvoted(id) {
-    $.get('getUpvoted', {userid: id}, function (data) {
+    /* $.get('getUpvoted', {userid: id}, function (data) {
         upvoted = data;
-    })
+    }); */
+
+    $.ajax({
+        type: 'GET',
+        url: '/getUpvoted',
+        data: {userid: id},
+        success: function(data) {
+            upvoted = data;
+        }
+    });
 }
 
 function getDownvoted(id) {
+    /*
     $.get('getDownvoted', {userid: id}, function (data) {
         downvoted = data;
-    })
+    }); */
+
+    $.ajax({
+        type: 'GET',
+        url: '/getDownvoted',
+        data: {userid: id},
+        success: function(data) {
+            downvoted = data;
+        }
+    });
 }
 
 function initButtons() {

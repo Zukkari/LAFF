@@ -17,6 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/../public/js/commentsEditor.js"></script>
+    <script type="text/javascript" src="/../public/js/voting.js"></script>
 
 
 
@@ -27,6 +28,21 @@
 
 </head>
 <body class="body-bottom">
+@if (auth()->check())
+    <script type="text/javascript">
+        var upvoted = [];
+        var downvoted = [];
+        getUpvoted({{auth()->user()->id}});
+        getDownvoted({{auth()->user()->id}});
+
+        window.setTimeout(initButtons, 750);
+    </script>
+@else
+    <script type="text/javascript">
+        var upvoted = [];
+        var downvoted = [];
+    </script>
+@endif
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -114,14 +130,22 @@
 
                         <div class="posts endless-pagination">
                             @foreach($postitus as $post)
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    getRating({{$post->id}});
+                                });
+                            </script>
                             <div class="col-md-12 col-lg-12 container">
                                 <div class="row">
                                     <h2>{{$post->pealkiri}}</h2>
+                                    <?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
                                     @if(auth()->check())
                                         @if(auth()->user()->kasutajanimi == $post->kasutaja)
                                             <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
                                             <a href="{{ route('ad.delete', ['ad_id' => $post->id]) }}"><?php echo __('profile.delete')?></a>
                                         @endif
+                                            <span id="{{$post->id}}" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote({{$post->id}})"></span>
+                                            <span id="{{$post->id}}" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote({{$post->id}})"></span>
                                     @endif
 
 

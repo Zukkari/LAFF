@@ -92,10 +92,10 @@ Route::get('/error', function () {
 });
 
 //VOTING SYSTEM
-Route::post('/postitus', 'VotingController@vote');
 Route::get('/getVotes', 'VotingController@getRating');
 Route::get('/getUpvoted', 'VotingController@getUpvoted');
 Route::get('/getDownvoted', 'VotingController@getDownvoted');
+Route::post('/vote', 'VotingController@vote');
 
 Route::get('/profile', 'profileController@index');
 Route::get('/getmsg', 'AjaxController@index');

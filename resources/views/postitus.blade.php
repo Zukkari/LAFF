@@ -144,7 +144,7 @@
                                 <span class="glyphicon glyphicon-time"></span><h5 class="info" id="aeg">x</h5>
                                 <h5><span class="label label-danger" id="peatag">x</span> <span class="label label-primary">kaotatud</span></h5><br>
                                 <div>
-                                    <p><img class="kuulutusePilt" id="pildilink" src="/../resources/pictures/no_image_available.jpg" alt="image"></p>
+                                    <p><img class="kuulutusePilt" id="pildilink" src="/../public/pictures/no_image_available.jpg" alt="image"></p>
                                     <p class="kirjeldus" id="text"></p>
                                 </div>
 
@@ -162,7 +162,7 @@
                                 getUpvoted({{auth()->user()->id}});
                                 getDownvoted({{auth()->user()->id}});
 
-                                window.setTimeout(initButtons, 750);
+                                window.setTimeout(initButtons, 1000);
                             </script>
                         @else
                             <script type="text/javascript">
