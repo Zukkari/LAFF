@@ -30,7 +30,11 @@ function editPost(id, title, payload) {
         target.appendChild(editDiv);
         editDiv.appendChild(document.createElement("BR"));
         editDiv.className = 'editDiv';
+<<<<<<< HEAD
         editDiv.id = 'editDiv';
+=======
+        editDiv.id = id;
+>>>>>>> 979481d24681382b668cfbdf57481b63c4df170e
 
         var textDiv = document.createElement("DIV");
         var textText = document.createElement("TEXTAREA");
@@ -46,7 +50,11 @@ function editPost(id, title, payload) {
 
         editDiv.appendChild(document.createElement("BR"));
         var submit = document.createElement("BUTTON");
+<<<<<<< HEAD
         submit.appendChild(document.createTextNode("Update your post"));
+=======
+        submit.appendChild(document.createTextNode("Update your comment"));
+>>>>>>> 979481d24681382b668cfbdf57481b63c4df170e
         submit.onclick = function () {
             var title = titleText.value;
             var payload = textText.value;
@@ -68,7 +76,24 @@ function editPost(id, title, payload) {
                 }
             }
 
+<<<<<<< HEAD
             $("#editDiv").remove();
+=======
+            elems = document.getElementsByClassName("editDiv");
+
+            for (i = 0; i < elems.length; i++) {
+                if (elems[i].id == id) {
+                    target.removeChild(elems[i]);
+
+                    while (elems[i].firstChild) {
+                        elems[i].removeChild(elems[i].firstChild);
+                    }
+                }
+            }
+
+            var index = editing.indexOf(id);
+            editing.splice(index, 1);
+>>>>>>> 979481d24681382b668cfbdf57481b63c4df170e
         };
 
         editDiv.appendChild(submit);
