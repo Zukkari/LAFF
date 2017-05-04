@@ -10,16 +10,12 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/../public/css/postitus.css" rel="stylesheet">
+    <link href="/../public/css/postitus.min.css" rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script type="text/javascript" src="/../public/js/checkConnection.js"></script>
-    <script src="/../public/js/fetchPost.js"></script>
-    <script src="/../public/js/polling.js"></script>
-    <script type="text/javascript" src="/../public/js/voting.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
@@ -144,7 +140,7 @@
                                 <span class="glyphicon glyphicon-time"></span><h5 class="info" id="aeg">x</h5>
                                 <h5><span class="label label-danger" id="peatag">x</span> <span class="label label-primary">kaotatud</span></h5><br>
                                 <div>
-                                    <p><img class="kuulutusePilt" id="pildilink" src="/../resources/pictures/no_image_available.jpg" alt="image"></p>
+                                    <p><img class="kuulutusePilt" id="pildilink" src="/../public/pictures/no_image_available.jpg" alt="image"></p>
                                     <p class="kirjeldus" id="text"></p>
                                 </div>
 
@@ -154,15 +150,14 @@
 
                         </div>
 
-
+                        <script src="/../public/js/javascript.js"></script>
                         @if (auth()->check())
                             <script type="text/javascript">
                                 var upvoted = [];
                                 var downvoted = [];
-                                getUpvoted({{auth()->user()->id}});
-                                getDownvoted({{auth()->user()->id}});
+                                getVotes({{auth()->user()->id}});
 
-                                window.setTimeout(initButtons, 750);
+                                window.setTimeout(initButtons, 1000);
                             </script>
                         @else
                             <script type="text/javascript">
@@ -177,11 +172,11 @@
                             @foreach($postitus as $post)
                                 <div class="col-md-12 col-lg-12 container">
                                     <div class="row">
-                                        <a href={{'postitus/'.$post->id}}><h2><?php echo $post->pealkiri ?> </h2></a>
+                                        <a href={{'postitus/'.$post->id}}><h2 class="postPealkiri" id="{{$post->id}}"><?php echo $post->pealkiri ?> </h2></a>
 
                                         @if(auth()->check())
                                             @if(auth()->user()->kasutajanimi == $post->kasutaja)
-                                                <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
+                                                <a id="{{$post->id}}" class="edit" onclick="editPost('{{$post->id}}','{{$post->pealkiri}}','{{$post->kirjeldus}}')"><?php echo __('profile.edit')?></a> |
                                                 <a href="{{ route('ad.delete', ['ad_id' => $post->id]) }}"><?php echo __('profile.delete')?></a>
                                             @endif
                                         @endif
@@ -189,13 +184,10 @@
 
                                         <div>
                                             <script type="text/javascript">
-                                                $(document).ready(function() {
-                                                    getRating({{$post->id}});
-                                                });
+                                                var editing = [];
                                             </script>
-                                            <h3 style="display: inline"><?php echo __('adPageMessages.rating')?><label id={{$post->id}}>0</label>
+                                            <h3 style="display: inline"><?php echo __('adPageMessages.rating')?><label class="postRating" id={{$post->id}}>{{$post->reiting}}</label>
                                                 @if (auth()->check())
-
                                                     <span id="<?php echo $post->id ?>" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote(<?php echo $post->id ?>)"></span>
                                                     <span id="<?php echo $post->id ?>" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote(<?php echo $post->id ?>)"></span>
                                                 @endif
@@ -206,7 +198,7 @@
                                         <h5><?php echo __('adPageMessages.tags')?><span class="label label-danger">{{$post->peatag}}</span></h5><br>
                                         <div>
                                             <img class="kuulutusePilt" src="{{$post->pildilink}}" alt="image">
-                                            <p class="kirjeldus">{{$post->kirjeldus}}</p>
+                                            <p class="kirjeldus" id="{{$post->id}}">{{$post->kirjeldus}}</p>
                                         </div>
                                         <br><br>
                                     </div>
@@ -258,7 +250,8 @@
 <footer class="row">
     @include('footer')
 </footer>
-
 </body>
+
+<script src="/../public/js/polling.min.js"></script>
 </html>
 

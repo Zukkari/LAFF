@@ -91,11 +91,12 @@ Route::get('/error', function () {
     return view('error');
 });
 
+Route::post('/updatePost', 'postitusController@update');
+
 //VOTING SYSTEM
-Route::post('/postitus', 'VotingController@vote');
 Route::get('/getVotes', 'VotingController@getRating');
-Route::get('/getUpvoted', 'VotingController@getUpvoted');
-Route::get('/getDownvoted', 'VotingController@getDownvoted');
+Route::get('/getVoted', 'VotingController@getVotes');
+Route::post('/vote', 'VotingController@vote');
 
 Route::get('/profile', 'profileController@index');
 Route::get('/getmsg', 'AjaxController@index');

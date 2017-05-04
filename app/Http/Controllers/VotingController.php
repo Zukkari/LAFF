@@ -64,23 +64,14 @@ class VotingController extends Controller
         }
     }
 
-    public function getUpvoted(Request $request) {
+    public function getVotes(Request $request) {
         if ($request->ajax()){
             $userid = $request->input('userid');
 
             $response = Vote::where('kasutajaID', $userid)->where('status', 1)->get()->pluck('postitusID')->toArray();
+            $response2 = Vote::where('kasutajaID', $userid)->where('status', -1)->get()->pluck('postitusID')->toArray();
 
-            return $response;
-        }
-    }
-
-    public function getDownvoted(Request $request) {
-        if ($request->ajax()) {
-            $userid = $request->input('userid');
-
-            $response = Vote::where('kasutajaID', $userid)->where('status', -1)->get()->pluck('postitusID')->toArray();
-
-            return $response;
+            return array($response, $response2);
         }
     }
 }

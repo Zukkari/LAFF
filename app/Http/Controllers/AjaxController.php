@@ -58,7 +58,6 @@ class AjaxController extends Controller
 
                 break;}
             } else {
-                sleep( 1 );
                 continue;
             }
         }

@@ -16,7 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/../public/js/commentsEditor.js"></script>
+    <script src="/../public/js/javascript.js"></script>
 
 
 
@@ -27,6 +27,20 @@
 
 </head>
 <body class="body-bottom">
+@if (auth()->check())
+    <script type="text/javascript">
+        var upvoted = [];
+        var downvoted = [];
+        getVotes({{auth()->user()->id}});
+
+        window.setTimeout(initButtons, 750);
+    </script>
+@else
+    <script type="text/javascript">
+        var upvoted = [];
+        var downvoted = [];
+    </script>
+@endif
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -116,13 +130,22 @@
                             @foreach($postitus as $post)
                             <div class="col-md-12 col-lg-12 container">
                                 <div class="row">
-                                    <h2>{{$post->pealkiri}}</h2>
+                                    <h2 class="postPealkiri" id="{{$post->id}}">{{$post->pealkiri}}</h2>
                                     @if(auth()->check())
                                         @if(auth()->user()->kasutajanimi == $post->kasutaja)
-                                            <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
+                                            <a class="edit" id="{{$post->id}}" onclick="editPost('{{$post->id}}', '{{$post->pealkiri}}', '{{$post->kirjeldus}}')"><?php echo __('profile.edit')?></a>
                                             <a href="{{ route('ad.delete', ['ad_id' => $post->id]) }}"><?php echo __('profile.delete')?></a>
                                         @endif
                                     @endif
+                                    <div>
+                                        <h3><?php echo __('adPageMessages.rating')?><label class="postRating" id="{{$post->id}}">{{$post->reiting}}</label>
+                                        @if (auth()->check())
+                                            <span id="{{$post->id}}" class="upvoteBtn glyphicon glyphicon-menu-up" onClick="upvote({{$post->id}})"></span>
+                                            <span id="{{$post->id}}" class="downvoteBtn glyphicon glyphicon-menu-down" onClick="downvote({{$post->id}})"></span>
+                                        @endif
+                                        </h3>
+                                    </div>
+
 
 
                                     <a href="{{url('/profile/'.$post->kasutaja)}}"><h5><span class="glyphicon glyphicon-time"></span><?php echo __('adPageMessages.user')?> {{$post->kasutaja}} <?php echo ", " ?> {{$post->date}} <?php echo ", "?> {{$post->email}}</h5></a>
@@ -130,7 +153,7 @@
                                     <h5><?php echo __('adPageMessages.tags')?><span class="label label-danger">{{$post->peatag}}</span></h5><br>
                                     <div>
                                         <img class="kuulutusePilt" src="<?php echo $post->pildilink ?>" alt="image">
-                                        <p class="kirjeldus">{{$post->kirjeldus}}</p>
+                                        <p class="kirjeldus" id="{{$post->id}}">{{$post->kirjeldus}}</p>
                                     </div>
                                 </div>
                                 <br><br>
@@ -161,6 +184,7 @@
 
                                 <script>
                                     var editing = [];
+                                    var editing2 = [];
                                 </script>
                                 <div class="kommentaarid">
                                     <h2><?php echo __('adPageMessages.comments')?></h2>
@@ -176,12 +200,11 @@
                                             <div class="interaction">
                                             @if(auth()->check())
                                                 @if(auth()->user()->kasutajanimi == $kommentaar->kasutaja_nimi)
-                                                        <a onclick="editComment({{$kommentaar->id}})" class="edit"><?php echo __('profile.edit')?></a> |
+                                                        <a onclick="editComment({{$kommentaar->id}})" id="{{$post->id}}" class="edit"><?php echo __('profile.edit')?></a> |
                                                         <a href="{{ route('post.delete', ['post_id' => $kommentaar->id]) }}"><?php echo __('profile.delete')?></a>
                                                 @endif
                                             @endif
                                             </div>
-
                                         </div>
                                         @endforeach
                                 </div>
