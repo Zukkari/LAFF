@@ -16,5 +16,6 @@ return [
     'reitingUser' => 'Kasutaja reiting: ',
     'reiting' => 'Postituse reiting',
     'delete1' => 'Kustutada viimane kuulutus',
-    'deleteall' => 'Kustutada kõik kuulutused'
+    'deleteall' => 'Kustutada kõik kuulutused',
+    'move'=> 'Postituse muutmiseks avage see'
 ];

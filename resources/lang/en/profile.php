@@ -16,6 +16,7 @@ return [
     'reitingUser' => 'Users rating: ',
     'reiting' => 'Rating of ad',
     'delete1' => 'Delete last ad',
-    'deleteall' => 'Delete all ads'
+    'deleteall' => 'Delete all ads',
+    'move'=> 'Open ad for editing'
 
 ];

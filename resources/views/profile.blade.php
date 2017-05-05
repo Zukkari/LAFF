@@ -179,7 +179,7 @@
             <td>{{$kasutajaPost->reiting}}</td>
             @if(auth()->check())
                 @if (auth()->user()->kasutajanimi == $name->kasutajanimi)
-                    <td> <a href="#" class="edit"><?php echo __('profile.edit')?></a> |
+                    <td> <?php echo __('profile.move')?> |
                         <a href="{{ route('ad.deleteAd', ['ad_id' => $kasutajaPost->id]) }}"><?php echo __('profile.delete')?></a></td>
                 @endif
             @endif
