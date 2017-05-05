@@ -9,18 +9,17 @@
 
     <title>Lostaf Main</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
 
     <!-- Styles -->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/../public/css/postitus.css" rel="stylesheet" type="text/css">
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+    <link href="/../public/css/postitus.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 
     <!-- Head icon -->
@@ -90,17 +89,7 @@
     </div>
 </nav>
 <br><br><br><br>
-<script>
-    $(function(){
-        var navMain = $(".navbar-collapse"); // avoid dependency on #id
-// "a:not([data-toggle])" - to avoid issues caused
-// when you have dropdown inside navbar
-        navMain.on("click", "a:not([data-toggle])", null, function () {
-            navMain.collapse('hide');
-        });
-    });
 
-</script>
 
 
 @if(Session::has('message'))
