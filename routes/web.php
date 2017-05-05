@@ -81,6 +81,17 @@ Route::get('/profile/{id}', [
 );
 Route::post("storeImg", "profileController@storeImg");
 
+Route::get('/deleteAdOne', [
+    'uses' => 'postitusController@deleteOne',
+    'as' => 'deleteOne',
+]);
+
+Route::get('/deleteAdAll', [
+    'uses' => 'postitusController@deleteAll',
+    'as' => 'deleteAll',
+]);
+
+
 
 //TODO KELLE OMA SEE ON JA MIS VIEW??
 Route::get('/voting', function () {

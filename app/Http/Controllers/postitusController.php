@@ -121,4 +121,19 @@ class postitusController extends Controller
             return 'Not ajax request';
         }
     }
+
+
+
+    public function deleteOne() {
+        DB::select('CALL delete_one(?)',array(auth()->user()->id));
+        Session::flash('message', 'Ad');
+        return redirect()->back();
+
+    }
+
+    public function deleteAll() {
+        DB::select('CALL delete_all(?)', array(auth()->user()->id));
+        Session::flash('message', 'Ad');
+        return redirect()->back();
+    }
 }

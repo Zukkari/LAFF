@@ -13,7 +13,7 @@
 
     <!-- Styles -->
 
-    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="stylesheet">
     <link href="/../public/css/postitus.min.css" rel="stylesheet">
 
     <!-- Scripts -->
@@ -145,7 +145,11 @@
 
         <div class="tekst">
             <h2><?php echo __('profile.myads')?></h2>
-
+            @if(auth()->check())
+                @if (auth()->user()->id == $name->id)
+            <h4> <a href="{{ route('deleteOne') }}"><?php echo __('profile.delete1')?></a> |  <a href="{{ route('deleteAll') }}"><?php echo __('profile.deleteall')?></a></h4>
+            @endif
+            @endif
 
 
             <div class="container">

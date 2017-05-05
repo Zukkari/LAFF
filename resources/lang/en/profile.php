@@ -14,6 +14,8 @@ return [
     'submit'=> 'Save changes',
     'registration'=> 'Registration date: ',
     'reitingUser' => 'Users rating: ',
-    'reiting' => 'Rating of ad'
+    'reiting' => 'Rating of ad',
+    'delete1' => 'Delete last ad',
+    'deleteall' => 'Delete all ads'
 
 ];

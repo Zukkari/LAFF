@@ -14,7 +14,7 @@ return [
     'submit'=> 'Salvesta muudatused',
     'registration'=> 'Registreerimiskuupäev: ',
     'reitingUser' => 'Kasutaja reiting: ',
-    'reiting' => 'Postituse reiting'
-
-
+    'reiting' => 'Postituse reiting',
+    'delete1' => 'Kustutada viimane kuulutus',
+    'deleteall' => 'Kustutada kõik kuulutused'
 ];
