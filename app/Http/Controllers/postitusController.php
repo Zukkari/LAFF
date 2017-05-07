@@ -56,7 +56,7 @@ class postitusController extends Controller
 
 
         $postitusi = DB::select('CALL postituste_arv()'); //mitu postitust on süsteemis
-        $postitus = DB::table('postitus_vaade')->paginate($this->leheküljel);
+        $postitus = DB::table('postitus_vaade')->orderBy('date', 'asc')->paginate($this->leheküljel);
 
         //See osa siin on vajalik lehekülje osade hilisema laadimise jaoks. Kui pöördutakse ajaxiga, siis laetakse veidikene teine leht
         if ($request->ajax()) {

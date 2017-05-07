@@ -118,7 +118,7 @@ Route::get("postitus", 'postitusController@index');
 
 Route::get("best", 'postitusController@best');
 
-Route::get("recent", 'postitusController@index');
+Route::get("recent", 'postitusController@recent');
 
 //Otsing
 Route::get("search", 'postitusController@search');
