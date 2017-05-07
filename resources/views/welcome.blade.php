@@ -11,7 +11,7 @@
 
 
     <!-- Styles -->
-    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="stylesheet">
     <link href="/../public/css/postitus.min.css" rel="stylesheet">
 
 

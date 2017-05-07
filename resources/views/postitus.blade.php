@@ -250,8 +250,10 @@
 <footer class="row">
     @include('footer')
 </footer>
-</body>
 
 <script src="/../public/js/polling.min.js"></script>
+</body>
+
+
 </html>
 
