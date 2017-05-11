@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://lostaf.cs.ut.ee/" />
+<title>6. Kasutaja suudab leida kuulutise otsingumootori kaudu</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">6. Kasutaja suudab leida kuulutise otsingumootori kaudu</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=search</td>
+	<td>boris</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h2</td>
+	<td>Kaotatud vihmavari Boris</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.kirjeldus</td>
+	<td>Lugupeetud kaaskodanikud! Täna umbes kella 9 paiku oli unustatud Pallase puiestee peatusse (Annelinna keskuse suunaline) must vihmavari nimega Boris. Vihmavari on pikkuselt suhteliselt väike. Boris oli ostetud välja vihmavarju kaupmeeste käest 250 rublaga ühel Venemaa turul, seega eesti keelt ta eriti ei valda. Vihmavari suhtub umbusaldusega võõrastesse ja arvatavasti on ehmunud hetkel, aga reageerib nupuvajutusele (keegi neist ei suuda sellele vastu panna). Kui keegi teab midagi Borisi saatusest ning soovib, et ta ühineks oma perega, siis võtke ühendust! (kontakti saab adminilt). Me väga igatseme ja ootame teda koju! PS: Vastutasuks Borisi tagastamisele, saab ühe hea šokolaadi! Kui aga tuleb välja, et Boris sai endale uue kodu, siis hoolitsege tema eest hästi, ärge korrake meie vigu!</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.label.label-danger</td>
+	<td>Boris tule koju!</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

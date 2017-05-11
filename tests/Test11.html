@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://lostaf.cs.ut.ee/" />
+<title>11. Kasutaja saab vaadata ja muuta oma lisatud postitusi</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">11. Kasutaja saab vaadata ja muuta oma lisatud postitusi</td></tr>
+</thead><tbody>
+<tr>
+	<td>assertText</td>
+	<td>//td[6]</td>
+	<td>Чтобы изменить объявление откройте его | Удалить</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Удалить</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/profile/TestuserAlice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/h2</td>
+	<td>Мои объявления</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=th</td>
+	<td>ID</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[2]</td>
+	<td>Заглавление</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[3]</td>
+	<td>Дата добавления</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//th[4]</td>
+	<td>Тэги</td>
+</tr>
+</tbody></table>
+</body>
+</html>
