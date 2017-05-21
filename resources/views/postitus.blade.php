@@ -8,17 +8,23 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Styles -->
-    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" as="stylesheet">
-    <link href="/../public/css/postitus.min.css" rel="stylesheet">
+		
+    
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+       <!-- Scripts -->
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script async src="/../public/js/activeNupp.js"></script>
 
     <!-- Head icon -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/2000px-Magnifying_glass_icon.svg.png">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="/../public/css/postitus.min.css" rel="stylesheet">
+
 
 
 </head>
@@ -35,14 +41,13 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li title="<?php echo __('userHelp.home')?>"><a href="{{url('/')}}"><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
+                <li title="<?php echo __('userHelp.home')?>" ><a href="{{url('/')}}"><span class="glyphicon glyphicon-home"></span><?php echo __('homePageMessages.home')?></a></li>
                 <li title="<?php echo __('userHelp.seeAds')?>" class="active"><a href="{{url('/postitus')}}"><?php echo __('homePageMessages.ads')?></a></li>
                 @if(auth()->check())
                     <li><a title="<?php echo __('userHelp.addAd')?>" href="{{url('/lisa')}}"><?php echo __('homePageMessages.addAd')?></a></li>
                 @endif
-                <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
-                <li>
-                    {!! Form::open(['method'=>'GET','url'=>'search','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
+                    <li title="<?php echo __('userHelp.aboutUs')?>"><a href="{{url('/meist')}}"><span class="glyphicon glyphicon-info-sign"></span><?php echo __('homePageMessages.us') ?></a></li>
+                <li>{!! Form::open(['method'=>'GET','url'=>'search','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
                     <div class="input-group">
                         {!! Form::text('search', null, array('class' => 'form-control', 'placeholder' =>  __('titles.titleSearch'))) !!}
                         <div class="input-group-btn">
@@ -51,8 +56,7 @@
                             </button>
                         </div>
                     </div>
-                    {!! Form::close() !!}
-                </li>
+                    {!! Form::close() !!}</li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -65,28 +69,28 @@
                     </ul>
                 </li>
                 @if (auth()->guest())
-                    <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
-                    <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
+                <li><a title="<?php echo __('userHelp.login')?>" href='{{ route('login') }}'><?php echo __('auth.login')?></a></li>
+                <li><a title="<?php echo __('userHelp.register')?>" href='{{route('register')}}'><?php echo __('auth.register')?></a></li>
                 @endif
 
                 @if (auth()->check())
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{auth()->user()->avatar}}" height="25px"> {{ auth()->user()->kasutajanimi }}<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
-                                <a href="{{url('/profile/'.auth()->user()->kasutajanimi)}}"><?php echo __('userHelp.profile')?></a>
-                                <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
-                            </li>
-                        </ul>
-                    </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="{{auth()->user()->avatar}}" height="25px"> {{ auth()->user()->kasutajanimi }}<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{url('/lisa')}}"><?php echo __('userHelp.addAd')?></a>
+                            <a href="{{url('/profile/'.auth()->user()->kasutajanimi)}}"><?php echo __('userHelp.profile')?></a>
+                            <a href="{{route('logout')}}"><?php echo __('userHelp.logout')?></a>
+                        </li>
+                    </ul>
+                </li>
                 @endif
 
             </ul>
         </div>
     </div>
 </nav>
-<br/>
+<br><br>
 <div class="container">
     <div class="jumbotron">
         <div class="container-fluid">
@@ -94,14 +98,14 @@
                 <div class="col-sm col-md-offset-2">
                     <div class="col-sm-10">
                         <ul class="nav nav-pills">
-                            <li class="active">
+                            <li id ="uusNupp" class="active">
                                 <a href="{{url('postitus')}}" title="<?php echo __('userHelp.newAds')?>"><?php echo __('adPageMessages.new') ?></a>
                             </li>
-                            <li>
-                                <a id="bestNupp" href="{{url('best')}}" title="<?php echo __('userHelp.topAds')?>"><?php echo __('adPageMessages.top') ?></a>
+                            <li id="bestNupp">
+                                <a href="{{url('best')}}" title="<?php echo __('userHelp.topAds')?>"><?php echo __('adPageMessages.top') ?></a>
                             </li>
-                            <li>
-                                <a href="{{url('recent')}}" title="<?php echo __('userHelp.recentlyAds')?>"><?php echo __('adPageMessages.found') ?></a>
+                            <li id="oldNupp">
+                                <a href="{{url('old')}}" title="<?php echo __('userHelp.recentlyAds')?>"><?php echo __('adPageMessages.found') ?></a>
                             </li>
                         </ul>
 
@@ -150,7 +154,7 @@
 
                         </div>
 
-                        <script src="/../public/js/javascript.js"></script>
+                        <script  src="/../public/js/javascript.js"></script>
                         @if (auth()->check())
                             <script type="text/javascript">
                                 var upvoted = [];
@@ -172,7 +176,7 @@
                             @foreach($postitus as $post)
                                 <div class="col-md-12 col-lg-12 container">
                                     <div class="row">
-                                        <a href={{'postitus/'.$post->id}}><h2 class="postPealkiri" id="{{$post->id}}"><?php echo $post->pealkiri ?> </h2></a>
+                                        <a href={{'postitus/'.$post->id}}><h2 class="postPealkiri" id="{{$post->id}}">{{$post->pealkiri}}</h2></a>
 
                                         @if(auth()->check())
                                             @if(auth()->user()->kasutajanimi == $post->kasutaja)
@@ -251,7 +255,10 @@
     @include('footer')
 </footer>
 
-<script src="/../public/js/polling.min.js"></script>
+<script src="/../public/js/polling.js"></script>
+<script>
+	aktiivne();
+</script>
 </body>
 
 
